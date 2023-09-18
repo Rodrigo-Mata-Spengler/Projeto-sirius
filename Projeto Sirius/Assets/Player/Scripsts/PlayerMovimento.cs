@@ -36,7 +36,7 @@ public class PlayerMovimento : MonoBehaviour
     {
         if (pController.isGrounded)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= velocidade;
             if (Input.GetButton("Jump"))
