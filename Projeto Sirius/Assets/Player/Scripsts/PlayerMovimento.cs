@@ -9,7 +9,8 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] private float pulo = 0;
     [SerializeField] private float gravidade = 0;
 
-    [Header("Velocidades do Player")]
+    [Header("Informações do Player")]
+    [SerializeField] private float altura = 0;
     [Header("Abstinencia:")]
     [SerializeField] private float velocidadeAbstinencia = 0;
     [SerializeField] private float velocidadeAbstinenciaCorrendo = 0;
@@ -22,11 +23,17 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] private float velocidadeOverdose = 0;
     [SerializeField] private float velocidadeOverdoseCorrendo = 0;
     [SerializeField] private float PuloOverdose = 0;
+    [Header("Agachado:")]
+    [SerializeField] private float velocidadeAgachado = 0;
+    [SerializeField] private float alturaAgachado = 0;
     private Vector3 moveDirection;
 
     private Rigidbody rigidbody;
     private CharacterController pController;
     private QuimicoPlayer qPlayer;
+
+    [Header("Temporario")]
+    public GameObject sprite;
 
     private void Start()
     {
@@ -39,8 +46,6 @@ public class PlayerMovimento : MonoBehaviour
     {
         //definir velocidade do Player
         VelocidadePlayer();
-        //definir velocidade de pulo do Player
-        PuloPlayer();
         //agachar
         AgacharPlayer();
         //andar no eixo x e pular
@@ -66,6 +71,17 @@ public class PlayerMovimento : MonoBehaviour
     //correr
     private void VelocidadePlayer()
     {
+        if (Input.GetButton("Agachar"))
+        {
+            pController.height = alturaAgachado;
+            velocidade = velocidadeAgachado;
+            pulo = 0;
+        }
+        else
+        {
+            pController.height = altura;
+        }
+
         if (qPlayer.GetQuimicoAtual() <= qPlayer.GetAbstinencia())
         {
             if (Input.GetButton("Run"))
@@ -75,8 +91,9 @@ public class PlayerMovimento : MonoBehaviour
             else
             {
                 velocidade = velocidadeAbstinencia;
-
             }
+
+            pulo = PuloAbstinencia;
         }
         else if (qPlayer.GetQuimicoAtual() >= qPlayer.GetOverdose())
         {
@@ -87,10 +104,10 @@ public class PlayerMovimento : MonoBehaviour
             else
             {
                 velocidade = velocidadeOverdose;
-
             }
+            pulo = PuloOverdose;
         }
-        else
+        else if(!Input.GetButton("Agachar"))
         {
             if (Input.GetButton("Run"))
             {
@@ -99,15 +116,11 @@ public class PlayerMovimento : MonoBehaviour
             else
             {
                 velocidade = velocidadeNormal;
-
             }
+            pulo = PuloNormal;
         }
-    }
 
-    //pular
-    private void PuloPlayer()
-    {
-
+        
     }
 
     //agachar

@@ -298,7 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423777014}
   - component: {fileID: 423777015}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 1061590429}
   - component: {fileID: 1061590430}
   - component: {fileID: 1061590431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,6 +1040,7 @@ MonoBehaviour:
   velocidade: 3
   pulo: 5
   gravidade: 10
+  altura: 2
   velocidadeAbstinencia: 1
   velocidadeAbstinenciaCorrendo: 2
   PuloAbstinencia: 0.5
@@ -1049,6 +1050,9 @@ MonoBehaviour:
   velocidadeOverdose: 4
   velocidadeOverdoseCorrendo: 8
   PuloOverdose: 8
+  velocidadeAgachado: 2
+  alturaAgachado: 1
+  sprite: {fileID: 423777013}
 --- !u!143 &1061590430
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1087,7 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73dd2a8b45e4134d8fd6a6838911a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quimicoatual: 0
+  quimicoatual: 50
   quimicoMaximo: 100
   status: 1
   abstinencia: 30
@@ -1301,13 +1305,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2065893487}
   - component: {fileID: 2065893488}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2065893487
 Transform:
   m_ObjectHideFlags: 0
