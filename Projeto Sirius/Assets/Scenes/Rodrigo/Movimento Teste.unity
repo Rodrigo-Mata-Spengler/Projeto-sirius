@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a200b19ca1a9685429ed7e043c28e904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Resolution: 20
+  m_Resolution: 50
   m_Appearance:
     pathColor: {r: 0, g: 1, b: 0, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -763,13 +763,7 @@ MonoBehaviour:
   m_Waypoints:
   - position: {x: 0, y: 0, z: 0}
     roll: 0
-  - position: {x: 6, y: 0, z: 0}
-    roll: 0
-  - position: {x: 13.86, y: 0, z: 0}
-    roll: 0
-  - position: {x: 37.8, y: 2, z: 2}
-    roll: 0
-  - position: {x: 105.7, y: 0, z: -10}
+  - position: {x: 61.83, y: 0, z: 0}
     roll: 0
 --- !u!4 &687860258
 Transform:
@@ -833,7 +827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 687860257}
-  m_PathPosition: 0.057078816
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2.5
@@ -979,6 +973,7 @@ GameObject:
   - component: {fileID: 1061590428}
   - component: {fileID: 1061590429}
   - component: {fileID: 1061590430}
+  - component: {fileID: 1061590431}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1045,6 +1040,15 @@ MonoBehaviour:
   velocidade: 3
   pulo: 5
   gravidade: 10
+  velocidadeAbstinencia: 1
+  velocidadeAbstinenciaCorrendo: 2
+  PuloAbstinencia: 0.5
+  velocidadeNormal: 3
+  velocidadeNormalCorrendo: 6
+  PuloNormal: 5
+  velocidadeOverdose: 4
+  velocidadeOverdoseCorrendo: 8
+  PuloOverdose: 8
 --- !u!143 &1061590430
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1071,6 +1075,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1061590431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061590426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73dd2a8b45e4134d8fd6a6838911a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quimicoatual: 0
+  quimicoMaximo: 100
+  status: 1
+  abstinencia: 30
+  overdose: 70
 --- !u!1 &1645540378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1157,7 @@ Transform:
   m_GameObject: {fileID: 1645540378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.405188, y: 2.6721914, z: -3.4776492}
+  m_LocalPosition: {x: -14.74, y: 2.66, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1230,7 +1251,7 @@ Transform:
   m_GameObject: {fileID: 1805849570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.405188, y: 2.6721914, z: -3.4776492}
+  m_LocalPosition: {x: -14.74, y: 2.66, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
