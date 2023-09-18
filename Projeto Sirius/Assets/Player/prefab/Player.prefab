@@ -269,8 +269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73dd2a8b45e4134d8fd6a6838911a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  status: 1
   quimicoatual: 50
   quimicoMaximo: 100
-  status: 1
+  cadencia: 0.5
+  perda: 0.5
   abstinencia: 30
   overdose: 70

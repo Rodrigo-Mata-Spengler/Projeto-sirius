@@ -367,6 +367,7 @@
 "Assets/Coelho que segue (Bob)/Script/CoelhoControler.cs"
 "Assets/Player/Scripsts/PlayerMovimento.cs"
 "Assets/Player/Scripsts/QuimicoPlayer.cs"
+"Assets/UI/QuimicoUI.cs"
 -langversion:9.0
 
 /deterministic
