@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3850142049311395792
 Transform:
   m_ObjectHideFlags: 0
@@ -149,9 +149,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6189981585758922047}
   - component: {fileID: 6193965179372635233}
+  - component: {fileID: 1690447427894940790}
   - component: {fileID: 5600536111377844785}
   - component: {fileID: 2613485787731608224}
-  - component: {fileID: 627442714157737521}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -199,10 +199,38 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1690447427894940790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5077908523437290206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3310cd80f75e444b5b9b58ab003e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 3
+  pulo: 5
+  gravidade: 10
+  altura: 2
+  velocidadeAbstinencia: 1
+  velocidadeAbstinenciaCorrendo: 2
+  PuloAbstinencia: 0.5
+  velocidadeNormal: 3
+  velocidadeNormalCorrendo: 6
+  PuloNormal: 5
+  velocidadeOverdose: 4
+  velocidadeOverdoseCorrendo: 8
+  PuloOverdose: 8
+  velocidadeAgachado: 2
+  alturaAgachado: 1
+  sprite: {fileID: 2753231416634526359}
 --- !u!143 &5600536111377844785
 CharacterController:
   m_ObjectHideFlags: 0
@@ -248,36 +276,3 @@ MonoBehaviour:
   perda: 0.5
   abstinencia: 30
   overdose: 70
-  quimicos: 5
-  quantidadeReabastecer: 20
-  desligarCadencia: 0
---- !u!114 &627442714157737521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5077908523437290206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de3310cd80f75e444b5b9b58ab003e38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidade: 0
-  pulo: 0
-  gravidade: 10
-  altura: 2
-  velocidadeAbstinencia: 1
-  velocidadeAbstinenciaCorrendo: 2
-  PuloAbstinencia: 0
-  velocidadeNormal: 4
-  velocidadeNormalCorrendo: 6
-  PuloNormal: 4
-  velocidadeOverdose: 6
-  velocidadeOverdoseCorrendo: 8
-  PuloOverdose: 6
-  velocidadeAgachado: 2
-  alturaAgachado: 1
-  forcaNormal: 2
-  forcaOverdose: 5
-  sprite: {fileID: 0}
