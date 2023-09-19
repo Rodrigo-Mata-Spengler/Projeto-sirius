@@ -64,14 +64,24 @@ public class PlayerMovimento : MonoBehaviour
     //andar no eixo x e pular
     private void MovimentPlayer()
     {
+
         if (pController.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
             moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= velocidade;
+            moveDirection.x *= velocidade;
             if (Input.GetButton("Jump"))
+            {
                 moveDirection.y = pulo;
+            }
         }
+        else
+        {
+            moveDirection.x = Input.GetAxis("Horizontal");
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection.x *= velocidade;
+        }
+        
         moveDirection.y -= gravidade * Time.deltaTime;
         pController.Move(moveDirection * Time.deltaTime);
     }
