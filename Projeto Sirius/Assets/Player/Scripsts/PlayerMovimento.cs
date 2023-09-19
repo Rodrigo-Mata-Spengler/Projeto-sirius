@@ -11,22 +11,31 @@ public class PlayerMovimento : MonoBehaviour
 
     [Header("Informações do Player")]
     [SerializeField] private float altura = 0;
+
     [Header("Abstinencia:")]
     [SerializeField] private float velocidadeAbstinencia = 0;
     [SerializeField] private float velocidadeAbstinenciaCorrendo = 0;
     [SerializeField] private float PuloAbstinencia = 0;
+
     [Header("Nomrmal:")]
     [SerializeField] private float velocidadeNormal = 0;
     [SerializeField] private float velocidadeNormalCorrendo = 0;
     [SerializeField] private float PuloNormal = 0;
+
     [Header("Overdose:")]
     [SerializeField] private float velocidadeOverdose = 0;
     [SerializeField] private float velocidadeOverdoseCorrendo = 0;
     [SerializeField] private float PuloOverdose = 0;
+
     [Header("Agachado:")]
     [SerializeField] private float velocidadeAgachado = 0;
     [SerializeField] private float alturaAgachado = 0;
     private Vector3 moveDirection;
+
+    [Header("Força de empurrar")]
+    [SerializeField] private float forcaNormal = 0;
+    [SerializeField] private float forcaOverdose = 0;
+    private float forcaAtual = 0;
 
     private Rigidbody rigidbody;
     private CharacterController pController;
@@ -46,8 +55,7 @@ public class PlayerMovimento : MonoBehaviour
     {
         //definir velocidade do Player
         VelocidadePlayer();
-        //agachar
-        AgacharPlayer();
+
         //andar no eixo x e pular
         MovimentPlayer();
 
@@ -93,6 +101,7 @@ public class PlayerMovimento : MonoBehaviour
                 velocidade = velocidadeAbstinencia;
             }
 
+            forcaAtual = 0;
             pulo = PuloAbstinencia;
         }
         else if (qPlayer.GetQuimicoAtual() >= qPlayer.GetOverdose())
@@ -105,6 +114,8 @@ public class PlayerMovimento : MonoBehaviour
             {
                 velocidade = velocidadeOverdose;
             }
+
+            forcaAtual = forcaOverdose;
             pulo = PuloOverdose;
         }
         else if(!Input.GetButton("Agachar"))
@@ -117,15 +128,20 @@ public class PlayerMovimento : MonoBehaviour
             {
                 velocidade = velocidadeNormal;
             }
+
+            forcaAtual = forcaNormal;
             pulo = PuloNormal;
         }
 
         
     }
 
-    //agachar
-    private void AgacharPlayer()
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-
+        Rigidbody rb = hit.collider.attachedRigidbody;
+        if (rb != null && !rb.isKinematic)
+        {
+            rb.velocity = hit.moveDirection * forcaAtual;
+        }
     }
 }
