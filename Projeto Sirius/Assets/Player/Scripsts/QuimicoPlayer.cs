@@ -62,6 +62,10 @@ public class QuimicoPlayer : MonoBehaviour
             }
         }
     }
+    public void ReabastecerQuimico(int a)
+    {
+        quimicos += a;
+    }
     public float GetQuimicoAtual()
     {
         return quimicoatual;
@@ -74,5 +78,8 @@ public class QuimicoPlayer : MonoBehaviour
     {
         return overdose;
     }
-
+    public int getQuimico()
+    {
+        return quimicos;
+    }
 }
