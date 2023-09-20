@@ -367,6 +367,7 @@
 "Assets/Coelho que segue (Bob)/Script/CoelhoControler.cs"
 "Assets/Coletaveis/Quimicos/QuimicoColetavel.cs"
 "Assets/Coletaveis/Quimicos/QuimicoUi.cs"
+"Assets/DoorRayCast.cs"
 "Assets/Objetos/scripts/Door.cs"
 "Assets/Objetos/scripts/DoorTrigger.cs"
 "Assets/Player/Scripsts/PlayerMovimento.cs"
