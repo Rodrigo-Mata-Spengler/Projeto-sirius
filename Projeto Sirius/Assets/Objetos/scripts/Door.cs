@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
     public bool IsOpen = false;
     [SerializeField]
     private bool IsRotatingDoor = true;
+
     [SerializeField]
     private float Speed = 1f;
     [Header("Rotation Configs")]
@@ -14,7 +15,10 @@ public class Door : MonoBehaviour
     [SerializeField]
     private float ForwardDirection = 0;
 
+
     [Header("Sliding Configs")]
+
+    [SerializeField] private bool SlidingDoor;
     [SerializeField]
     private Vector3 SlideDirection = Vector3.back;
     [SerializeField]
@@ -47,16 +51,17 @@ public class Door : MonoBehaviour
             {
                 float dot = Vector3.Dot(Forward, (UserPosition - transform.position).normalized);
                 Debug.Log($"Dot: {dot.ToString("N3")}");
-                AnimationCoroutine = StartCoroutine(DoRotationOpen(dot));
+                AnimationCoroutine = StartCoroutine(DoRotationOpen(dot, Speed));
             }
-            else
+            
+            else if(SlidingDoor)
             {
                 AnimationCoroutine = StartCoroutine(DoSlidingOpen());
             }
         }
     }
 
-    private IEnumerator DoRotationOpen(float ForwardAmount)
+    private IEnumerator DoRotationOpen(float ForwardAmount, float speed)
     {
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation;
@@ -72,14 +77,18 @@ public class Door : MonoBehaviour
 
         IsOpen = true;
 
+  
+
         float time = 0;
         while (time < 1)
         {
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.deltaTime * speed;
         }
     }
+
+
 
     private IEnumerator DoSlidingOpen()
     {
@@ -148,4 +157,3 @@ public class Door : MonoBehaviour
         }
     }
 }
-
