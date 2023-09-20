@@ -15,7 +15,7 @@ C:/Users/rodri/Documents/Projeto sirius 2/Projeto-sirius/Projeto Sirius
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49760
+62858
 Successfully changed project path to: C:/Users/rodri/Documents/Projeto sirius 2/Projeto-sirius/Projeto Sirius
 C:/Users/rodri/Documents/Projeto sirius 2/Projeto-sirius/Projeto Sirius
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/rodri/Documents/Projeto sirius 2/Projeto-sirius/Projeto Sirius
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [17120] Host "[IP] 192.168.15.10 [Port] 0 [Flags] 2 [Guid] 283913282 [EditorId] 283913282 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6VINFRK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [28612] Host "[IP] 192.168.15.10 [Port] 0 [Flags] 2 [Guid] 1946094836 [EditorId] 1946094836 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6VINFRK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [17120] Host "[IP] 192.168.15.10 [Port] 0 [Flags] 2 [Guid] 283913282 [EditorId] 283913282 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6VINFRK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28612] Host "[IP] 192.168.15.10 [Port] 0 [Flags] 2 [Guid] 1946094836 [EditorId] 1946094836 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6VINFRK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 2.76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 4.10 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.8f1 (b5eafc012955)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -70,46 +70,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56764
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.036877 seconds.
-- Loaded All Assemblies, in  0.774 seconds
+Registered in 0.023922 seconds.
+- Loaded All Assemblies, in  0.509 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.517 seconds
-Domain Reload Profiling: 1284ms
-	BeginReloadAssembly (236ms)
+- Finished resetting the current domain, in  0.308 seconds
+Domain Reload Profiling: 812ms
+	BeginReloadAssembly (176ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (66ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (152ms)
-	LoadAllAssembliesAndSetupDomain (293ms)
-		LoadAssemblies (229ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (94ms)
+	LoadAllAssembliesAndSetupDomain (169ms)
+		LoadAssemblies (173ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (288ms)
-			TypeCache.Refresh (285ms)
-				TypeCache.ScanAssembly (259ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (517ms)
+		AnalyzeDomain (165ms)
+			TypeCache.Refresh (163ms)
+				TypeCache.ScanAssembly (146ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (308ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (403ms)
+		SetupLoadedEditorAssemblies (240ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (264ms)
-			ProcessInitializeOnLoadMethodAttributes (96ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,392 +117,57 @@ Domain Reload Profiling: 1284ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-0000017406273C50 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406273C50 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405DEDC10 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405D37010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405DEDC10 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174077B6020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1A77010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174057CE430 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174057CE430 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405D9D360 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174077F7830 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174057D6840 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740780D240 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406D10620 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C198E010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740781D250 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406D47C30 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406D47C30 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174057DE850 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406D47C30 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174057DE850 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1B06630 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406D47C30 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406D51840 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174070B3930 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405AF7430 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407005240 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740700F450 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740701EAB0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1A12230 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1A12230 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740701EAB0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.248 seconds
-Refreshing native plugins compatible for Editor in 2.34 ms, found 0 plugins.
+- Loaded All Assemblies, in  0.749 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 0 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.152 seconds
-Domain Reload Profiling: 2386ms
-	BeginReloadAssembly (335ms)
+- Finished resetting the current domain, in  0.686 seconds
+Domain Reload Profiling: 1427ms
+	BeginReloadAssembly (201ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (39ms)
-	RebuildCommonClasses (74ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (714ms)
-		LoadAssemblies (593ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (334ms)
-			TypeCache.Refresh (277ms)
-				TypeCache.ScanAssembly (252ms)
-			ScanForSourceGeneratedMonoScriptInfo (43ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1153ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (748ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
-			SetLoadedEditorAssemblies (8ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (163ms)
-			ProcessInitializeOnLoadAttributes (365ms)
-			ProcessInitializeOnLoadMethodAttributes (159ms)
-			AfterProcessingInitializeOnLoad (30ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 2.48 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3535 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 50 unused Assets / (1.2 MB). Loaded Objects now: 4010.
-Memory consumption went from 139.6 MB to 138.4 MB.
-Total: 7.537900 ms (FindLiveObjects: 0.454800 ms CreateObjectMapping: 0.409100 ms MarkObjects: 6.210200 ms  DeleteObjects: 0.462100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 216606.068875 seconds.
-  path: Assets/Player/prefab/prefab camera
-  artifactKey: Guid(a9d357d320b77434bbcd6125bf372666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/prefab/prefab camera using Guid(a9d357d320b77434bbcd6125bf372666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db656d1ee4ef79051096b53e4f873f49') in 0.003456 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Player/prefab/Player.prefab
-  artifactKey: Guid(436e443d711496748921e7bb24e6563a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/prefab/Player.prefab using Guid(436e443d711496748921e7bb24e6563a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5950235ec745cb2b394feab7ddc0412') in 0.177396 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file data-00000173C1C4B010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1C4B010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405937060 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406C44020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740781D250 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406E67030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740E672030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405937060 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405937060 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408D4E310 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405DEDC10 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F378040 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407FEF500 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EFCB030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740FFC0700 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407FEF500 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F002640 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740E803640 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406158C20 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406DA9020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408008D10 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F378040 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405937060 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1A22250 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740796C280 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1B63020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740E803640 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405C5EE30 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740FE64400 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740E8AC010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406DA9020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405941270 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.970 seconds
-Refreshing native plugins compatible for Editor in 2.09 ms, found 0 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.361 seconds
-Domain Reload Profiling: 3318ms
-	BeginReloadAssembly (348ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (56ms)
-	RebuildCommonClasses (82ms)
-	RebuildNativeTypeToScriptingClass (24ms)
-	initialDomainReloadingComplete (68ms)
-	LoadAllAssembliesAndSetupDomain (434ms)
-		LoadAssemblies (567ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (82ms)
-			TypeCache.Refresh (18ms)
-				TypeCache.ScanAssembly (2ms)
-			ScanForSourceGeneratedMonoScriptInfo (51ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (2362ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (674ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (137ms)
-			ProcessInitializeOnLoadAttributes (338ms)
-			ProcessInitializeOnLoadMethodAttributes (147ms)
-			AfterProcessingInitializeOnLoad (29ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 2.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3528 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (1.2 MB). Loaded Objects now: 4074.
-Memory consumption went from 134.7 MB to 133.5 MB.
-Total: 4.795200 ms (FindLiveObjects: 0.370200 ms CreateObjectMapping: 0.345400 ms MarkObjects: 3.769000 ms  DeleteObjects: 0.309500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file data-00000173C133D1B0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C133D1B0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740FE5C930 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406C44020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740781D250 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408982020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740861C030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F62DB60 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F62DB60 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406F2F010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407EF0060 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F378040 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407E14010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740E8AC010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174060B4010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407E14010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174081B76A0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408447010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740808A010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174061BA010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740808A010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408702010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406F49010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740E694020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EF31010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174085B9030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174061BA010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174082BB040 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EB47A10 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405B3E9F0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174061BA010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174089CD830 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.765 seconds
-Refreshing native plugins compatible for Editor in 1.49 ms, found 0 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.627 seconds
-Domain Reload Profiling: 2384ms
-	BeginReloadAssembly (275ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (58ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (43ms)
 	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (363ms)
-		LoadAssemblies (469ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (424ms)
+		LoadAssemblies (346ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (73ms)
-			TypeCache.Refresh (13ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (50ms)
+		AnalyzeDomain (200ms)
+			TypeCache.Refresh (164ms)
+				TypeCache.ScanAssembly (150ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
 			ResolveRequiredComponents (9ms)
-	FinalizeReload (1627ms)
+	FinalizeReload (687ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (521ms)
+		SetupLoadedEditorAssemblies (463ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (122ms)
-			ProcessInitializeOnLoadAttributes (267ms)
-			ProcessInitializeOnLoadMethodAttributes (92ms)
-			AfterProcessingInitializeOnLoad (17ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (228ms)
+			ProcessInitializeOnLoadMethodAttributes (98ms)
+			AfterProcessingInitializeOnLoad (16ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 1.81 ms, found 0 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3530 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (1.2 MB). Loaded Objects now: 4090.
-Memory consumption went from 134.9 MB to 133.8 MB.
-Total: 5.871000 ms (FindLiveObjects: 0.342200 ms CreateObjectMapping: 0.415100 ms MarkObjects: 4.696300 ms  DeleteObjects: 0.416100 ms)
+Unloading 3598 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (1.2 MB). Loaded Objects now: 4075.
+Memory consumption went from 144.8 MB to 143.6 MB.
+Total: 5.656400 ms (FindLiveObjects: 0.371200 ms CreateObjectMapping: 0.292700 ms MarkObjects: 4.562900 ms  DeleteObjects: 0.428200 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -512,125 +177,53 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 449.602120 seconds.
-  path: Assets/Coelho que segue (Bob)/Script/COelhoControler.cs
-  artifactKey: Guid(0ff905a088a3b8b40990ae263fb807b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Coelho que segue (Bob)/Script/COelhoControler.cs using Guid(0ff905a088a3b8b40990ae263fb807b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce937dabbcf4596fc2350dedf83460ec') in 0.003631 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-Symbol file data-0000017408008BE0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407249030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406F49010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F689BB0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408197010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408C0B020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174100CB010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407F84C80 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407F84C80 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174076D6010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F9243A0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1C6F2D0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EB08010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F79BC00 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174060B4010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EB08010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174081B76A0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F3A0910 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407A40010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406258010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408008BE0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408050320 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174058F1010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F9D8C50 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408050320 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740584A010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740781D250 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408702010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408702010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F649EB0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740781D250 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F991510 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.104 seconds
-Refreshing native plugins compatible for Editor in 2.41 ms, found 0 plugins.
+- Loaded All Assemblies, in  0.673 seconds
+Refreshing native plugins compatible for Editor in 2.19 ms, found 0 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.367 seconds
-Domain Reload Profiling: 3452ms
-	BeginReloadAssembly (379ms)
+- Finished resetting the current domain, in  1.725 seconds
+Domain Reload Profiling: 2390ms
+	BeginReloadAssembly (248ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (57ms)
-	RebuildCommonClasses (90ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (78ms)
-	LoadAllAssembliesAndSetupDomain (512ms)
-		LoadAssemblies (662ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (291ms)
+		LoadAssemblies (417ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (85ms)
-			TypeCache.Refresh (14ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (9ms)
 				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (55ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (2367ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1726ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (696ms)
+		SetupLoadedEditorAssemblies (556ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
+			InitializePlatformSupportModulesInManaged (16ms)
 			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (159ms)
-			ProcessInitializeOnLoadAttributes (342ms)
-			ProcessInitializeOnLoadMethodAttributes (138ms)
-			AfterProcessingInitializeOnLoad (29ms)
+			BeforeProcessingInitializeOnLoad (120ms)
+			ProcessInitializeOnLoadAttributes (291ms)
+			ProcessInitializeOnLoadMethodAttributes (102ms)
+			AfterProcessingInitializeOnLoad (20ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 2.42 ms, found 0 plugins.
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 1.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3528 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (1.2 MB). Loaded Objects now: 4104.
-Memory consumption went from 134.7 MB to 133.5 MB.
-Total: 9.424100 ms (FindLiveObjects: 0.348600 ms CreateObjectMapping: 0.334900 ms MarkObjects: 8.437200 ms  DeleteObjects: 0.302200 ms)
+Unloading 3538 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (1.2 MB). Loaded Objects now: 4090.
+Memory consumption went from 131.7 MB to 130.6 MB.
+Total: 4.584100 ms (FindLiveObjects: 0.710200 ms CreateObjectMapping: 0.367900 ms MarkObjects: 3.220100 ms  DeleteObjects: 0.285100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -647,129 +240,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file data-0000017405569410 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001741056D020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406F49010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F689BB0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408197010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408C0B020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174100CB010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407F84C80 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407F84C80 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EABA880 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405953190 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000173C1C6F2D0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F368030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F958B00 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740739D030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740EB08010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174081B76A0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F368030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174060718A0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017405769020 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017470C3EC60 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F4D7640 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740FC96030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F9D8C50 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017406270030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740584A010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F368030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017408702010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000174083FD010 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F649EB0 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001740F368030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000017407249030 doesn't match image C:\Users\rodri\Documents\Projeto sirius 2\Projeto-sirius\Projeto Sirius\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.945 seconds
-Refreshing native plugins compatible for Editor in 2.50 ms, found 0 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.454 seconds
-Domain Reload Profiling: 4387ms
-	BeginReloadAssembly (321ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (53ms)
-	RebuildCommonClasses (74ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (449ms)
-		LoadAssemblies (557ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (83ms)
-			TypeCache.Refresh (13ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (55ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (3455ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1596ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
-			SetLoadedEditorAssemblies (9ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (324ms)
-			ProcessInitializeOnLoadAttributes (910ms)
-			ProcessInitializeOnLoadMethodAttributes (266ms)
-			AfterProcessingInitializeOnLoad (59ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (37ms)
-Refreshing native plugins compatible for Editor in 2.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3530 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (1.2 MB). Loaded Objects now: 4120.
-Memory consumption went from 134.9 MB to 133.8 MB.
-Total: 7.091900 ms (FindLiveObjects: 0.422100 ms CreateObjectMapping: 0.417900 ms MarkObjects: 5.877300 ms  DeleteObjects: 0.372800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 331917.465147 seconds.
+  path: Assets/Coletaveis/Quimicos/Quimicos Coletavel.prefab
+  artifactKey: Guid(1f8d748e899561344a4d00735de8145b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Coletaveis/Quimicos/Quimicos Coletavel.prefab using Guid(1f8d748e899561344a4d00735de8145b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16bbf356fb34e5d57849f703427ca195') in 0.188031 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26

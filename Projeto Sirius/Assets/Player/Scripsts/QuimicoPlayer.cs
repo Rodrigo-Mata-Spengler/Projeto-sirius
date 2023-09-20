@@ -26,6 +26,9 @@ public class QuimicoPlayer : MonoBehaviour
     [SerializeField] private int quimicos = 0;
     [SerializeField] private float quantidadeReabastecer = 0;
 
+    [Header("Modo teste")]
+    [SerializeField] private bool desligarCadencia = false;
+
     private void Start()
     {
         quimicoatual = 50f;
@@ -34,7 +37,7 @@ public class QuimicoPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (tempCadencia <= Time.time)
+        if (tempCadencia <= Time.time && !desligarCadencia)
         {
             quimicoatual -= perda;
 
@@ -62,6 +65,10 @@ public class QuimicoPlayer : MonoBehaviour
             }
         }
     }
+    public void ReabastecerQuimico(int a)
+    {
+        quimicos += a;
+    }
     public float GetQuimicoAtual()
     {
         return quimicoatual;
@@ -74,5 +81,12 @@ public class QuimicoPlayer : MonoBehaviour
     {
         return overdose;
     }
-
+    public int getQuimico()
+    {
+        return quimicos;
+    }
+    public bool IsInOverdose()
+    {
+        return quimicoatual >= overdose;
+    }
 }
