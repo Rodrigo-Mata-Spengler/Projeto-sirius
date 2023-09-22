@@ -37,6 +37,7 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] private float forcaOverdose = 0;
     private float forcaAtual = 0;
 
+    public bool movVertical = false;
     private Rigidbody rigidbody;
     private CharacterController pController;
     private QuimicoPlayer qPlayer;
@@ -56,9 +57,15 @@ public class PlayerMovimento : MonoBehaviour
         //definir velocidade do Player
         VelocidadePlayer();
 
-        //andar no eixo x e pular
-        MovimentPlayer();
-
+        if (movVertical)
+        {
+            MovimentoVerticalPlayer();
+        }
+        else
+        {
+            //andar no eixo x e pular
+            MovimentPlayer();
+        }
     }
 
     //andar no eixo x e pular
@@ -86,6 +93,13 @@ public class PlayerMovimento : MonoBehaviour
         pController.Move(moveDirection * Time.deltaTime);
     }
 
+    private void MovimentoVerticalPlayer()
+    {
+        moveDirection.y = Input.GetAxis("Horizontal");
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection.y *= velocidade;
+        pController.Move(moveDirection * Time.deltaTime);
+    }
     //correr
     private void VelocidadePlayer()
     {
