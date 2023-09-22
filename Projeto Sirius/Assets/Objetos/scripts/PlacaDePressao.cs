@@ -51,7 +51,13 @@ public class PlacaDePressao : MonoBehaviour
                 AnimationCoroutine = StartCoroutine(DoSlidingOpen());
                 
             }
-            
+            else
+            {
+                float dot = Vector3.Dot(Forward,transform.position.normalized);
+                Debug.Log($"Dot: {dot.ToString("N3")}");
+                AnimationCoroutine = StartCoroutine(DoRotationOpen(dot, Speed));
+            }
+
         }
     }
 
@@ -69,8 +75,37 @@ public class PlacaDePressao : MonoBehaviour
            
                 AnimationCoroutine = StartCoroutine(DoSlidingClose());
             }
+            else
+            {
+                AnimationCoroutine = StartCoroutine(DoRotationClose());
+            }
         }
     }
+    private IEnumerator DoRotationOpen(float ForwardAmount, float speed)
+    {
+        Quaternion startRotation = transform.rotation;
+        Quaternion endRotation;
+
+        if (ForwardAmount >= ForwardDirection)
+        {
+            endRotation = Quaternion.Euler(new Vector3(0, 0, StartRotation.z + RotationAmount));
+        }
+        else
+        {
+            endRotation = Quaternion.Euler(new Vector3(0, 0, StartRotation.z - RotationAmount));
+        }
+
+        IsOpen = true;
+
+        float time = 0;
+        while (time < 1)
+        {
+            transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
+            yield return null;
+            time += Time.deltaTime * speed;
+        }
+    }
+
 
     private IEnumerator DoSlidingOpen()
     {
@@ -82,6 +117,22 @@ public class PlacaDePressao : MonoBehaviour
         while (time < 1)
         {
             transform.position = Vector3.Lerp(startPosition, endPosition, time);
+            yield return null;
+            time += Time.deltaTime * Speed;
+        }
+    }
+
+    private IEnumerator DoRotationClose()
+    {
+        Quaternion startRotation = transform.rotation;
+        Quaternion endRotation = Quaternion.Euler(StartRotation);
+
+        IsOpen = false;
+
+        float time = 0;
+        while (time < 1)
+        {
+            transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
             yield return null;
             time += Time.deltaTime * Speed;
         }
