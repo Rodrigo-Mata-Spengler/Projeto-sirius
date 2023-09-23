@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovimento : MonoBehaviour
 {
     [Header("Velocidades Atuais")]
-    [SerializeField] private float velocidade = 0;
+    [SerializeField] public float velocidade = 0;
     [SerializeField] private float pulo = 0;
     [SerializeField] private float gravidade = 0;
 
@@ -24,7 +24,7 @@ public class PlayerMovimento : MonoBehaviour
 
     [Header("Overdose:")]
     [SerializeField] private float velocidadeOverdose = 0;
-    [SerializeField] private float velocidadeOverdoseCorrendo = 0;
+    [SerializeField] public float velocidadeOverdoseCorrendo = 0;
     [SerializeField] private float PuloOverdose = 0;
 
     [Header("Agachado:")]
