@@ -37,10 +37,16 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] private float forcaOverdose = 0;
     private float forcaAtual = 0;
 
-    public bool movVertical = false;
+    [Header("velocidade arrastando")]
+    [SerializeField] private float velocidadeArrastando = 0;
+    [SerializeField] private float puloArrastando = 0;
+    [HideInInspector] public bool arrastando = false;
+
+    [HideInInspector] public bool movVertical = false;
     private Rigidbody rigidbody;
     private CharacterController pController;
     private QuimicoPlayer qPlayer;
+    
 
     [Header("Temporario")]
     public GameObject sprite;
@@ -157,6 +163,11 @@ public class PlayerMovimento : MonoBehaviour
             pulo = PuloNormal;
         }
 
+        if (arrastando)
+        {
+            velocidade = velocidadeArrastando;
+            pulo = puloArrastando;
+        }
         
     }
 

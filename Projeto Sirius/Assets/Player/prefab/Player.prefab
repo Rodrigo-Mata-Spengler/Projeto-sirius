@@ -306,6 +306,7 @@ MonoBehaviour:
   alturaAgachado: 1
   forcaNormal: 2
   forcaOverdose: 5
+  movVertical: 0
   sprite: {fileID: 0}
 --- !u!114 &6551399426956054141
 MonoBehaviour:
@@ -320,8 +321,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qPlayer: {fileID: 0}
+  mPlayer: {fileID: 0}
   ancoraPlayer: {fileID: 5251191789419057727}
   tagArrastarObjeto: Arrastavel
+  tagSubirParede: Escalavel
 --- !u!1 &5251191789419057727
 GameObject:
   m_ObjectHideFlags: 0
