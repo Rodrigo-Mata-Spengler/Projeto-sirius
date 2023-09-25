@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Luiz/Luiz scene.unity
+    guid: f1d358b0112c5a54aa7dbd15bd2cfa3f
   m_configObjects: {}
