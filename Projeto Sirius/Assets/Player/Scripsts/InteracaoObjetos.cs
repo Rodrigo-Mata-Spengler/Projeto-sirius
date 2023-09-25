@@ -44,6 +44,8 @@ public class InteracaoObjetos : MonoBehaviour
     private void Arrasta()
     {
         objeto.transform.SetParent(ancoraPlayer.transform);
+
+        mPlayer.arrastando = true;
     }
     private void Solta()
     {
@@ -51,6 +53,7 @@ public class InteracaoObjetos : MonoBehaviour
         {
             objeto.transform.SetParent(gameObject.transform.parent);
         }
+        mPlayer.arrastando = false;
     }
 
     //para escalar
