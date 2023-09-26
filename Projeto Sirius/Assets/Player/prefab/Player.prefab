@@ -306,6 +306,9 @@ MonoBehaviour:
   alturaAgachado: 1
   forcaNormal: 2
   forcaOverdose: 5
+  velocidadeArrastando: 2
+  puloArrastando: 0
+  arrastando: 0
   movVertical: 0
   sprite: {fileID: 0}
 --- !u!114 &6551399426956054141

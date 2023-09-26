@@ -18,10 +18,16 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private string tagSubirParede;
     private bool interacaoEscalar = false;
 
+    [Header("Se Pendurar")]
+    [SerializeField] private string tagPendurar;
+    [SerializeField] private GameObject ancoraPendurar;
+    private bool interacaoPendurar = false;
+    private Transform original_parent;
     private void Start()
     {
         qPlayer = GetComponent<QuimicoPlayer>();
         mPlayer = GetComponent<PlayerMovimento>();
+        original_parent = gameObject.transform.parent;
     }
     private void Update()
     {
@@ -31,12 +37,17 @@ public class InteracaoObjetos : MonoBehaviour
         }else if (interacaoEscalar && Input.GetButtonDown("Interagir") && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             Escalar();
+        }else if (interacaoPendurar && Input.GetButton("Interagir") && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
+        {
+            Pendurar();
         }
 
         if (Input.GetButtonUp("Interagir") || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
         {
             Solta();
             SoltarEscalada();
+            SoltarPendurar();
+            SoltarPendurar();
         }
     }
 
@@ -57,15 +68,25 @@ public class InteracaoObjetos : MonoBehaviour
     }
 
     //para escalar
-
     private void Escalar()
     {
         mPlayer.movVertical = true;
     }
-
     private void SoltarEscalada()
     {
         mPlayer.movVertical = false;
+    }
+
+    //para pendurar
+    private void Pendurar()
+    {
+        gameObject.transform.SetParent(ancoraPendurar.transform);
+        mPlayer.enabled = false;
+    }
+    private void SoltarPendurar()
+    {
+        gameObject.transform.SetParent(original_parent);
+        mPlayer.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -78,6 +99,10 @@ public class InteracaoObjetos : MonoBehaviour
         else if(other.gameObject.CompareTag(tagSubirParede))
         {
             interacaoEscalar = true;
+        }else if (other.gameObject.CompareTag(tagPendurar))
+        {
+            interacaoPendurar = true;
+            ancoraPendurar = other.gameObject;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -90,6 +115,11 @@ public class InteracaoObjetos : MonoBehaviour
         if (other.gameObject.CompareTag(tagSubirParede))
         {
             interacaoEscalar = false;
+        }
+        else if (other.gameObject.CompareTag(tagPendurar))
+        {
+            interacaoPendurar = false;
+            ancoraPendurar = null;
         }
     }
 }

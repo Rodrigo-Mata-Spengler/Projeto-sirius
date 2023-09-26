@@ -8,6 +8,7 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] public float velocidade = 0;
     [SerializeField] private float pulo = 0;
     [SerializeField] private float gravidade = 0;
+    private float gravidadeAtual = 0;
 
     [Header("Informações do Player")]
     [SerializeField] private float altura = 0;
@@ -41,6 +42,12 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] private float velocidadeArrastando = 0;
     [SerializeField] private float puloArrastando = 0;
     [HideInInspector] public bool arrastando = false;
+
+    [Header("Velocidade Agarrando")]
+    [SerializeField] private float velocidadeAgarrando = 0;
+    [SerializeField] private float puloAgarrando = 0;
+    [SerializeField] private float gravidadeAgarrando = 0;
+    [HideInInspector] public bool agarrando = false;
 
     [HideInInspector] public bool movVertical = false;
     private Rigidbody rigidbody;
@@ -95,7 +102,7 @@ public class PlayerMovimento : MonoBehaviour
             moveDirection.x *= velocidade;
         }
         
-        moveDirection.y -= gravidade * Time.deltaTime;
+        moveDirection.y -= gravidadeAtual * Time.deltaTime;
         pController.Move(moveDirection * Time.deltaTime);
     }
 
@@ -109,6 +116,8 @@ public class PlayerMovimento : MonoBehaviour
     //correr
     private void VelocidadePlayer()
     {
+        gravidadeAtual = gravidade;
+
         if (Input.GetButton("Agachar"))
         {
             pController.height = alturaAgachado;
@@ -167,6 +176,13 @@ public class PlayerMovimento : MonoBehaviour
         {
             velocidade = velocidadeArrastando;
             pulo = puloArrastando;
+        }
+
+        if (agarrando)
+        {
+            velocidade = velocidadeAgarrando;
+            pulo = puloAgarrando;
+            gravidadeAtual = gravidadeAgarrando;
         }
         
     }
