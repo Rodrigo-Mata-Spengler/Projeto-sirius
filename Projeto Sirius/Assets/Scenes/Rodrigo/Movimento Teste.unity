@@ -1935,7 +1935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &1181288757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2685,8 +2685,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805849570}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.56, y: 2.66, z: -3.5}
+  m_LocalRotation: {x: 0.10874678, y: 0, z: 0, w: 0.9940695}
+  m_LocalPosition: {x: -12.56, y: 4.52, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2848,19 +2848,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.66
+      value: 4.52
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.5
+      value: -9.38
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9940695
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.10874678
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2890,17 +2890,9 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1061590427}
-    - target: {fileID: 7262266937319535176, guid: f9da142b97758e741af7395042304cb0, type: 3}
-      propertyPath: m_Path
-      value: 
-      objectReference: {fileID: 687860257}
     - target: {fileID: 8195445792919928546, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_Name
       value: Virtual Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 8673028184594132218, guid: f9da142b97758e741af7395042304cb0, type: 3}
-      propertyPath: m_Damping
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
