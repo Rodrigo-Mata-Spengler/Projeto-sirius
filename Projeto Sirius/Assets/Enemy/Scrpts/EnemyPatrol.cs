@@ -5,28 +5,37 @@ using UnityEngine.AI;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    private Vector3 target;
+    [HideInInspector]public Vector3 target;
     public Transform[] waypoints;
     private int WayPointsIndex = 0;
 
     public float speed;
     [SerializeField] private float StopTime;
     [SerializeField]private float currentTime;
+
+    [HideInInspector] public bool seePlayer = false;
+    private GameObject Player;
     private void Start()
     {
         UpdateDestination();
+        Player = GameObject.FindGameObjectWithTag("Player");
       
     }
 
     private void Update()
     {
-        if(Vector3.Distance(transform.position,target) > 0.2f)
+        if(Vector3.Distance(transform.position, target) > 0.2f && seePlayer)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            transform.LookAt(target);
+        }
+        if(Vector3.Distance(transform.position,target) > 0.2f && !seePlayer)
         {
             //move to target
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             transform.LookAt(target);
         }
-        else
+        else if(!seePlayer)
         {
             Delay();
         }
@@ -51,7 +60,15 @@ public class EnemyPatrol : MonoBehaviour
 
     void UpdateDestination()
     {
-        target = waypoints[WayPointsIndex].position;
+        if (seePlayer)
+        {
+            target = Player.transform.position;
+        }
+        else
+        {
+            target = waypoints[WayPointsIndex].position;
+        }
+        
        
     }
     void IterateWaypointIndex()
