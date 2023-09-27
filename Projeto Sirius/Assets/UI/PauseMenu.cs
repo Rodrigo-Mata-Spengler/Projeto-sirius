@@ -10,6 +10,9 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private GameObject OpcoesPanel;
     [SerializeField] private GameObject PausePanel;
+    [SerializeField] private GameObject DeathPanel;
+
+    private bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseOrResume();
+            
 
         }
     }
@@ -32,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         if (IsPaused)
         {
             Resume();
+            
         }
         else
         {
@@ -39,17 +44,32 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void Death()
+    {
+        Time.timeScale = 0f;
+        DeathPanel.SetActive(true);
+        dead = true;
+    }
+    public void Reborn()
+    {
+        Time.timeScale = 1f;
+        DeathPanel.SetActive(false);
+        SceneManager.LoadScene(1);
+        dead = false;
+    }
 
     private void Pause()
     {
         Time.timeScale = 0f;
         IsPaused = true;
+        PausePanel.SetActive(true);
     }
 
     private void Resume()
     {
         Time.timeScale = 1f;
         IsPaused = false;
+        PausePanel.SetActive(false);
     }
 
     public void Opcoes()

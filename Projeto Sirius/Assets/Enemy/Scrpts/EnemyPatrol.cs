@@ -15,6 +15,7 @@ public class EnemyPatrol : MonoBehaviour
 
     [HideInInspector] public bool seePlayer = false;
     private GameObject Player;
+    [SerializeField] private PauseMenu pauseMenu;
     private void Start()
     {
         UpdateDestination();
@@ -27,13 +28,14 @@ public class EnemyPatrol : MonoBehaviour
         if(Vector3.Distance(transform.position, target) > 0.2f && seePlayer)
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            transform.LookAt(target);
+            //transform.LookAt(target);
+            pauseMenu.Death();
         }
         if(Vector3.Distance(transform.position,target) > 0.2f && !seePlayer)
         {
             //move to target
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            transform.LookAt(target);
+            //transform.LookAt(target);
         }
         else if(!seePlayer)
         {
