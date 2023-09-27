@@ -49,6 +49,10 @@ public class PlayerMovimento : MonoBehaviour
     [SerializeField] private float gravidadeAgarrando = 0;
     [HideInInspector] public bool agarrando = false;
 
+    [Header("Wall Graber")]
+    [SerializeField] private string tagWall;
+    [SerializeField] private float time_grabed;
+
     [HideInInspector] public bool movVertical = false;
     private Rigidbody rigidbody;
     private CharacterController pController;
