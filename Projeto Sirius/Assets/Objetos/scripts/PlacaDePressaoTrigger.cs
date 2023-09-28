@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class PlacaDePressaoTrigger : MonoBehaviour
 {
-    [SerializeField] private PlacaDePressao porta;
+    [SerializeField] private PlacaDePressao[] porta;
     [SerializeField] private PlacaDePressao placaDePressao;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Arrastavel"))
         {
-            if (!porta.IsOpen)
+            for (int i = 0; i < porta.Length; i++)
             {
-                porta.Open(other.transform.position);
-                placaDePressao.Open(other.transform.position);
-               
+                if (!porta[i].IsOpen)
+                {
+                    porta[i].Open(other.transform.position);
+                    placaDePressao.Open(other.transform.position);
+
+                }
             }
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Arrastavel"))
         {
-            
-            if (porta.IsOpen)
+            for(int i =0; i< porta.Length; i++)
             {
-                placaDePressao.Close();
-                porta.Close();
+
+                if (porta[i].IsOpen)
+                {
+                    placaDePressao.Close();
+                    porta[i].Close();
+                }
             }
+
         }
     }
 }
