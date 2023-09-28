@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{88c6fe4f-8252-4acb-8b28-eff958116ed0}">
+		<property name="name">
+			<value>Volume Coração</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dcb7b5f7-a99b-4fa6-91ac-bebda6c9cf4d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ba8655a0-cae4-49f8-9c25-fbaf0cc5ed6b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ba8655a0-cae4-49f8-9c25-fbaf0cc5ed6b}">
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
