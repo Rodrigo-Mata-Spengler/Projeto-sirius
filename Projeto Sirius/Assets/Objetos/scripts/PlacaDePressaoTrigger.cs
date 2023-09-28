@@ -11,6 +11,7 @@ public class PlacaDePressaoTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") || other.CompareTag("Arrastavel"))
         {
+            Debug.Log("aquii porra");
             for (int i = 0; i < porta.Length; i++)
             {
                 if (!porta[i].IsOpen)

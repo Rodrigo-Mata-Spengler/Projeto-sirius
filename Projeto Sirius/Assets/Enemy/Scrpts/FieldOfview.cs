@@ -53,12 +53,14 @@ public class FieldOfview : MonoBehaviour
                     visibleTargets.Add(target);
                     SeePlayer = true;
                     Debug.LogWarning("vi");
+                    enemyPatrolScript.seePlayer = true;
 
                     enemyPatrolScript.target = target.position;
                 }
                 else
                 {
                     SeePlayer = false;
+                    enemyPatrolScript.seePlayer = false;
                 }
 
             }

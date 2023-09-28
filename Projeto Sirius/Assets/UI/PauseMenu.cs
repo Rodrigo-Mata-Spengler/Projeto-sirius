@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         DeathPanel.SetActive(true);
         dead = true;
+        
     }
     public void Reborn()
     {

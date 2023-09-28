@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorButton : MonoBehaviour
 {
 
-    [SerializeField] private Door Door;
+    [SerializeField] private Door[] Door;
     private bool inside = false;
     private Transform PlayerTransform;
     // Start is called before the first frame update
@@ -15,10 +15,13 @@ public class DoorButton : MonoBehaviour
     {
         if (inside && Input.GetButton("Interagir"))
         {
-            if (!Door.IsOpen)
+            for (int i = 0; i < Door.Length; i++)
             {
-                Door.Open(PlayerTransform.transform.position);
+                if (!Door[i].IsOpen)
+                {
+                    Door[i].Open(PlayerTransform.transform.position);
 
+                }
             }
         }
     }
