@@ -47,7 +47,6 @@ public class InteracaoObjetos : MonoBehaviour
             Solta();
             SoltarEscalada();
             SoltarPendurar();
-            SoltarPendurar();
         }
     }
 
@@ -111,15 +110,18 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoArrasta = false;
             objeto = null;
+            Solta();
         }
         if (other.gameObject.CompareTag(tagSubirParede))
         {
             interacaoEscalar = false;
+            SoltarEscalada();
         }
         else if (other.gameObject.CompareTag(tagPendurar))
         {
             interacaoPendurar = false;
             ancoraPendurar = null;
+            SoltarPendurar();
         }
     }
 }

@@ -100,8 +100,9 @@ public class Door : MonoBehaviour
         while (time < 1)
         {
             transform.position = Vector3.Lerp(startPosition, endPosition, time);
-            yield return null;
             time += Time.deltaTime * Speed;
+            yield return null;
+            
         }
     }
 
