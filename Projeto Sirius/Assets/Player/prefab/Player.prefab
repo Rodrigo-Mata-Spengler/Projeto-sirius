@@ -309,6 +309,12 @@ MonoBehaviour:
   velocidadeArrastando: 2
   puloArrastando: 0
   arrastando: 0
+  velocidadeAgarrando: 0
+  puloAgarrando: 0
+  gravidadeAgarrando: 0
+  agarrando: 0
+  tagWall: 
+  time_grabed: 0
   movVertical: 0
   sprite: {fileID: 0}
 --- !u!114 &6551399426956054141
@@ -328,6 +334,8 @@ MonoBehaviour:
   ancoraPlayer: {fileID: 5251191789419057727}
   tagArrastarObjeto: Arrastavel
   tagSubirParede: Escalavel
+  tagPendurar: Agarravel
+  ancoraPendurar: {fileID: 0}
 --- !u!1 &5251191789419057727
 GameObject:
   m_ObjectHideFlags: 0
