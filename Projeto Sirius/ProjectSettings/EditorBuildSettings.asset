@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mendes/Cena Mendes.unity
     guid: d3cb4fbf6e8d3f7499eeeb65ba39a583
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 3751616eeed7f3b48a0653d77a6a54b4, type: 2}
