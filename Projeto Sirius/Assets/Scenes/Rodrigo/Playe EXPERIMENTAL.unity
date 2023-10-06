@@ -1506,6 +1506,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083752751}
   m_CullTransparentMesh: 1
+--- !u!1001 &1518373999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077908523437290206, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077908523437290206, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 436e443d711496748921e7bb24e6563a, type: 3}
 --- !u!1 &1670932435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Experimental
       objectReference: {fileID: 0}
+    - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6851516022441376659, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.56
@@ -1948,10 +2013,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8516314216005008833, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7424912556805429236, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+    - {fileID: 1373603166799935340, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8511200996908871681}
     - targetCorrespondingSourceObject: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8511200996908871680}
@@ -1982,11 +2056,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8511200996908871681}
+        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ed2de12b-276f-4704-8ef0-6b309240d60c
     m_ActionName: player/Move[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8511200996908871681}
+        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e0f3da69-3773-4927-99ac-411b22d7fafc
     m_ActionName: player/Jump[/Keyboard/space]
   - m_PersistentCalls:
@@ -1994,11 +2092,35 @@ MonoBehaviour:
     m_ActionId: cfabb602-3073-4674-bab8-5810f3f9f183
     m_ActionName: player/Interacao[/Keyboard/f]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8511200996908871681}
+        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
+        m_MethodName: OnEscalar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7047884b-2280-40c6-a8d9-0b35adc239ab
     m_ActionName: player/Escalar[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8511200996908871681}
+        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
+        m_MethodName: OnAgacahr
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ad3a97d6-4823-4673-a3cd-d5017000ba25
     m_ActionName: player/Agachar[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
@@ -2006,6 +2128,19 @@ MonoBehaviour:
   m_DefaultActionMap: player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8511200996908871681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4093940292793350928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89af2eac617942e4990fe462802385b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeNormal: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2017,3 +2152,4 @@ SceneRoots:
   - {fileID: 850782216357180877}
   - {fileID: 2142689}
   - {fileID: 1670932438}
+  - {fileID: 1518373999}

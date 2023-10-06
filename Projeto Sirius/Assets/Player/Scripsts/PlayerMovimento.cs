@@ -89,7 +89,7 @@ public class PlayerMovimento : MonoBehaviour
     //andar no eixo x e pular
     private void MovimentPlayer()
     {
-
+        Debug.Log("mover:" + Input.GetAxis("Horizontal"));
         if (pController.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
