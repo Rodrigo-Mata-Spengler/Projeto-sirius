@@ -2059,22 +2059,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8511200996908871681}
         m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ed2de12b-276f-4704-8ef0-6b309240d60c
-    m_ActionName: player/Move[/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8511200996908871681}
-        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
@@ -2095,22 +2079,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8511200996908871681}
         m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
-        m_MethodName: OnEscalar
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7047884b-2280-40c6-a8d9-0b35adc239ab
-    m_ActionName: player/Escalar[/Keyboard/s,/Keyboard/w]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8511200996908871681}
-        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
         m_MethodName: OnAgacahr
         m_Mode: 0
         m_Arguments:
@@ -2123,6 +2091,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ad3a97d6-4823-4673-a3cd-d5017000ba25
     m_ActionName: player/Agachar[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8511200996908871681}
+        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ed2de12b-276f-4704-8ef0-6b309240d60c
+    m_ActionName: player/Move[/Keyboard/d,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8511200996908871681}
+        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
+        m_MethodName: OnRun
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8366a544-6c95-4556-926a-76478cbc3f97
+    m_ActionName: player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player
@@ -2141,6 +2141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadeNormal: 10
+  velocidadeCorridaNormal: 0
+  puloNormal: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
