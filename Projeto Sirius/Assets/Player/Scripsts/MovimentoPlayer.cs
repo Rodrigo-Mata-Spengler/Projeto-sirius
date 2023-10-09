@@ -14,8 +14,7 @@ public class MovimentoPlayer : MonoBehaviour
 
     [Header("Velocidade Caminhada")]
     [SerializeField] private float velocidadeNormal = 0;
-
-    private bool escalando = false;    
+    private bool escalando = false;
 
     [Header("velocidade Corrida")]
     private bool correndo = false;
@@ -30,6 +29,11 @@ public class MovimentoPlayer : MonoBehaviour
     [SerializeField] private float gravidade = 0;
     [SerializeField] private float puloNormal = 0;
 
+    [Header("Agachar")]
+    private float alturaAtual = 0;
+    private bool agachado = false;
+    [SerializeField] private float alturaAgachado = 0;
+    [SerializeField] private float velocidadeAgachadoNormal = 0;
 
 
     private void Start()
@@ -37,6 +41,7 @@ public class MovimentoPlayer : MonoBehaviour
         player = GetComponent<Rigidbody>();
         playerControler = GetComponent<CharacterController>();
         playerInteracao = GetComponent<InteracaoObjetos>();
+        alturaAtual = playerControler.height;
         playerInput = new Vector3(0, 0, 0);
     }
 
@@ -74,7 +79,15 @@ public class MovimentoPlayer : MonoBehaviour
 
     public void OnAgacahr(InputAction.CallbackContext context)
     {
-        //Debug.Log("agachar");
+        if (context.ReadValue<float>() == 0)
+        {
+            agachado = false;
+        }
+        else
+        {
+            agachado = true;
+            Debug.Log("teste!");
+        }
     }
 
     public void OnRun(InputAction.CallbackContext context)
@@ -91,11 +104,13 @@ public class MovimentoPlayer : MonoBehaviour
     private float VelocidadeBrain()
     {
         float temp = 0;
-        /*if (escalando)
+        if (agachado)
+        {
+            temp = velocidadeAgachadoNormal;
+        }else if (escalando)
         {
             temp = velocidadeEscaladaNormal;
-        }else */
-        if (correndo)
+        }else if (correndo)
         {
             temp = velocidadeCorridaNormal;
         }else
@@ -105,16 +120,26 @@ public class MovimentoPlayer : MonoBehaviour
 
         return temp;
     }
-
+    private void Agachar()
+    {
+        if (agachado)
+        {
+            playerControler.height = alturaAgachado;
+        }
+        else
+        {
+            playerControler.height = alturaAtual;
+        }
+    }
     private void Update()
     {
-        Debug.Log(playerInput.y);
         if (OnEscalar())
         {
             MovimentoVerticalplayer();
         }
         else
         {
+            Agachar();
             MovimentPlayer();
         }
         

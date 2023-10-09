@@ -5,11 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Luiz/Luiz scene.unity
     guid: f1d358b0112c5a54aa7dbd15bd2cfa3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mendes/Cena Mendes.unity
     guid: d3cb4fbf6e8d3f7499eeeb65ba39a583
+  - enabled: 1
+    path: Assets/Scenes/Rodrigo/Playe EXPERIMENTAL.unity
+    guid: 7e47401a01e803342b7fffd3ed71797d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3751616eeed7f3b48a0653d77a6a54b4, type: 2}

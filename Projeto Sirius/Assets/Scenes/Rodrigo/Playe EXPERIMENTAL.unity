@@ -2244,6 +2244,8 @@ MonoBehaviour:
   velocidadeEscaladaNormal: 5
   gravidade: 10
   puloNormal: 5
+  alturaAgachado: 1
+  velocidadeAgachadoNormal: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
