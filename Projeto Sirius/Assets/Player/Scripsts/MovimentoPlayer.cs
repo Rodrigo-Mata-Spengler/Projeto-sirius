@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class MovimentoPlayer : MonoBehaviour
 {
     private Rigidbody player;
+    private CharacterController playerControler;
     private float velocidadeAtual;
     private Vector2 playerInput;
 
@@ -17,15 +18,18 @@ public class MovimentoPlayer : MonoBehaviour
     [SerializeField] private float velocidadeCorridaNormal = 0;
 
     [Header("Pulo")]
+    
     [SerializeField] private float puloNormal = 0;
+
+    public int a = 0;
 
     private void Start()
     {
         player = GetComponent<Rigidbody>();
+        playerControler = GetComponent<CharacterController>();
     }
     public void OnMove(InputAction.CallbackContext context)
     {
-       Debug.Log("Mover:"+context.ReadValue<Vector2>());
        playerInput = context.ReadValue<Vector2>();
     }
 
@@ -46,19 +50,32 @@ public class MovimentoPlayer : MonoBehaviour
 
     public void OnRun(InputAction.CallbackContext context)
     {
-        correndo = !correndo;
-        
+        if (context.ReadValue<float>() == 0)
+        {
+            correndo = false;
+        }else
+        {
+            correndo = true;
+        }
     }
 
-    private void VelocidadeBrain()
+    private float VelocidadeBrain()
     {
-        
+        if (correndo)
+        {
+            return velocidadeCorridaNormal;
+        }else
+        {
+            return velocidadeNormal;
+        }
+
+        return 0;
     }
 
     private void Update()
     {
-        Debug.Log(correndo);
-        player.velocity = new Vector3(playerInput.x*velocidadeNormal,0,0);
+        
+        player.velocity = new Vector3(playerInput.x* VelocidadeBrain(),0,0);
         //Debug.Log("velocidade:" + player.velocity);
     }
 }

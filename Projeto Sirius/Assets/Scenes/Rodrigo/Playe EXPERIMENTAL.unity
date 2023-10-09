@@ -2014,11 +2014,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8516314216005008833, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516314216005008833, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7424912556805429236, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
     - {fileID: 1373603166799935340, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2140,9 +2143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af2eac617942e4990fe462802385b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeNormal: 10
-  velocidadeCorridaNormal: 0
+  velocidadeNormal: 5
+  velocidadeCorridaNormal: 10
   puloNormal: 0
+  a: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
