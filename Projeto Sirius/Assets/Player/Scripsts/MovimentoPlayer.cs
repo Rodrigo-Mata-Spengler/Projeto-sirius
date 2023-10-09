@@ -109,20 +109,30 @@ public class MovimentoPlayer : MonoBehaviour
     private void Update()
     {
         Debug.Log(playerInput.y);
-        MovimentPlayer();
+        if (OnEscalar())
+        {
+            MovimentoVerticalplayer();
+        }
+        else
+        {
+            MovimentPlayer();
+        }
+        
     }
 
+    private void MovimentoVerticalplayer()
+    {
+        moveDirection = new Vector3(playerInput.x, playerInput.y, 0);
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= VelocidadeBrain();
+        playerControler.Move(moveDirection * Time.deltaTime);
+    }
     private void MovimentPlayer()
     {
         
         if (playerControler.isGrounded)
         {
             moveDirection = new Vector3(playerInput.x, 0, 0);
-            if (OnEscalar())
-            {
-                moveDirection.y = playerInput.y;
-                Debug.Log(moveDirection.y);
-            }
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= VelocidadeBrain();
             if (pulando)
@@ -137,11 +147,7 @@ public class MovimentoPlayer : MonoBehaviour
             moveDirection.x *= VelocidadeBrain();
         }
 
-        if (!OnEscalar())
-        {
-            moveDirection.y -= gravidade * Time.deltaTime;
-        }
-        //Debug.Log(moveDirection);
+        moveDirection.y -= gravidade * Time.deltaTime;
         playerControler.Move(moveDirection * Time.deltaTime);
 
     }
