@@ -1965,6 +1965,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 917601857364940640, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_Name
       value: Player Experimental
@@ -2019,7 +2023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516314216005008833, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1373603166799935340, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
@@ -2145,7 +2149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadeNormal: 5
   velocidadeCorridaNormal: 10
-  puloNormal: 0
+  gravidade: 10
+  puloNormal: 5
   a: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
