@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteracaoObjetos : MonoBehaviour
 {
+    [Header("Tag Status")]
+    [SerializeField] public string tag;
     [Header("Player")]
     [SerializeField] private QuimicoPlayer qPlayer;
     [SerializeField] private PlayerMovimento mPlayer;
@@ -15,7 +17,7 @@ public class InteracaoObjetos : MonoBehaviour
     private GameObject objeto;
 
     [Header("Subir nas Paredes")]
-    [SerializeField] private string tagSubirParede;
+    [SerializeField] public string tagSubirParede;
     private bool interacaoEscalar = false;
 
     [Header("Se Pendurar")]
@@ -90,7 +92,8 @@ public class InteracaoObjetos : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(tagArrastarObjeto))
+        tag = other.gameObject.tag;
+        /*if (other.gameObject.CompareTag(tagArrastarObjeto))
         {
             interacaoArrasta = true;
             objeto = other.gameObject;
@@ -102,11 +105,12 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoPendurar = true;
             ancoraPendurar = other.gameObject;
-        }
+        }*/
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag(tagArrastarObjeto))
+        tag = null ;
+        /*if (other.gameObject.CompareTag(tagArrastarObjeto))
         {
             interacaoArrasta = false;
             objeto = null;
@@ -115,13 +119,13 @@ public class InteracaoObjetos : MonoBehaviour
         if (other.gameObject.CompareTag(tagSubirParede))
         {
             interacaoEscalar = false;
-            SoltarEscalada();
+            //SoltarEscalada();
         }
         else if (other.gameObject.CompareTag(tagPendurar))
         {
             interacaoPendurar = false;
             ancoraPendurar = null;
             SoltarPendurar();
-        }
+        }*/
     }
 }

@@ -9,6 +9,8 @@ public class MovimentoPlayer : MonoBehaviour
     private CharacterController playerControler;
     private float velocidadeAtual;
     private Vector3 playerInput;
+    private InteracaoObjetos playerInteracao;
+    private Vector3 moveDirection;
 
     [Header("Velocidade Caminhada")]
     [SerializeField] private float velocidadeNormal = 0;
@@ -28,13 +30,13 @@ public class MovimentoPlayer : MonoBehaviour
     [SerializeField] private float gravidade = 0;
     [SerializeField] private float puloNormal = 0;
 
-    public int a = 0;
-    private Vector3 moveDirection;
+
 
     private void Start()
     {
         player = GetComponent<Rigidbody>();
         playerControler = GetComponent<CharacterController>();
+        playerInteracao = GetComponent<InteracaoObjetos>();
         playerInput = new Vector3(0, 0, 0);
     }
 
@@ -42,7 +44,7 @@ public class MovimentoPlayer : MonoBehaviour
     {
         Vector2 temp = context.ReadValue<Vector2>();
         playerInput.x = temp.x;
-        //playerInput.y = temp.y;
+        playerInput.y = temp.y;
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -58,15 +60,15 @@ public class MovimentoPlayer : MonoBehaviour
 
     }
 
-    public void OnEscalar(InputAction.CallbackContext context)
+    public bool OnEscalar()
     {
-        if (context.ReadValue<float>() == 0)
+        if (playerInteracao.tag == playerInteracao.tagSubirParede)
         {
-            pulando = false;
+            return escalando = true;
         }
-        else if()
+        else
         {
-            pulando = true;
+            return escalando = false;
         }
     }
 
@@ -89,10 +91,11 @@ public class MovimentoPlayer : MonoBehaviour
     private float VelocidadeBrain()
     {
         float temp = 0;
-        if (escalando)
+        /*if (escalando)
         {
             temp = velocidadeEscaladaNormal;
-        }else if (correndo)
+        }else */
+        if (correndo)
         {
             temp = velocidadeCorridaNormal;
         }else
@@ -103,23 +106,9 @@ public class MovimentoPlayer : MonoBehaviour
         return temp;
     }
 
-    private float VelocidadeVerticalBrain()
-    {
-        float temp = 0;
-        if (playerControler.isGrounded)
-        {
-            temp = playerInput.y * puloNormal;
-        }
-        
-        //temp -= gravidade;
-
-        Debug.Log("velocidade vertical:" + temp);
-
-        return temp;
-    }
-
     private void Update()
     {
+        Debug.Log(playerInput.y);
         MovimentPlayer();
     }
 
@@ -129,8 +118,13 @@ public class MovimentoPlayer : MonoBehaviour
         if (playerControler.isGrounded)
         {
             moveDirection = new Vector3(playerInput.x, 0, 0);
+            if (OnEscalar())
+            {
+                moveDirection.y = playerInput.y;
+                Debug.Log(moveDirection.y);
+            }
             moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection.x *= VelocidadeBrain();
+            moveDirection *= VelocidadeBrain();
             if (pulando)
             {
                 moveDirection.y = puloNormal;
@@ -143,7 +137,11 @@ public class MovimentoPlayer : MonoBehaviour
             moveDirection.x *= VelocidadeBrain();
         }
 
-        moveDirection.y -= gravidade * Time.deltaTime;
+        if (!OnEscalar())
+        {
+            moveDirection.y -= gravidade * Time.deltaTime;
+        }
+        //Debug.Log(moveDirection);
         playerControler.Move(moveDirection * Time.deltaTime);
 
     }
