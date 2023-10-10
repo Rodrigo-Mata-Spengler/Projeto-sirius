@@ -62,7 +62,6 @@ public class QuimicoPlayer : MonoBehaviour
 
         if (aplicar && tempUso <= Time.time)
         {
-            Debug.Log("usou");
             if (quimicos > 0)
             {
                 quimicoatual += quantidadeReabastecer;
@@ -74,13 +73,13 @@ public class QuimicoPlayer : MonoBehaviour
 
     public void OnAplicar(InputAction.CallbackContext context)
     {
-        if (context.ReadValue<float>() == 0)
-        {
-            aplicar = false;
-        }
-        else
+        if (context.performed)
         {
             aplicar = true;
+        }
+        else if(context.canceled)
+        {
+            aplicar = false;
         }
     }
 

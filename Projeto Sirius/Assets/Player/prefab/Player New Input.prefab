@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 2883722794124855018}
   - component: {fileID: 8336167175591605944}
   m_Layer: 3
-  m_Name: Player Experimental
+  m_Name: Player New Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,11 +236,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7d325abd70534a9146431ef77a3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: 0
   tag: 
   qPlayer: {fileID: 0}
   mPlayer: {fileID: 0}
   ancoraPlayer: {fileID: 6951047221563369458}
   tagArrastarObjeto: Arrastavel
+  tagQuimicoColetavel: QuimicoColetavel
+  quimicoColetavel: {fileID: 0}
   tagSubirParede: Escalavel
   tagPendurar: Agarravel
   ancoraPendurar: {fileID: 0}
@@ -256,13 +259,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af2eac617942e4990fe462802385b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadeAbstinencia: 3
   velocidadeNormal: 5
-  velocidadeCorridaNormal: 10
+  velocidadeOverdose: 7
+  velocidadeCorridaAbstinencia: 0
+  velocidadeCorridaNormal: 8
+  velocidadeCorridaOverdose: 10
+  velocidadeEscaladaAbstinencia: 3
   velocidadeEscaladaNormal: 5
+  velocidadeEscaladaOverdose: 7
   gravidade: 10
+  puloAbstinencia: 0
   puloNormal: 5
+  puloOverdose: 7
   alturaAgachado: 1
   velocidadeAgachadoNormal: 2
+  velocidadeArrastandoNormal: 1
+  velocidadeArrastandoOverdose: 3
+  puloArrastando: 5
+  arrastando: 0
 --- !u!114 &8336167175591605944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +320,19 @@ MonoBehaviour:
     m_ActionId: e0f3da69-3773-4927-99ac-411b22d7fafc
     m_ActionName: player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 386463765481018588}
+        m_TargetAssemblyTypeName: InteracaoObjetos, Assembly-CSharp
+        m_MethodName: OnInteracao
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: cfabb602-3073-4674-bab8-5810f3f9f183
     m_ActionName: player/Interacao[/Keyboard/f]
   - m_PersistentCalls:
