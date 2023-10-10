@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -14,23 +15,13 @@ public class PauseMenu : MonoBehaviour
 
     private bool dead = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnPause(InputAction.CallbackContext context)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (context.performed)
         {
             PauseOrResume();
-            
-
         }
     }
-
     public void PauseOrResume()
     {
         if (IsPaused)

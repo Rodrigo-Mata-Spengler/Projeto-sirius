@@ -1641,7 +1641,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7840191889680533103, guid: 436e443d711496748921e7bb24e6563a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 436e443d711496748921e7bb24e6563a, type: 3}
 --- !u!1 &1670932435
 GameObject:
@@ -2085,17 +2088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73dd2a8b45e4134d8fd6a6838911a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6551669414309464945 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 386463765481018588, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-  m_PrefabInstance: {fileID: 6802313351899279926}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3e7d325abd70534a9146431ef77a3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6802313351899279926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2104,50 +2096,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 386463765481018588, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: tagQuimicoColetavel
-      value: QuimicoColetavel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: puloOverdose
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: puloArrastando
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeOverdose
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeAbstinencia
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeCorridaNormal
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeCorridaOverdose
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeArrastandoNormal
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeEscaladaOverdose
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeArrastandoOverdose
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: velocidadeEscaladaAbstinencia
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_Name
       value: Player Experimental
@@ -2191,34 +2139,6 @@ PrefabInstance:
     - target: {fileID: 6851516022441376659, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6551669414309464945}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnInteracao
-      objectReference: {fileID: 0}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InteracaoObjetos, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8336167175591605944, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

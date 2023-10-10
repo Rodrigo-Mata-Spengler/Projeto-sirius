@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 1953348688379884995}
   m_Layer: 0
   m_Name: door trigger
-  m_TagString: Untagged
+  m_TagString: BotaoPorta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b0f85bed4b12744b9b63395d72d9456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 8781027366005680251}
+  Door:
+  - {fileID: 0}
 --- !u!1 &8561929110791369965
 GameObject:
   m_ObjectHideFlags: 0

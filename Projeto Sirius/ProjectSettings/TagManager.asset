@@ -9,6 +9,8 @@ TagManager:
   - Agarravel
   - Parede
   - QuimicoColetavel
+  - LightSwitch
+  - BotaoPorta
   layers:
   - Default
   - TransparentFX

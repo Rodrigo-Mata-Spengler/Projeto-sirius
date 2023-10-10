@@ -247,6 +247,10 @@ MonoBehaviour:
   tagSubirParede: Escalavel
   tagPendurar: Agarravel
   ancoraPendurar: {fileID: 0}
+  tagLightSwitch: LightSwitch
+  luz: {fileID: 0}
+  tagAlavanca: BotaoPorta
+  door: {fileID: 0}
 --- !u!114 &2883722794124855018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +403,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 78a633a0-0041-49f7-ba19-c0c85249e7c5
     m_ActionName: player/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3db04269-aabe-4a8a-9231-3a597bd2d00a
+    m_ActionName: player/Pausar[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player

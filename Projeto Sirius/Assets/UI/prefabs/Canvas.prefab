@@ -2042,6 +2042,7 @@ GameObject:
   - component: {fileID: 5471782128641183728}
   - component: {fileID: 6618847307979267259}
   - component: {fileID: 4618573126689841845}
+  - component: {fileID: 7174890966060018279}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -2123,6 +2124,76 @@ MonoBehaviour:
   OpcoesPanel: {fileID: 1854268702197470324}
   PausePanel: {fileID: 3433731066886269525}
   DeathPanel: {fileID: 3985645779385899092}
+--- !u!114 &7174890966060018279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433731066886269525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: cb15dbee7cdbb084c9867f0cafc3c3cf, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed2de12b-276f-4704-8ef0-6b309240d60c
+    m_ActionName: player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0f3da69-3773-4927-99ac-411b22d7fafc
+    m_ActionName: player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cfabb602-3073-4674-bab8-5810f3f9f183
+    m_ActionName: player/Interacao[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ad3a97d6-4823-4673-a3cd-d5017000ba25
+    m_ActionName: player/Agachar[/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8366a544-6c95-4556-926a-76478cbc3f97
+    m_ActionName: player/Correr[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 78a633a0-0041-49f7-ba19-c0c85249e7c5
+    m_ActionName: player/Aplicar[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4618573126689841845}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3db04269-aabe-4a8a-9231-3a597bd2d00a
+    m_ActionName: player/Pausar[/Keyboard/escape]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &3656943950769136423
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,17 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private GameObject ancoraPendurar;
     private bool interacaoPendurar = false;
     private Transform original_parent;
+
+    [Header("Light Switch")]
+    [SerializeField] private string tagLightSwitch;
+    [SerializeField] private LuzTrigger luz;
+    private bool interacaoLightSwitch = false;
+
+    [Header("Alavanca")]
+    [SerializeField] private string tagAlavanca;
+    [SerializeField] private DoorButton door;
+    private bool interacaoAlavanca = false;
+
     private void Start()
     {
         qPlayer = GetComponent<QuimicoPlayer>();
@@ -52,6 +63,13 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoQuimico = false;
             quimicoColetavel.Reabastecer();
+        }else if (interacaoLightSwitch && button == ButtonStatus.press)
+        {
+            luz.LightOn();
+        }
+        else if (interacaoAlavanca && button == ButtonStatus.press)
+        {
+            door.OpenDoor(transform);
         }
 
         if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
@@ -118,6 +136,15 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoQuimico = true;
             quimicoColetavel =  other.gameObject.GetComponent<QuimicoColetavel>();
+        }else if (other.gameObject.CompareTag(tagLightSwitch))
+        {
+            interacaoLightSwitch = true;
+            luz = other.gameObject.GetComponent<LuzTrigger>();
+        }
+        else if (other.gameObject.CompareTag(tagAlavanca))
+        {
+            interacaoAlavanca = true;
+            door = other.gameObject.GetComponent<DoorButton>();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -139,6 +166,15 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoQuimico = false;
             quimicoColetavel = null;
+        }else if (other.gameObject.CompareTag(tagLightSwitch))
+        {
+            interacaoLightSwitch = false;
+            luz = null;
+        }
+        if (other.gameObject.CompareTag(tagAlavanca))
+        {
+            interacaoAlavanca = false;
+            door = null;
         }
     }
 }

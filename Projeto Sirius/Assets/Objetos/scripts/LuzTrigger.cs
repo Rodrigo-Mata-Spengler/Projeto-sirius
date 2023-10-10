@@ -5,39 +5,16 @@ using UnityEngine;
 public class LuzTrigger : MonoBehaviour
 {
     [SerializeField] private  LightOff lightOffScript;
-    private bool inside = false;
-    private Transform PlayerTransform;
-    // Start is called before the first frame update
 
-
-    private void Update()
+    public void LightOn()
     {
-        if (inside && Input.GetButton("Interagir"))
+        if (!lightOffScript.off)
         {
-            if(!lightOffScript.off)
-            {
-                lightOffScript.LightsOff();
-            }
-            else
-            {
-                lightOffScript.LightOn();
-            }
-            
+            lightOffScript.LightsOff();
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent<CharacterController>(out CharacterController controller))
+        else
         {
-            inside = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.TryGetComponent<CharacterController>(out CharacterController controller))
-        {
-            inside = false;
+            lightOffScript.LightOn();
         }
     }
 }
