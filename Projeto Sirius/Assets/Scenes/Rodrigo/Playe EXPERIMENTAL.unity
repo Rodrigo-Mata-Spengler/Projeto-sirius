@@ -1256,7 +1256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1000757028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1883,6 +1883,63 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1001 &1965451404
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122070844122386531, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579330000888121670, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      propertyPath: m_Name
+      value: Quimicos Coletavel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
 --- !u!850595691 &2112386767
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -2047,6 +2104,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 386463765481018588, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: tagQuimicoColetavel
+      value: QuimicoColetavel
+      objectReference: {fileID: 0}
     - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: puloOverdose
       value: 7
@@ -2177,3 +2238,4 @@ SceneRoots:
   - {fileID: 1670932438}
   - {fileID: 1518373999}
   - {fileID: 1000757031}
+  - {fileID: 1965451404}

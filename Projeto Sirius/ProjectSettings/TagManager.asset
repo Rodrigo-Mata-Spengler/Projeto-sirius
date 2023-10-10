@@ -8,6 +8,7 @@ TagManager:
   - Escalavel
   - Agarravel
   - Parede
+  - QuimicoColetavel
   layers:
   - Default
   - TransparentFX

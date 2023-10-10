@@ -20,9 +20,13 @@ public class InteracaoObjetos : MonoBehaviour
     private bool interacaoArrasta = false;
     private GameObject objeto;
 
-    [Header("Subir nas Paredes")]
+    [Header("Quimico Coletavel")]
+    [SerializeField] public string tagQuimicoColetavel;
+    [SerializeField] public QuimicoColetavel quimicoColetavel;
+    private bool interacaoQuimico = false;
+
+    [Header("Escalada")]
     [SerializeField] public string tagSubirParede;
-    private bool interacaoEscalar = false;
 
     [Header("Se Pendurar")]
     [SerializeField] private string tagPendurar;
@@ -35,6 +39,7 @@ public class InteracaoObjetos : MonoBehaviour
         mPlayer = GetComponent<MovimentoPlayer>();
         original_parent = gameObject.transform.parent;
     }
+
     private void Update()
     {
         if (interacaoArrasta && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
@@ -43,6 +48,10 @@ public class InteracaoObjetos : MonoBehaviour
         }else if (interacaoPendurar && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             Pendurar();
+        }else if (interacaoQuimico && button == ButtonStatus.press)
+        {
+            interacaoQuimico = false;
+            quimicoColetavel.Reabastecer();
         }
 
         if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
@@ -105,6 +114,10 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoPendurar = true;
             ancoraPendurar = other.gameObject;
+        }else if (other.gameObject.CompareTag(tagQuimicoColetavel))
+        {
+            interacaoQuimico = true;
+            quimicoColetavel =  other.gameObject.GetComponent<QuimicoColetavel>();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -121,6 +134,11 @@ public class InteracaoObjetos : MonoBehaviour
             interacaoPendurar = false;
             ancoraPendurar = null;
             SoltarPendurar();
+        }
+        else if (other.gameObject.CompareTag(tagQuimicoColetavel))
+        {
+            interacaoQuimico = false;
+            quimicoColetavel = null;
         }
     }
 }

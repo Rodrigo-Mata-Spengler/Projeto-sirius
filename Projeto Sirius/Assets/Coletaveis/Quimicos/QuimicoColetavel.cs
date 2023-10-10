@@ -15,31 +15,16 @@ public class QuimicoColetavel : MonoBehaviour
         uiFlutuante.SetActive(false);
     }
 
-    private void Update()
+    public void Reabastecer()
     {
-        if (button && interacao)
-        {
-            button = false;
+        player.GetComponent<QuimicoPlayer>().ReabastecerQuimico(quantidade);
 
-            player.GetComponent<QuimicoPlayer>().ReabastecerQuimico(quantidade);
-
-            Destroy(this.gameObject);
-        }
-    }
-
-    public void OnColetar(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            button = true;
-        }
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         uiFlutuante.SetActive(true);
-
-        interacao = true;
 
         player = other.gameObject;
     }
@@ -47,8 +32,6 @@ public class QuimicoColetavel : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         uiFlutuante.SetActive(false);
-
-        interacao = false;
 
         player = null;
     }

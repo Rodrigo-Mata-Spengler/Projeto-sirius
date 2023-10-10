@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 6049324411372781909}
   m_Layer: 0
   m_Name: Quimicos Coletavel
-  m_TagString: Untagged
+  m_TagString: QuimicoColetavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
