@@ -17,25 +17,24 @@ public class MovimentoPlayer : MonoBehaviour
     private bool escalando = false;
 
     [Header("velocidade Corrida")]
-    private bool correndo = false;
     [SerializeField] private float velocidadeCorridaNormal = 0;
-
+    private bool correndo = false;
+    
     [Header("Escalada")]
-    private bool velocidade = false;
     [SerializeField] private float velocidadeEscaladaNormal = 0;
+    private bool velocidade = false;
 
     [Header("Pulo")]
-    private bool pulando = false;
     [SerializeField] private float gravidade = 0;
     [SerializeField] private float puloNormal = 0;
-
+    private bool pulando = false;
+    
     [Header("Agachar")]
-    private float alturaAtual = 0;
-    private bool agachado = false;
     [SerializeField] private float alturaAgachado = 0;
     [SerializeField] private float velocidadeAgachadoNormal = 0;
-
-
+    private float alturaAtual = 0;
+    private bool agachado = false;
+    
     private void Start()
     {
         player = GetComponent<Rigidbody>();

@@ -2017,17 +2017,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6851516022441376659, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   m_PrefabInstance: {fileID: 6802313351899279926}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4093940292793350928 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-  m_PrefabInstance: {fileID: 6802313351899279926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6551669414309464942 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9187672707324191201, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   m_PrefabInstance: {fileID: 6802313351899279926}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4093940292793350928}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b73dd2a8b45e4134d8fd6a6838911a77, type: 3}
@@ -2041,21 +2036,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 386463765481018588, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 917601857364940640, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_Name
       value: Player Experimental
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6851516022441376659, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2097,175 +2080,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7424912556805429236, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178021674223591454, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8516314216005008833, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8516314216005008833, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187672707324191201, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: delayUso
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187672707324191201, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1373603166799935340, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8511200996908871681}
-    - targetCorrespondingSourceObject: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8511200996908871680}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
---- !u!114 &8511200996908871680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4093940292793350928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: cb15dbee7cdbb084c9867f0cafc3c3cf, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8511200996908871681}
-        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e0f3da69-3773-4927-99ac-411b22d7fafc
-    m_ActionName: player/Jump[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cfabb602-3073-4674-bab8-5810f3f9f183
-    m_ActionName: player/Interacao[/Keyboard/f]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8511200996908871681}
-        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
-        m_MethodName: OnAgacahr
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ad3a97d6-4823-4673-a3cd-d5017000ba25
-    m_ActionName: player/Agachar[/Keyboard/shift]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8511200996908871681}
-        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ed2de12b-276f-4704-8ef0-6b309240d60c
-    m_ActionName: player/Move[/Keyboard/d,/Keyboard/a]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8511200996908871681}
-        m_TargetAssemblyTypeName: MovimentoPlayer, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 8366a544-6c95-4556-926a-76478cbc3f97
-    m_ActionName: player/New action
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6551669414309464942}
-        m_TargetAssemblyTypeName: QuimicoPlayer, Assembly-CSharp
-        m_MethodName: OnAplicar
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 78a633a0-0041-49f7-ba19-c0c85249e7c5
-    m_ActionName: player/New action
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &8511200996908871681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4093940292793350928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89af2eac617942e4990fe462802385b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadeNormal: 5
-  velocidadeCorridaNormal: 10
-  velocidadeEscaladaNormal: 5
-  gravidade: 10
-  puloNormal: 5
-  alturaAgachado: 1
-  velocidadeAgachadoNormal: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
