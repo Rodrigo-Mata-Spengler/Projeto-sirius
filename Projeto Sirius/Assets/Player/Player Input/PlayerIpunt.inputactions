@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Aplicar",
+                    "type": "Button",
+                    "id": "78a633a0-0041-49f7-ba19-c0c85249e7c5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -148,6 +157,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Correr",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd28d365-89bc-4161-8740-ea099c56eede",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press(pressPoint=1,behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aplicar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
