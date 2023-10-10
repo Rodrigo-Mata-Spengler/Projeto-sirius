@@ -11,22 +11,31 @@ public class MovimentoPlayer : MonoBehaviour
     private Vector3 playerInput;
     private InteracaoObjetos playerInteracao;
     private Vector3 moveDirection;
+    private QuimicoPlayer playerQuimico;
 
     [Header("Velocidade Caminhada")]
+    [SerializeField] private float velocidadeAbstinencia = 0;
     [SerializeField] private float velocidadeNormal = 0;
+    [SerializeField] private float velocidadeOverdose = 0;
     private bool escalando = false;
 
     [Header("velocidade Corrida")]
+    [SerializeField] private float velocidadeCorridaAbstinencia = 0;
     [SerializeField] private float velocidadeCorridaNormal = 0;
+    [SerializeField] private float velocidadeCorridaOverdose = 0;
     private bool correndo = false;
     
     [Header("Escalada")]
+    [SerializeField] private float velocidadeEscaladaAbstinencia = 0;
     [SerializeField] private float velocidadeEscaladaNormal = 0;
+    [SerializeField] private float velocidadeEscaladaOverdose = 0;
     private bool velocidade = false;
 
     [Header("Pulo")]
     [SerializeField] private float gravidade = 0;
+    [SerializeField] private float puloAbstinencia = 0;
     [SerializeField] private float puloNormal = 0;
+    [SerializeField] private float puloOverdose = 0;
     private bool pulando = false;
     
     [Header("Agachar")]
@@ -34,12 +43,19 @@ public class MovimentoPlayer : MonoBehaviour
     [SerializeField] private float velocidadeAgachadoNormal = 0;
     private float alturaAtual = 0;
     private bool agachado = false;
+
+    [Header("Arrastar")]
+    [SerializeField] private float velocidadeArrastandoNormal = 0;
+    [SerializeField] private float velocidadeArrastandoOverdose = 0;
+    [SerializeField] private float puloArrastando = 0;
+    [HideInInspector]public bool arrastando = false;
     
     private void Start()
     {
         player = GetComponent<Rigidbody>();
         playerControler = GetComponent<CharacterController>();
         playerInteracao = GetComponent<InteracaoObjetos>();
+        playerQuimico = GetComponent<QuimicoPlayer>();
         alturaAtual = playerControler.height;
         playerInput = new Vector3(0, 0, 0);
     }
@@ -106,15 +122,92 @@ public class MovimentoPlayer : MonoBehaviour
         if (agachado)
         {
             temp = velocidadeAgachadoNormal;
-        }else if (escalando)
+        }
+        else if (arrastando)
         {
-            temp = velocidadeEscaladaNormal;
-        }else if (correndo)
+            if (playerQuimico.StatusTranslator() == 0)
+            {
+                temp = 0;
+            }
+            else if (playerQuimico.StatusTranslator() == 1)
+            {
+                temp = velocidadeArrastandoNormal;
+            }
+            else if (playerQuimico.StatusTranslator() == 2)
+            {
+                temp = velocidadeArrastandoOverdose;
+            }
+        }
+        else if(escalando)
         {
-            temp = velocidadeCorridaNormal;
-        }else
+            if (playerQuimico.StatusTranslator() == 0)
+            {
+                temp = velocidadeEscaladaAbstinencia;
+            }
+            else if (playerQuimico.StatusTranslator() == 1)
+            {
+                temp = velocidadeEscaladaNormal;
+            }
+            else if (playerQuimico.StatusTranslator() == 2)
+            {
+                temp = velocidadeCorridaOverdose;
+            }
+        }
+        else 
         {
-            temp = velocidadeNormal;
+            if (correndo)
+            {
+                if (playerQuimico.StatusTranslator() == 0)
+                {
+                    temp = velocidadeCorridaAbstinencia;
+                }
+                else if (playerQuimico.StatusTranslator() == 1)
+                {
+                    temp = velocidadeCorridaNormal;
+                }
+                else if (playerQuimico.StatusTranslator() == 2)
+                {
+                    temp = velocidadeCorridaOverdose;
+                }
+            }
+            else
+            {
+                if (playerQuimico.StatusTranslator() == 0)
+                {
+                    temp = velocidadeAbstinencia;
+                }
+                else if (playerQuimico.StatusTranslator() == 1)
+                {
+                    temp = velocidadeNormal;
+                }
+                else if(playerQuimico.StatusTranslator() == 2)
+                {
+                    temp = velocidadeOverdose;
+                } 
+            }
+        }
+
+        return temp;
+    }
+    private float PuloBrain()
+    {
+        float temp = 0;
+        if (playerQuimico.StatusTranslator() == 0)
+        {
+            temp = puloAbstinencia;
+        }
+        else if (playerQuimico.StatusTranslator() == 1)
+        {
+            temp = puloNormal;
+        }
+        else if (playerQuimico.StatusTranslator() == 2)
+        {
+            temp = puloOverdose;
+        }
+
+        if (arrastando)
+        {
+            temp = puloArrastando;
         }
 
         return temp;
@@ -161,7 +254,7 @@ public class MovimentoPlayer : MonoBehaviour
             moveDirection *= VelocidadeBrain();
             if (pulando)
             {
-                moveDirection.y = puloNormal;
+                moveDirection.y = PuloBrain();
             }
         }
         else

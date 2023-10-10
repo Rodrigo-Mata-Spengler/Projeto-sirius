@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+enum ButtonStatus {idle , press , released };
 public class InteracaoObjetos : MonoBehaviour
 {
+    [SerializeField]private ButtonStatus button = ButtonStatus.idle;
+
     [Header("Tag Status")]
     [SerializeField] public string tag;
     [Header("Player")]
     [SerializeField] private QuimicoPlayer qPlayer;
-    [SerializeField] private PlayerMovimento mPlayer;
+    [SerializeField] private MovimentoPlayer mPlayer;
 
     [Header("Arrastar Objetos")]
     [SerializeField] private GameObject ancoraPlayer;
@@ -28,27 +32,36 @@ public class InteracaoObjetos : MonoBehaviour
     private void Start()
     {
         qPlayer = GetComponent<QuimicoPlayer>();
-        mPlayer = GetComponent<PlayerMovimento>();
+        mPlayer = GetComponent<MovimentoPlayer>();
         original_parent = gameObject.transform.parent;
     }
     private void Update()
     {
-        if (interacaoArrasta && Input.GetButtonDown("Interagir") && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
+        if (interacaoArrasta && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             Arrasta();
-        }else if (interacaoEscalar && Input.GetButtonDown("Interagir") && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
-        {
-            Escalar();
-        }else if (interacaoPendurar && Input.GetButton("Interagir") && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
+        }else if (interacaoPendurar && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             Pendurar();
         }
 
-        if (Input.GetButtonUp("Interagir") || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
+        if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
         {
+            button = ButtonStatus.idle;
             Solta();
-            SoltarEscalada();
             SoltarPendurar();
+            
+        }
+    }
+
+    public  void OnInteracao(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            button = ButtonStatus.press;
+        }else if (context.canceled)
+        {
+            button = ButtonStatus.released;
         }
     }
 
@@ -68,16 +81,6 @@ public class InteracaoObjetos : MonoBehaviour
         mPlayer.arrastando = false;
     }
 
-    //para escalar
-    private void Escalar()
-    {
-        mPlayer.movVertical = true;
-    }
-    private void SoltarEscalada()
-    {
-        mPlayer.movVertical = false;
-    }
-
     //para pendurar
     private void Pendurar()
     {
@@ -93,39 +96,31 @@ public class InteracaoObjetos : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         tag = other.gameObject.tag;
-        /*if (other.gameObject.CompareTag(tagArrastarObjeto))
+        if (other.gameObject.CompareTag(tagArrastarObjeto))
         {
             interacaoArrasta = true;
             objeto = other.gameObject;
         }
-        else if(other.gameObject.CompareTag(tagSubirParede))
-        {
-            interacaoEscalar = true;
-        }else if (other.gameObject.CompareTag(tagPendurar))
+        else  if (other.gameObject.CompareTag(tagPendurar))
         {
             interacaoPendurar = true;
             ancoraPendurar = other.gameObject;
-        }*/
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         tag = null ;
-        /*if (other.gameObject.CompareTag(tagArrastarObjeto))
+        if (other.gameObject.CompareTag(tagArrastarObjeto))
         {
             interacaoArrasta = false;
             objeto = null;
             Solta();
         }
-        if (other.gameObject.CompareTag(tagSubirParede))
-        {
-            interacaoEscalar = false;
-            //SoltarEscalada();
-        }
-        else if (other.gameObject.CompareTag(tagPendurar))
+        if (other.gameObject.CompareTag(tagPendurar))
         {
             interacaoPendurar = false;
             ancoraPendurar = null;
             SoltarPendurar();
-        }*/
+        }
     }
 }
