@@ -12,6 +12,7 @@ public class MovimentoPlayer : MonoBehaviour
     private InteracaoObjetos playerInteracao;
     private Vector3 moveDirection;
     private QuimicoPlayer playerQuimico;
+    [SerializeField] private float forcaAtual = 0;
 
     [Header("Velocidade Caminhada")]
     [SerializeField] private float velocidadeAbstinencia = 0;
@@ -267,5 +268,14 @@ public class MovimentoPlayer : MonoBehaviour
         moveDirection.y -= gravidade * Time.deltaTime;
         playerControler.Move(moveDirection * Time.deltaTime);
 
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody rb = hit.collider.attachedRigidbody;
+        if (rb != null && !rb.isKinematic)
+        {
+            rb.velocity = hit.moveDirection * forcaAtual;
+        }
     }
 }

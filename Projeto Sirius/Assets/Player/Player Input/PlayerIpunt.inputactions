@@ -192,6 +192,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "dffab111-1fbe-412f-bb0e-eb6f85be3c0b",
+            "actions": [
+                {
+                    "name": "Selecionar",
+                    "type": "Button",
+                    "id": "9e7a56aa-51e8-4c76-bdfd-e19cfda402fd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "46e97dd7-56d8-480a-bafc-b4e8c8254224",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selecionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
