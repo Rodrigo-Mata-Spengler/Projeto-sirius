@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5a7f2d3e-2c25-4556-87df-39e976bf7e55}">
+		<property name="assetPath">
+			<value>Objeto Metálico/Objeto Metálico Caindo 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1767800453514738</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1881c853-cc31-4f68-aa25-b2be91454f39}</destination>
+		</relationship>
+	</object>
+</objects>
