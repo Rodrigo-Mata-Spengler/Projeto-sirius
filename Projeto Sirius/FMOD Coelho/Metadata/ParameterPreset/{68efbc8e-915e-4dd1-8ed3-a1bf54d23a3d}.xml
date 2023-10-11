@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{532e0107-fe1d-40d3-9a35-df572ca8ca51}">
+	<object class="ParameterPreset" id="{68efbc8e-915e-4dd1-8ed3-a1bf54d23a3d}">
 		<property name="name">
-			<value>Coração</value>
+			<value>Posição</value>
 		</property>
 		<relationship name="folder">
 			<destination>{dcb7b5f7-a99b-4fa6-91ac-bebda6c9cf4d}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{f3b7669c-c800-41d0-a3bf-01751ef16b3e}</destination>
+			<destination>{c2e4187e-4011-45ba-abc3-d515aeae149b}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{f3b7669c-c800-41d0-a3bf-01751ef16b3e}">
+	<object class="GameParameter" id="{c2e4187e-4011-45ba-abc3-d515aeae149b}">
 		<property name="maximum">
 			<value>2</value>
 		</property>

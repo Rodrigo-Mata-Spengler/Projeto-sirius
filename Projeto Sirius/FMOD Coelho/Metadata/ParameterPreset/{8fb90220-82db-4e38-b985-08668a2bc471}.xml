@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{532e0107-fe1d-40d3-9a35-df572ca8ca51}">
+	<object class="ParameterPreset" id="{8fb90220-82db-4e38-b985-08668a2bc471}">
 		<property name="name">
-			<value>Coração</value>
+			<value>Morrendo Fade Out</value>
 		</property>
 		<relationship name="folder">
 			<destination>{dcb7b5f7-a99b-4fa6-91ac-bebda6c9cf4d}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{f3b7669c-c800-41d0-a3bf-01751ef16b3e}</destination>
+			<destination>{26c4cde5-8bc8-4a7d-b2c7-00284cf2d9cc}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{f3b7669c-c800-41d0-a3bf-01751ef16b3e}">
-		<property name="maximum">
-			<value>2</value>
-		</property>
+	<object class="GameParameter" id="{26c4cde5-8bc8-4a7d-b2c7-00284cf2d9cc}">
 		<property name="initialValue">
 			<value>0</value>
 		</property>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{c7082995-126a-4780-b315-3d66f515be68}">
+		<property name="name">
+			<value>Passos do Protagonista</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dcb7b5f7-a99b-4fa6-91ac-bebda6c9cf4d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{cbbffa83-2d85-4cf6-a954-5f8781741042}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{cbbffa83-2d85-4cf6-a954-5f8781741042}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Metal</value>
+			<value>Concreto</value>
+			<value>Madeira</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
