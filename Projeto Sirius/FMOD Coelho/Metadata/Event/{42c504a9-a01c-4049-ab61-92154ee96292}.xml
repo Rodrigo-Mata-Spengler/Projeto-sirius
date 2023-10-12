@@ -110,9 +110,23 @@
 	</object>
 	<object class="MixerBusPanner" id="{7f74f071-01a4-4c58-86c6-6f1ce782afbb}" />
 	<object class="MultiSound" id="{923fd927-c4d8-4b70-a1ad-eef76c222b0f}">
+		<property name="pitch">
+			<value>-8</value>
+		</property>
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
+		<relationship name="sounds">
+			<destination>{fc8926a5-0f7e-4428-b0df-445653b46461}</destination>
+			<destination>{4b1bd205-fa8c-467b-b746-27736abcc396}</destination>
+			<destination>{844af76c-40a2-4f43-85d7-875c4c7325b7}</destination>
+			<destination>{406f81d7-c1f7-4e01-877e-1ed318bb01c8}</destination>
+			<destination>{002a561a-5f7e-4750-a707-8e5c6472e6dc}</destination>
+			<destination>{981e94e1-e9df-4a86-a7fa-e4eb59065abe}</destination>
+			<destination>{d51abf57-beb0-4be1-8c03-8565639b0534}</destination>
+			<destination>{fd77bfe2-6d2f-4f6a-bbac-41d039f76672}</destination>
+			<destination>{2ffa5e5d-11ff-404c-8e3c-32499f85e953}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{b9a4c79c-31b3-4a04-9754-0b2e50e8de50}" />
 	<object class="PannerEffect" id="{b42f16fb-ed43-4e29-a9f8-822b4ef2312d}">
@@ -128,6 +142,51 @@
 	</object>
 	<object class="MixerBusFader" id="{e36fa777-87d3-40ba-a8f2-96bbd40b1b22}" />
 	<object class="SpatialiserEffect" id="{4dde5c5b-220d-4450-9076-4fbe86f0bc89}" />
+	<object class="SingleSound" id="{fc8926a5-0f7e-4428-b0df-445653b46461}">
+		<relationship name="audioFile">
+			<destination>{a6ff227d-5786-4a69-8033-9c0b21c6795b}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{4b1bd205-fa8c-467b-b746-27736abcc396}">
+		<relationship name="audioFile">
+			<destination>{1f0d14fc-d835-45f8-a7b8-7f336b8221b1}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{844af76c-40a2-4f43-85d7-875c4c7325b7}">
+		<relationship name="audioFile">
+			<destination>{7fcbbec8-114f-4ab1-a406-d75e7cfdc4c4}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{406f81d7-c1f7-4e01-877e-1ed318bb01c8}">
+		<relationship name="audioFile">
+			<destination>{44ddd2a6-5dd5-43c1-94f2-21eda32b71c5}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{002a561a-5f7e-4750-a707-8e5c6472e6dc}">
+		<relationship name="audioFile">
+			<destination>{0e7f331a-b146-4a4f-a84e-d9f256047435}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{981e94e1-e9df-4a86-a7fa-e4eb59065abe}">
+		<relationship name="audioFile">
+			<destination>{a3a554d2-77ec-4e36-b92a-fc76b39e97c2}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{d51abf57-beb0-4be1-8c03-8565639b0534}">
+		<relationship name="audioFile">
+			<destination>{81089513-607c-41ae-8fac-5c34ace3c1a1}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{fd77bfe2-6d2f-4f6a-bbac-41d039f76672}">
+		<relationship name="audioFile">
+			<destination>{c39b94c6-b8b0-4047-be4e-8dfa2bce79a4}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{2ffa5e5d-11ff-404c-8e3c-32499f85e953}">
+		<relationship name="audioFile">
+			<destination>{37e48594-27ee-44ab-804f-efad6a4d3e5d}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{27c2f06c-a9fb-4632-be87-d348a0e4c076}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>stereoPan</value>
