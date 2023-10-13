@@ -12,6 +12,8 @@ public class MovimentoPlayer : MonoBehaviour
     private InteracaoObjetos playerInteracao;
     private Vector3 moveDirection;
     private QuimicoPlayer playerQuimico;
+    private LedgeDetect ledge;
+    private float lastIpunt = 0;
     [SerializeField] private float forcaAtual = 0;
 
     [Header("Velocidade Caminhada")]
@@ -58,6 +60,7 @@ public class MovimentoPlayer : MonoBehaviour
         playerInteracao = GetComponent<InteracaoObjetos>();
         playerQuimico = GetComponent<QuimicoPlayer>();
         alturaAtual = playerControler.height;
+        ledge = transform.GetChild(1).GetComponent<LedgeDetect>();
         playerInput = new Vector3(0, 0, 0);
     }
 
@@ -83,7 +86,7 @@ public class MovimentoPlayer : MonoBehaviour
 
     public bool OnEscalar()
     {
-        if (playerInteracao.tag == playerInteracao.tagSubirParede)
+        if (playerInteracao.tag == playerInteracao.tagSubirParede && ledge.IsClimbing())
         {
             return escalando = true;
         }
@@ -230,6 +233,10 @@ public class MovimentoPlayer : MonoBehaviour
         {
             MovimentoVerticalplayer();
         }
+        else if (ledge.IsLedge())
+        {
+            MovimentLedge();
+        }
         else
         {
             Agachar();
@@ -268,6 +275,31 @@ public class MovimentoPlayer : MonoBehaviour
         moveDirection.y -= gravidade * Time.deltaTime;
         playerControler.Move(moveDirection * Time.deltaTime);
 
+    }
+
+    private void MovimentLedge()
+    {
+
+        moveDirection = new Vector3(playerInput.x, 0, 0);
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= VelocidadeBrain();
+        if (pulando)
+        {
+            moveDirection.y = PuloBrain();
+        }
+
+        playerControler.Move(moveDirection * Time.deltaTime);
+
+    }
+
+    public float LastInput()
+    {
+        if(playerInput.x != 0)
+        {
+            lastIpunt = playerInput.x;
+        }
+
+        return lastIpunt;
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

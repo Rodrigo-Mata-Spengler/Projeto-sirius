@@ -6,6 +6,7 @@ public class LedgeDetect : MonoBehaviour
 {
     private CharacterController playerControler;
     private Transform playerTransform;
+    private MovimentoPlayer playerMov;
     [SerializeField] private float offSet = 0.1f;
 
     [Header("LInha Cabeça")]
@@ -24,7 +25,8 @@ public class LedgeDetect : MonoBehaviour
     {
         playerControler = transform.parent.gameObject.GetComponent<CharacterController>();
         playerTransform = transform.parent.gameObject.GetComponent<Transform>();
-    }
+        playerMov = transform.parent.gameObject.GetComponent<MovimentoPlayer>();
+;    }
 
     private void Update()
     {
@@ -47,8 +49,9 @@ public class LedgeDetect : MonoBehaviour
     private void DesenharLina1()
     {
         //cria a linha 1
-        line1Start = new Vector3(playerControler.radius + offSet + playerTransform.position.x, (playerControler.height / 2) + playerTransform.position.y, playerTransform.position.z);
-        line1End = new Vector3(playerControler.radius + tamanhoLinha1 + offSet + playerTransform.position.x, (playerControler.height / 2) + playerTransform.position.y, playerTransform.position.z);
+        line1Start = new Vector3((playerControler.radius + offSet) * playerMov.LastInput() + playerTransform.position.x, (playerControler.height / 2) + playerTransform.position.y, playerTransform.position.z);
+        line1End = new Vector3((playerControler.radius + tamanhoLinha1 + offSet) * playerMov.LastInput() + playerTransform.position.x, (playerControler.height / 2) + playerTransform.position.y, playerTransform.position.z);
+
         line1Start = transform.TransformDirection(line1Start);
         line1End = transform.TransformDirection(line1End);
     }
@@ -56,19 +59,41 @@ public class LedgeDetect : MonoBehaviour
     private void DesenharLina2()
     {
         //cria a linha 2
-        line2Start = new Vector3(playerControler.radius + offSet + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
-        line2End = new Vector3(playerControler.radius + tamanhoLinha2 + offSet + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
+        line2Start = new Vector3((playerControler.radius + offSet) * playerMov.LastInput() + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
+        line2End = new Vector3((playerControler.radius + tamanhoLinha1 + offSet) * playerMov.LastInput() + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
+
         line2Start = transform.TransformDirection(line2Start);
         line2End = transform.TransformDirection(line2End);
     }
 
-    public bool getLinha1()
+    private bool getLinha1()
     {
         return linha1Colisao;
     }
 
-    public bool getLinha2()
+    private bool getLinha2()
     {
         return linha2Colisao;
+    }
+
+    public bool IsLedge()
+    {
+        if (!playerControler.isGrounded)
+        {
+            if (getLinha1()==false && getLinha2()==true)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool IsClimbing()
+    {
+        if (getLinha1() && getLinha2())
+        {
+            return true;
+        }
+        return false;
     }
 }
