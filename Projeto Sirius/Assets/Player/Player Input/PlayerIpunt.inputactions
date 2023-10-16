@@ -173,7 +173,7 @@
                     "name": "",
                     "id": "fd28d365-89bc-4161-8740-ea099c56eede",
                     "path": "<Keyboard>/r",
-                    "interactions": "Press(pressPoint=1,behavior=1)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Aplicar",

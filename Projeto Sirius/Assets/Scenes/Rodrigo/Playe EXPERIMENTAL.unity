@@ -985,26 +985,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &687773162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8178021674223591454, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-  m_PrefabInstance: {fileID: 6802313351899279926}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &687773163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687773162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8727153dd48ff0f48811ebda212acbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offSet: 0.05
-  tamanhoLinha1: 0.5
-  tamanhoLinha2: 0.5
 --- !u!1 &832535522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805849570}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10874678, y: 0, z: 0, w: 0.9940695}
+  m_LocalRotation: {x: 0.10874678, y: 0.000000023648253, z: -0.0000000025870137, w: 0.9940695}
   m_LocalPosition: {x: -12.56, y: 4.52, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1946,11 +1926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.000000023648253
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.0000000025870137
       objectReference: {fileID: 0}
     - target: {fileID: 101486136731242215, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2005,10 +1985,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2883722794124855018, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: forcaAtual
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_Name
       value: Player Experimental
@@ -2053,22 +2029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8178021674223591454, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_Name
-      value: Ledge grab
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178021674223591454, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3227332658907141731, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8178021674223591454, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 687773163}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
