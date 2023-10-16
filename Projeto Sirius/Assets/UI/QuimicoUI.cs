@@ -10,6 +10,6 @@ public class QuimicoUI : MonoBehaviour
 
     private void LateUpdate()
     {
-        slide.value = qPlayer.GetQuimicoAtual();
+        slide.value = qPlayer.GetQuimicoAtual() * -1;
     }
 }

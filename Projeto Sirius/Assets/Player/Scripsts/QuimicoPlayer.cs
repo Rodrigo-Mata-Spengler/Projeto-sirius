@@ -82,7 +82,6 @@ public class QuimicoPlayer : MonoBehaviour
             aplicar = false;
         }
     }
-
     public void ReabastecerQuimico(int a)
     {
         quimicos += a;
@@ -107,7 +106,6 @@ public class QuimicoPlayer : MonoBehaviour
     {
         return quimicoatual >= overdose;
     }
-
     public float StatusTranslator()
     {
         switch (status)
