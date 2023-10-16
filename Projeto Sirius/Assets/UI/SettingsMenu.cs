@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
+
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -11,8 +13,12 @@ public class SettingsMenu : MonoBehaviour
     public TMP_Dropdown resolutionDropDown;
     public Toggle vsyncTog;
 
+    public VolumeProfile volumeProfile ;
+    UnityEngine.Rendering.Universal.ColorAdjustments Brightness;
+
     private void Start()
     {
+        
         //Resolution
         resolutions = Screen.resolutions;
         resolutionDropDown.ClearOptions();
@@ -43,6 +49,9 @@ public class SettingsMenu : MonoBehaviour
         {
             vsyncTog.isOn = true;
         }
+
+        //brightness
+        if (!volumeProfile.TryGet(out Brightness)) throw new System.NullReferenceException(nameof(Brightness));
     }
 
     public void SetResolution(int resolutionIndex)
@@ -71,5 +80,10 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetBrightness(float brightnessValue)
+    {
+        Brightness.postExposure.value = brightnessValue;
     }
 }

@@ -6,6 +6,7 @@ public class OptionsPanel : MonoBehaviour
 {
 
     [SerializeField] private GameObject MainMenuPanel;
+    [SerializeField] private GameObject MainOpcoesPanel;
     [SerializeField] private GameObject OpcoesPanel;
     [SerializeField] private GameObject ControlesPanel;
     [SerializeField] private GameObject GraficosPanel;
@@ -73,5 +74,9 @@ public class OptionsPanel : MonoBehaviour
         SFXPanel.SetActive(true);
     }
 
-
+    public void ParaMainMenu()
+    {
+        MainMenuPanel.SetActive(true);
+        MainOpcoesPanel.SetActive(false);
+    }
 }
