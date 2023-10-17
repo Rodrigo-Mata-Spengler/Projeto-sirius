@@ -70,6 +70,12 @@ public class PauseMenu : MonoBehaviour
         OpcoesPanel.SetActive(true);
 
     }
+    public void BackToPausePanel()
+    {
+        OpcoesPanel.SetActive(false);
+        PausePanel.SetActive(true);
+       
+    }
 
     public void BackToMainMenu()
     {
