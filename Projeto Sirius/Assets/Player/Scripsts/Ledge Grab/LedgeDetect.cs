@@ -60,7 +60,7 @@ public class LedgeDetect : MonoBehaviour
     {
         //cria a linha 2
         line2Start = new Vector3((playerControler.radius + offSet) * playerMov.LastInput() + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
-        line2End = new Vector3((playerControler.radius + tamanhoLinha1 + offSet) * playerMov.LastInput() + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
+        line2End = new Vector3((playerControler.radius + tamanhoLinha2 + offSet) * playerMov.LastInput() + playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
 
         line2Start = transform.TransformDirection(line2Start);
         line2End = transform.TransformDirection(line2End);

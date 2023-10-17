@@ -304,10 +304,14 @@ public class MovimentoPlayer : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Rigidbody rb = hit.collider.attachedRigidbody;
-        if (rb != null && !rb.isKinematic)
+
+        if (playerControler.isGrounded)
         {
-            rb.velocity = hit.moveDirection * forcaAtual;
+            Rigidbody rb = hit.collider.attachedRigidbody;
+            if (rb != null && !rb.isKinematic)
+            {
+                rb.velocity = hit.moveDirection * forcaAtual;
+            }
         }
     }
 }
