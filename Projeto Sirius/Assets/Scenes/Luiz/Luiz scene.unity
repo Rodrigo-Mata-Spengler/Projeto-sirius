@@ -160,6 +160,24 @@ Transform:
   - {fileID: 646072786}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &151990361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+  m_PrefabInstance: {fileID: 4976489410563731128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &151990368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151990361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6c2da2db9374dada6761b5e35121c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: {fileID: -944628639613478452, guid: cb15dbee7cdbb084c9867f0cafc3c3cf, type: 3}
 --- !u!1 &180232132
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,10 +4312,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1043304046832555723, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -4385,7 +4399,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 151990368}
   m_SourcePrefab: {fileID: 100100000, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
 --- !u!1001 &6557902295539105443
 PrefabInstance:
