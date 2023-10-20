@@ -28,17 +28,9 @@ public class SaveManeger : MonoBehaviour
             }else {
                 spawn.transform.position = new Vector3(data.loc_Atual[0], data.loc_Atual[1],spawn.transform.position.z);
 
-                spawn.SpawnPlayer(BuildPlayer());
+                spawn.SpawnPlayer(player,data);
             }
         }
-    }
-
-    private GameObject BuildPlayer()
-    {
-        player.GetComponent<QuimicoPlayer>().SetQuimicoAtual(data.quantidade_Aplicada);
-        player.GetComponent<QuimicoPlayer>().SetQuimico(data.quantidade_Guardada);
-
-        return player;
     }
     
     //verifica se todos os requerimentos para carregar o player foram configurados

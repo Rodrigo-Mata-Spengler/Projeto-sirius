@@ -35,7 +35,6 @@ public class QuimicoPlayer : MonoBehaviour
 
     private void Start()
     {
-        quimicoatual = 50f;
         tempCadencia = cadencia + Time.time;
     }
 
