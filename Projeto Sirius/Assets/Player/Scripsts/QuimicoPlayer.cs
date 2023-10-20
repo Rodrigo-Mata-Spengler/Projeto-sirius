@@ -12,7 +12,7 @@ public class QuimicoPlayer : MonoBehaviour
     [Header("Niveis do quimico")]
     [SerializeField] private float quimicoatual = 0;
     [SerializeField] private float quimicoMaximo = 0;
-    
+
 
     [Header("Cadencia do quimico")]
     [SerializeField] private float cadencia = 0;
@@ -90,6 +90,10 @@ public class QuimicoPlayer : MonoBehaviour
     {
         return quimicoatual;
     }
+    public void SetQuimicoAtual(float quimico_atual)
+    {
+        quimicoatual = quimico_atual;
+    }
     public float GetAbstinencia()
     {
         return abstinencia;
@@ -101,6 +105,10 @@ public class QuimicoPlayer : MonoBehaviour
     public int getQuimico()
     {
         return quimicos;
+    }
+    public void SetQuimico(int quimico_atual)
+    {
+        quimicos = quimico_atual;
     }
     public bool IsInOverdose()
     {

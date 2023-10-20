@@ -44,6 +44,11 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private DoorButton door;
     private bool interacaoAlavanca = false;
 
+    [Header("CheckPoint")]
+    [SerializeField] private string tagCheckPoint;
+    [SerializeField] private CheckPoint checkPoint;
+    private bool interacaoCheckPoint = false;
+
     private void Start()
     {
         qPlayer = GetComponent<QuimicoPlayer>();
@@ -56,20 +61,27 @@ public class InteracaoObjetos : MonoBehaviour
         if (interacaoArrasta && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             Arrasta();
-        }else if (interacaoPendurar && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
+        }
+        else if (interacaoPendurar && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             Pendurar();
-        }else if (interacaoQuimico && button == ButtonStatus.press)
+        }
+        else if (interacaoQuimico && button == ButtonStatus.press)
         {
             interacaoQuimico = false;
             quimicoColetavel.Reabastecer();
-        }else if (interacaoLightSwitch && button == ButtonStatus.press)
+        }
+        else if (interacaoLightSwitch && button == ButtonStatus.press)
         {
             luz.LightOn();
         }
         else if (interacaoAlavanca && button == ButtonStatus.press)
         {
             door.OpenDoor(transform);
+        }
+        else if (interacaoCheckPoint && button == ButtonStatus.press)
+        {
+            checkPoint.savePlayer(transform.gameObject);
         }
 
         if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
@@ -146,6 +158,11 @@ public class InteracaoObjetos : MonoBehaviour
             interacaoAlavanca = true;
             door = other.gameObject.GetComponent<DoorButton>();
         }
+        else if (other.gameObject.CompareTag(tagCheckPoint))
+        {
+            interacaoCheckPoint = true;
+            checkPoint = other.gameObject.GetComponent<CheckPoint>();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -171,10 +188,15 @@ public class InteracaoObjetos : MonoBehaviour
             interacaoLightSwitch = false;
             luz = null;
         }
-        if (other.gameObject.CompareTag(tagAlavanca))
+        else if (other.gameObject.CompareTag(tagAlavanca))
         {
             interacaoAlavanca = false;
             door = null;
+        }
+        else if (other.gameObject.CompareTag(tagCheckPoint))
+        {
+            interacaoCheckPoint = false;
+            checkPoint = null;
         }
     }
 }

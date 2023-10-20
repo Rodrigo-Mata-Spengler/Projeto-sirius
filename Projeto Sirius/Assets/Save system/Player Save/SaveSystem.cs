@@ -37,4 +37,14 @@ public class SaveSystem
             return null;
         }
     }
+
+    public static void ErasePlayer()
+    {
+        string path = Application.persistentDataPath + "/PlayerData.cpd";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
 }

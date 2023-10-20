@@ -11,6 +11,8 @@ TagManager:
   - QuimicoColetavel
   - LightSwitch
   - BotaoPorta
+  - CheckPoint
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
