@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{bae8852f-9c4e-4bb1-8c3c-391477eaa5c7}">
+		<property name="name">
+			<value>Músicas</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dcb7b5f7-a99b-4fa6-91ac-bebda6c9cf4d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7649ba2e-4410-4708-b30e-35438d778585}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7649ba2e-4410-4708-b30e-35438d778585}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Jazz Noir</value>
+			<value>Perseguição</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
