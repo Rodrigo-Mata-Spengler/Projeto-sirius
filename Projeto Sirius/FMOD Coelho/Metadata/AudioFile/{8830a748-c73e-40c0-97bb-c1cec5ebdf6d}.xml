@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8830a748-c73e-40c0-97bb-c1cec5ebdf6d}">
+		<property name="assetPath">
+			<value>Passo Coelho/Passo Coelho 5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.22058956916099773</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1881c853-cc31-4f68-aa25-b2be91454f39}</destination>
+		</relationship>
+	</object>
+</objects>
