@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{8b050b35-895f-47e4-93b2-0967e857c6eb}">
+		<property name="name">
+			<value>Objeto Arrastando</value>
+		</property>
+		<relationship name="folder">
+			<destination>{69c99058-a69b-41b2-aace-adcf1632c04a}</destination>
+		</relationship>
+	</object>
+</objects>
