@@ -7,6 +7,8 @@ enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando, e
 public class PlayerMoveStatus : MonoBehaviour
 {
     private CharacterController playerControler;
+    private MovimentoPlayer playerMovimento;
+    [SerializeField]private LedgeDetect playerLedge;
     public Vector3 velocidade;
 
     [SerializeField] private StatusMovimento status = StatusMovimento.idle;
@@ -16,13 +18,15 @@ public class PlayerMoveStatus : MonoBehaviour
     private void Awake()
     {
         playerControler = GetComponent<CharacterController>();
+        playerMovimento = GetComponent<MovimentoPlayer>();
+        playerLedge = GetComponent<LedgeDetect>();
     }
 
     private void Update()
     {
         velocidade = playerControler.velocity;
 
-        
+        //testa para ver se o player esta no ar
         if (!playerControler.isGrounded)
         {
             if (velocidade.y > pulandoOffSet)
@@ -32,13 +36,41 @@ public class PlayerMoveStatus : MonoBehaviour
             }
             else if (velocidade.y < -1 * pulandoOffSet)
             {
-                status = StatusMovimento.caindo;
-
+                if (!playerMovimento.agachado)
+                {
+                    status = StatusMovimento.caindo;
+                }
             }
         }
         else
         {
-            status = StatusMovimento.idle;
+            if (playerMovimento.correndo && velocidade.x != 0)
+            {
+                status = StatusMovimento.correndo;
+            }else if (playerMovimento.agachado)
+            {
+                status = StatusMovimento.agachando;
+            }else if (playerMovimento.arrastando)
+            {
+                status = StatusMovimento.empurrando;
+            }else if (playerMovimento.escalando)
+            {
+                status = StatusMovimento.escalando;
+            }else if (playerLedge.IsLedge())
+            {
+                status = StatusMovimento.agarrando;
+            }
+            else
+            {
+                if (velocidade.x != 0)
+                {
+                    status = StatusMovimento.caminhando;
+                }
+                else
+                {
+                    status = StatusMovimento.idle;
+                }
+            }
         }
     }
 }

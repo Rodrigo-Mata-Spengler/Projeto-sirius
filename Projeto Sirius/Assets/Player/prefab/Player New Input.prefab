@@ -298,15 +298,19 @@ MonoBehaviour:
   velocidadeCorridaAbstinencia: 0
   velocidadeCorridaNormal: 8
   velocidadeCorridaOverdose: 10
+  correndo: 0
   velocidadeEscaladaAbstinencia: 3
   velocidadeEscaladaNormal: 5
   velocidadeEscaladaOverdose: 7
+  escalando: 0
   gravidade: 10
   puloAbstinencia: 0
   puloNormal: 5
   puloOverdose: 7
+  pulando: 0
   alturaAgachado: 1
   velocidadeAgachadoNormal: 2
+  agachado: 0
   velocidadeArrastandoNormal: 1
   velocidadeArrastandoOverdose: 3
   puloArrastando: 5
@@ -470,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63c1743572bd14fb7bfb913451a019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLedge: {fileID: 3985171473417943264}
   velocidade: {x: 0, y: 0, z: 0}
   status: 0
   pulandoOffSet: 0.2

@@ -20,31 +20,31 @@ public class MovimentoPlayer : MonoBehaviour
     [SerializeField] private float velocidadeAbstinencia = 0;
     [SerializeField] private float velocidadeNormal = 0;
     [SerializeField] private float velocidadeOverdose = 0;
-    public bool escalando = false;
 
     [Header("velocidade Corrida")]
     [SerializeField] private float velocidadeCorridaAbstinencia = 0;
     [SerializeField] private float velocidadeCorridaNormal = 0;
     [SerializeField] private float velocidadeCorridaOverdose = 0;
-    public bool correndo = false;
+    [HideInInspector] public bool correndo = false;
     
     [Header("Escalada")]
     [SerializeField] private float velocidadeEscaladaAbstinencia = 0;
     [SerializeField] private float velocidadeEscaladaNormal = 0;
     [SerializeField] private float velocidadeEscaladaOverdose = 0;
+    [HideInInspector] public bool escalando = false;
 
     [Header("Pulo")]
     [SerializeField] private float gravidade = 0;
     [SerializeField] private float puloAbstinencia = 0;
     [SerializeField] private float puloNormal = 0;
     [SerializeField] private float puloOverdose = 0;
-    public bool pulando = false;
+    [HideInInspector] public bool pulando = false;
     
     [Header("Agachar")]
     [SerializeField] private float alturaAgachado = 0;
     [SerializeField] private float velocidadeAgachadoNormal = 0;
     private float alturaAtual = 0;
-    private bool agachado = false;
+    [HideInInspector] public bool agachado = false;
 
     [Header("Arrastar")]
     [SerializeField] private float velocidadeArrastandoNormal = 0;
