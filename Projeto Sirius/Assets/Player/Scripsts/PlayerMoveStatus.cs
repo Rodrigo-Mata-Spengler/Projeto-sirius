@@ -8,7 +8,7 @@ public class PlayerMoveStatus : MonoBehaviour
 {
     private CharacterController playerControler;
     private MovimentoPlayer playerMovimento;
-    [SerializeField]private LedgeDetect playerLedge;
+    [SerializeField] private LedgeDetect playerLedge;
     public Vector3 velocidade;
 
     [SerializeField] private StatusMovimento status = StatusMovimento.idle;
@@ -19,7 +19,6 @@ public class PlayerMoveStatus : MonoBehaviour
     {
         playerControler = GetComponent<CharacterController>();
         playerMovimento = GetComponent<MovimentoPlayer>();
-        playerLedge = GetComponent<LedgeDetect>();
     }
 
     private void Update()
@@ -47,16 +46,16 @@ public class PlayerMoveStatus : MonoBehaviour
             if (playerMovimento.correndo && velocidade.x != 0)
             {
                 status = StatusMovimento.correndo;
-            }else if (playerMovimento.agachado)
+            } else if (playerMovimento.agachado)
             {
                 status = StatusMovimento.agachando;
-            }else if (playerMovimento.arrastando)
+            } else if (playerMovimento.arrastando)
             {
                 status = StatusMovimento.empurrando;
-            }else if (playerMovimento.escalando)
+            } else if (playerMovimento.escalando)
             {
                 status = StatusMovimento.escalando;
-            }else if (playerLedge.IsLedge())
+            } else if (playerLedge.IsLedge())
             {
                 status = StatusMovimento.agarrando;
             }
@@ -73,4 +72,43 @@ public class PlayerMoveStatus : MonoBehaviour
             }
         }
     }
+
+    public float GetStatus()
+    {
+        float temp = 0;
+
+        switch (status)
+        {
+            case StatusMovimento.idle:
+                temp = 0;
+                break;
+            case StatusMovimento.caminhando:
+                temp = 1;
+                break;
+            case StatusMovimento.correndo:
+                temp = 2;
+                break;
+            case StatusMovimento.pulando:
+                temp = 3;
+                break;
+            case StatusMovimento.caindo:
+                temp = 4;
+                break;
+            case StatusMovimento.agachando:
+                temp = 5;
+                break;
+            case StatusMovimento.empurrando:
+                temp = 6;
+                break;
+            case StatusMovimento.escalando:
+                temp = 7;
+                break;
+            case StatusMovimento.agarrando:
+                temp = 8;
+                break;
+        }
+
+        return temp;
+    }
+
 }
