@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MovimentoPlayer : MonoBehaviour
 {
-    private Rigidbody player;
+    private Rigidbody playerRb;
     private CharacterController playerControler;
     private float velocidadeAtual;
     private Vector3 playerInput;
@@ -20,26 +20,25 @@ public class MovimentoPlayer : MonoBehaviour
     [SerializeField] private float velocidadeAbstinencia = 0;
     [SerializeField] private float velocidadeNormal = 0;
     [SerializeField] private float velocidadeOverdose = 0;
-    private bool escalando = false;
+    public bool escalando = false;
 
     [Header("velocidade Corrida")]
     [SerializeField] private float velocidadeCorridaAbstinencia = 0;
     [SerializeField] private float velocidadeCorridaNormal = 0;
     [SerializeField] private float velocidadeCorridaOverdose = 0;
-    private bool correndo = false;
+    public bool correndo = false;
     
     [Header("Escalada")]
     [SerializeField] private float velocidadeEscaladaAbstinencia = 0;
     [SerializeField] private float velocidadeEscaladaNormal = 0;
     [SerializeField] private float velocidadeEscaladaOverdose = 0;
-    private bool velocidade = false;
 
     [Header("Pulo")]
     [SerializeField] private float gravidade = 0;
     [SerializeField] private float puloAbstinencia = 0;
     [SerializeField] private float puloNormal = 0;
     [SerializeField] private float puloOverdose = 0;
-    private bool pulando = false;
+    public bool pulando = false;
     
     [Header("Agachar")]
     [SerializeField] private float alturaAgachado = 0;
@@ -55,7 +54,7 @@ public class MovimentoPlayer : MonoBehaviour
     
     private void Start()
     {
-        player = GetComponent<Rigidbody>();
+        playerRb = GetComponent<Rigidbody>();
         playerControler = GetComponent<CharacterController>();
         playerInteracao = GetComponent<InteracaoObjetos>();
         playerQuimico = GetComponent<QuimicoPlayer>();
@@ -141,6 +140,7 @@ public class MovimentoPlayer : MonoBehaviour
             {
                 temp = velocidadeArrastandoOverdose;
             }
+
         }
         else if(escalando)
         {
@@ -156,6 +156,7 @@ public class MovimentoPlayer : MonoBehaviour
             {
                 temp = velocidadeCorridaOverdose;
             }
+
         }
         else 
         {
@@ -173,6 +174,7 @@ public class MovimentoPlayer : MonoBehaviour
                 {
                     temp = velocidadeCorridaOverdose;
                 }
+
             }
             else
             {
@@ -187,7 +189,7 @@ public class MovimentoPlayer : MonoBehaviour
                 else if(playerQuimico.StatusTranslator() == 2)
                 {
                     temp = velocidadeOverdose;
-                } 
+                }
             }
         }
 
@@ -242,7 +244,7 @@ public class MovimentoPlayer : MonoBehaviour
             Agachar();
             MovimentPlayer();
         }
-        
+
     }
 
     private void MovimentoVerticalplayer()
