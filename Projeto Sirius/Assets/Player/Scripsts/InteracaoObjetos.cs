@@ -49,6 +49,11 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private CheckPoint checkPoint;
     private bool interacaoCheckPoint = false;
 
+    [Header("Colesionaveis")]
+    [SerializeField] private string tagColecionavel;
+    [SerializeField] Colecionavel colecionavel;
+    private bool interacaoColecionavel = false;
+
     private void Start()
     {
         qPlayer = GetComponent<QuimicoPlayer>();
@@ -82,6 +87,9 @@ public class InteracaoObjetos : MonoBehaviour
         else if (interacaoCheckPoint && button == ButtonStatus.press)
         {
             checkPoint.savePlayer(transform.gameObject);
+        }else if (interacaoColecionavel && button == ButtonStatus.press)
+        {
+            Coletar();
         }
 
         if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
@@ -132,6 +140,12 @@ public class InteracaoObjetos : MonoBehaviour
         mPlayer.enabled = true;
     }
 
+    //coletar colecionavel
+    private void Coletar()
+    {
+        this.GetComponent<PlayerInventario>().PegarColetavel(colecionavel.colecionavelID);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         tag = other.gameObject.tag;
@@ -162,6 +176,11 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoCheckPoint = true;
             checkPoint = other.gameObject.GetComponent<CheckPoint>();
+        }
+        else if (other.gameObject.CompareTag(tagColecionavel))
+        {
+            interacaoColecionavel = true;
+            colecionavel = other.gameObject.GetComponent<Colecionavel>();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -197,6 +216,11 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoCheckPoint = false;
             checkPoint = null;
+        }
+        else if (other.gameObject.CompareTag(tagColecionavel))
+        {
+            interacaoColecionavel = false;
+            colecionavel = null;
         }
     }
 }

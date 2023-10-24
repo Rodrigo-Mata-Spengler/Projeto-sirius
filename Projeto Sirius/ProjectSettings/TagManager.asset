@@ -13,6 +13,7 @@ TagManager:
   - BotaoPorta
   - CheckPoint
   - PlayerSpawn
+  - Colecionavel
   layers:
   - Default
   - TransparentFX

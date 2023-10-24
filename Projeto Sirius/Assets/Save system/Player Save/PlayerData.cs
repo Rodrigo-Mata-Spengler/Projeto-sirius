@@ -17,7 +17,7 @@ public class PlayerData
     public int quantidade_Guardada = 0;
 
     //colecionaveis
-
+    public bool[] colecionaveis = new bool[40];
     public PlayerData(GameObject player)
     {
         //scena atual
@@ -30,6 +30,13 @@ public class PlayerData
         //Quimico do player
         quantidade_Aplicada = player.GetComponent<QuimicoPlayer>().GetQuimicoAtual();
         quantidade_Guardada = player.GetComponent<QuimicoPlayer>().getQuimico();
+
+        //Coletaveis
+        bool[] temp = player.GetComponent<PlayerInventario>().colecionaveis;
+        for (int i = 0; i < colecionaveis.Length; i++)
+        {
+            colecionaveis[i] = temp[i];
+        }
     }
 
 }
