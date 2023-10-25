@@ -104,7 +104,6 @@ public class MovimentoPlayer : MonoBehaviour
         else
         {
             agachado = true;
-            Debug.Log("teste!");
         }
     }
 

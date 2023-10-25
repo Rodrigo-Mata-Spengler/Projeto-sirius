@@ -534,6 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8788008714356100191}
+  - component: {fileID: 2372457075094942411}
   m_Layer: 3
   m_Name: SoundDetection
   m_TagString: Untagged
@@ -556,6 +557,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6851516022441376659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2372457075094942411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6975243462304595138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480730af0070a6d4fb758e483f289ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatus: {fileID: 646063863428317603}
+  statusMov: 0
+  caminhando: 4
+  correndo: 8
+  pulando: 4
+  agachado: 2
+  escalando: 4
 --- !u!1 &8178021674223591454
 GameObject:
   m_ObjectHideFlags: 0

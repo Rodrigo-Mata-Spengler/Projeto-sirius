@@ -22,11 +22,8 @@ public class SaveManeger : MonoBehaviour
         if (VerifyConfig())
         {
             //verifica se existe um save do player ja existente
-            data = SaveSystem.LoadPlayer();
             if (data == null)
-            {
-                Debug.Log(player.GetComponent<QuimicoPlayer>().getQuimico());
-                
+            {   
                 spawn.SpawnPlayer(player,cam);
             }else {
                 spawn.transform.position = new Vector3(data.loc_Atual[0], data.loc_Atual[1],spawn.transform.position.z);
