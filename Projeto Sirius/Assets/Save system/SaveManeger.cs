@@ -12,6 +12,9 @@ public class SaveManeger : MonoBehaviour
     [Header("Prefab do Player")]
     [SerializeField] private GameObject player;
 
+    [Header("Camera da Scena")]
+    [SerializeField] private GameObject cam;
+
     private PlayerData data;
 
     private void Start()
@@ -24,11 +27,11 @@ public class SaveManeger : MonoBehaviour
             {
                 Debug.Log(player.GetComponent<QuimicoPlayer>().getQuimico());
                 
-                spawn.SpawnPlayer(player);
+                spawn.SpawnPlayer(player,cam);
             }else {
                 spawn.transform.position = new Vector3(data.loc_Atual[0], data.loc_Atual[1],spawn.transform.position.z);
 
-                spawn.SpawnPlayer(player,data);
+                spawn.SpawnPlayer(player,data,cam);
             }
         }
     }
@@ -46,6 +49,11 @@ public class SaveManeger : MonoBehaviour
         if (!player)
         {
             Debug.LogError("Prefab do player não configurado! \n favor configurar antes de continuar");
+            configurado = false;
+        }
+        if (!cam)
+        {
+            Debug.LogError("Prefab da camera não configurado! \n favor configurar antes de continuar");
             configurado = false;
         }
 

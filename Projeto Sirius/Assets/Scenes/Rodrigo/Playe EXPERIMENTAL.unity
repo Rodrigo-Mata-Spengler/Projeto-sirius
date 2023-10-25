@@ -642,6 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 529810364}
   player: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+  cam: {fileID: 850782216357180878}
 --- !u!4 &611996674
 Transform:
   m_ObjectHideFlags: 0
@@ -1460,6 +1461,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9da142b97758e741af7395042304cb0, type: 3}
+--- !u!1 &850782216357180878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8195445792919928546, guid: f9da142b97758e741af7395042304cb0, type: 3}
+  m_PrefabInstance: {fileID: 850782216357180877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1693632659289645973
 PrefabInstance:
   m_ObjectHideFlags: 0
