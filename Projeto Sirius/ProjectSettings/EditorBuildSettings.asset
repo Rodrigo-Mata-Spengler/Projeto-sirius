@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Luiz/Luiz scene.unity
-    guid: f1d358b0112c5a54aa7dbd15bd2cfa3f
-  - enabled: 1
     path: Assets/Scenes/Mendes/Cena Mendes.unity
     guid: d3cb4fbf6e8d3f7499eeeb65ba39a583
   m_configObjects:
