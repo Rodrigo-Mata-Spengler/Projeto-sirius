@@ -8,7 +8,6 @@ using UnityEngine.Rendering;
 
 public class SettingsMenu : MonoBehaviour
 {
-    Resolution[] resolutions;
 
     public TMP_Dropdown resolutionDropDown;
     public Toggle vsyncTog;
@@ -16,29 +15,39 @@ public class SettingsMenu : MonoBehaviour
     public VolumeProfile volumeProfile ;
     UnityEngine.Rendering.Universal.ColorAdjustments Brightness;
 
+    public List<ResItem> resolutionsx = new List<ResItem>();
+    private int selectedResolution;
+    [SerializeField] private TMP_Text resolutionLabel;
+
+    public List<QualityItem> quality = new List<QualityItem>();
+    private int selectedQuality = 1;
+    [SerializeField] private TMP_Text QualityLabel;
+
     private void Start()
     {
-        
-        //Resolution
-        resolutions = Screen.resolutions;
-        resolutionDropDown.ClearOptions();
-
-        List<string> options = new List<string>();
-
-        int currentResolutionIndex = 0;
-        for(int i = 0; i< resolutions.Length; i++)
+        UpdateQualityLabel();
+        bool foundRes = false;
+        for(int i = 0; i< resolutionsx.Count; i++)
         {
-            string option = resolutions[i].width +"x" + resolutions[i].height;
-            options.Add(option);
-
-            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            if(Screen.width == resolutionsx[i].horizontal && Screen.height == resolutionsx[i].vertical)
             {
-                currentResolutionIndex = i;
+                foundRes = true;
+                selectedResolution = i;
+                UpdateResLabel();
             }
         }
-        resolutionDropDown.AddOptions(options);
-        resolutionDropDown.value = currentResolutionIndex;
-        resolutionDropDown.RefreshShownValue();
+        if (!foundRes)
+        {
+            ResItem newRes = new ResItem();
+            newRes.horizontal = Screen.width;
+            newRes.vertical = Screen.height;
+
+            resolutionsx.Add(newRes);
+            selectedResolution = resolutionsx.Count - 1;
+
+            UpdateResLabel();
+        }
+
 
         //VSYNC
         if(QualitySettings.vSyncCount == 0)
@@ -54,11 +63,64 @@ public class SettingsMenu : MonoBehaviour
         if (!volumeProfile.TryGet(out Brightness)) throw new System.NullReferenceException(nameof(Brightness));
     }
 
-    public void SetResolution(int resolutionIndex)
+    //Resolution label and button
+    public void ResLeft()
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        selectedResolution--;
+        if(selectedResolution < 0)
+        {
+            selectedResolution = 0;
+        }
+        UpdateResLabel();
     }
+
+    public void ResRight()
+    {
+        selectedResolution++;
+        if(selectedResolution > resolutionsx.Count - 1)
+        {
+            selectedResolution = resolutionsx.Count - 1;
+        }
+        UpdateResLabel();
+    }
+    public void UpdateResLabel()
+    {
+        resolutionLabel.text = resolutionsx[selectedResolution].horizontal.ToString() + " x " + resolutionsx[selectedResolution].vertical.ToString();
+
+    }
+
+    //Quality label and buttons
+    public void QualityLeft()
+    {
+        selectedQuality--;
+        if (selectedQuality < 0)
+        {
+            selectedQuality = 0;
+        }
+        UpdateQualityLabel();
+    }
+
+    public void QualityRight()
+    {
+        selectedQuality++;
+        if (selectedQuality > quality.Count - 1)
+        {
+            selectedQuality = quality.Count - 1;
+        }
+        UpdateQualityLabel();
+    }
+    public void UpdateQualityLabel()
+    {
+        QualityLabel.text = quality[selectedQuality].quality.ToString();
+
+    }
+
+    public void SetResolution()
+    {
+        
+        Screen.SetResolution(resolutionsx[selectedResolution].horizontal, resolutionsx[selectedResolution].vertical, Screen.fullScreen); ;
+    }
+
 
     public void Vsync()
     {
@@ -72,9 +134,9 @@ public class SettingsMenu : MonoBehaviour
         }
     }
 
-    public void SetQuality (int qualityIndex)
+    public void SetQuality ()
     {
-        QualitySettings.SetQualityLevel(qualityIndex);
+        QualitySettings.SetQualityLevel(selectedQuality);
       
     }
     public void SetFullscreen(bool isFullscreen)
@@ -86,4 +148,24 @@ public class SettingsMenu : MonoBehaviour
     {
         Brightness.postExposure.value = brightnessValue;
     }
+
+    public void ApllyChanges()
+    {
+        Vsync();
+        //SetFullscreen();
+        SetQuality();
+        SetResolution();
+    }
+}
+
+[System.Serializable]
+public class ResItem
+{
+    public int horizontal, vertical;
+}
+
+[System.Serializable]
+public class QualityItem
+{
+    public string quality;
 }
