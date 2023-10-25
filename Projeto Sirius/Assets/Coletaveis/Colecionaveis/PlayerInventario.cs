@@ -11,11 +11,14 @@ public class PlayerInventario : MonoBehaviour
         colecionaveis = new bool[40];
 
         PlayerData data = SaveSystem.LoadPlayer();
-
-        for (int i = 0; i < colecionaveis.Length; i++)
+        if (data != null)
         {
-            colecionaveis[i] = data.colecionaveis[i];
+            for (int i = 0; i < colecionaveis.Length; i++)
+            {
+                colecionaveis[i] = data.colecionaveis[i];
+            }
         }
+        
     }
 
     public void PegarColetavel(int ID)

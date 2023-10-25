@@ -323,7 +323,7 @@ MonoBehaviour:
   puloNormal: 5
   puloOverdose: 7
   pulando: 0
-  alturaAgachado: 1
+  alturaAgachado: 2
   velocidadeAgachadoNormal: 2
   agachado: 0
   velocidadeArrastandoNormal: 1

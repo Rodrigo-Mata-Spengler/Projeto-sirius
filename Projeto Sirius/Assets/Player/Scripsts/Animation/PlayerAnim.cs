@@ -38,6 +38,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Clibing", false);
 
                 anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
                 break;
 
             case StatusMovimento.caminhando:
@@ -47,6 +49,7 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Runing", true);
                 break;
             case StatusMovimento.pulando:
+                //anim.SetBool("Is_Walking", true);
                 anim.SetBool("Is_Jumping", true);
                 break;
             case StatusMovimento.caindo:
@@ -54,6 +57,10 @@ public class PlayerAnim : MonoBehaviour
                 break;
             case StatusMovimento.agachando:
                 anim.SetBool("Is_crouch", true);
+                anim.SetBool("Is_Stealth_idle", false);
+                break;
+            case StatusMovimento.agachado_idle:
+                anim.SetBool("Is_Stealth_idle", true);
                 break;
             case StatusMovimento.empurrando:
                 anim.SetBool("Is_Pushing", true);
@@ -106,6 +113,9 @@ public class PlayerAnim : MonoBehaviour
                 break;
             case 8:
                 status = StatusMovimento.agarrando;
+                break;
+            case 9:
+                status = StatusMovimento.agachado_idle;
                 break;
         }
     }

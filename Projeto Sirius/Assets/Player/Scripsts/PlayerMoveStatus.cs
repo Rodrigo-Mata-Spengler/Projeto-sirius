@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando, empurrando, escalando, agarrando}
+enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando , agachado_idle, empurrando, escalando, agarrando}
 public class PlayerMoveStatus : MonoBehaviour
 {
     private CharacterController playerControler;
@@ -48,7 +48,14 @@ public class PlayerMoveStatus : MonoBehaviour
                 status = StatusMovimento.correndo;
             } else if (playerMovimento.agachado)
             {
-                status = StatusMovimento.agachando;
+                if(velocidade.x != 0)
+                {
+                    status = StatusMovimento.agachando;
+                }
+                else
+                {
+                    status = StatusMovimento.agachado_idle;
+                }   
             } else if (playerMovimento.arrastando)
             {
                 status = StatusMovimento.empurrando;
@@ -105,6 +112,9 @@ public class PlayerMoveStatus : MonoBehaviour
                 break;
             case StatusMovimento.agarrando:
                 temp = 8;
+                break;
+            case StatusMovimento.agachado_idle:
+                temp = 9;
                 break;
         }
 

@@ -115,20 +115,21 @@ public class QuimicoPlayer : MonoBehaviour
     }
     public float StatusTranslator()
     {
+        float temp = 0;
+
         switch (status)
         {
             case Statusquimico.Abstinencia:
-                return 0;
+                temp = 0;
                 break;
             case Statusquimico.Normal:
-                return 1;
+                temp = 1;
                 break;
             case Statusquimico.Overdose:
-                return 2;
-                break;
-            default:
-                return 0;
+                temp = 2;
                 break;
         }
+
+        return temp;
     }
 }
