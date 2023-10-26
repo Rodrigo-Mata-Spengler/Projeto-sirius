@@ -8,8 +8,6 @@ using UnityEngine.Rendering;
 
 public class SettingsMenu : MonoBehaviour
 {
-
-    public TMP_Dropdown resolutionDropDown;
     public Toggle vsyncTog;
 
     public VolumeProfile volumeProfile ;
@@ -25,8 +23,9 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
-        UpdateQualityLabel();
+        //UpdateQualityLabel();
         bool foundRes = false;
+
         for(int i = 0; i< resolutionsx.Count; i++)
         {
             if(Screen.width == resolutionsx[i].horizontal && Screen.height == resolutionsx[i].vertical)
