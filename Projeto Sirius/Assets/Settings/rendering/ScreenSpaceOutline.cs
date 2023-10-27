@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
@@ -15,23 +14,23 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature
         [Header("General Outline Settings")]
         public Color outlineColor = Color.black;
         [Range(0.0f, 20.0f)]
-        public float outlineScale = 0.5f;
+        public float outlineScale = 0.7f;
 
         [Header("Depth Settings")]
         [Range(0.0f, 100.0f)]
         public float depthThreshold = 100f;
         [Range(0.0f, 500.0f)]
-        public float robertsCrossMultiplier = 500f;
+        public float robertsCrossMultiplier = 0f;
 
         [Header("Normal Settings")]
         [Range(0.0f, 1.0f)]
-        public float normalThreshold = 0.37f;
+        public float normalThreshold = 0.39f;
 
         [Header("Depth Normal Relation Settings")]
         [Range(0.0f, 2.0f)]
         public float steepAngleThreshold = 2f;
         [Range(0.0f, 500.0f)]
-        public float steepAngleMultiplier = 500f;
+        public float steepAngleMultiplier = 385f;
 
     }
 
@@ -161,7 +160,9 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature
 
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
         {
+          
             RenderTextureDescriptor temporaryTargetDescriptor = renderingData.cameraData.cameraTargetDescriptor;
+    
             temporaryTargetDescriptor.depthBufferBits = 0;
             cmd.GetTemporaryRT(temporaryBufferID, temporaryTargetDescriptor, FilterMode.Bilinear);
             temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
