@@ -18,8 +18,6 @@ public class AreaEnemy : MonoBehaviour
     private Vector3 pontoSpawnpos;
     [SerializeField] private GameObject[] inimigosNoMundo;
 
-    [SerializeField] private bool temp = false;
-
     private void OnDrawGizmos()
     {
         TradutorPos();

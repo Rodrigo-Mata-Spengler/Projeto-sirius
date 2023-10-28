@@ -123,42 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &319022913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 956705663842361879, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
-  m_PrefabInstance: {fileID: 1217298023602121748}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &399742545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 399742546}
-  m_Layer: 0
-  m_Name: Ponto A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &399742546
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399742545}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.01, y: 0, z: 10.64}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1217298023602121749}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445218252
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,68 +438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1200979411
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1200979412}
-  m_Layer: 0
-  m_Name: Ponto B
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1200979412
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200979411}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.92, y: 0, z: -11.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1217298023602121749}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1207824892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1207824893}
-  m_Layer: 0
-  m_Name: Ponto Spawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1207824893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207824892}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1217298023602121749}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1217298023602121748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -590,45 +492,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5371843924951772319, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 399742546}
-    - targetCorrespondingSourceObject: {fileID: 5371843924951772319, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1200979412}
-    - targetCorrespondingSourceObject: {fileID: 5371843924951772319, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1207824893}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 956705663842361879, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1217298023602121750}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
---- !u!4 &1217298023602121749 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5371843924951772319, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
-  m_PrefabInstance: {fileID: 1217298023602121748}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1217298023602121750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319022913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae2a9b2f8e81e749bfae61b5ddda2ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pontoA: {fileID: 399742546}
-  pontoB: {fileID: 1200979412}
-  "alturaVisualiza\xE7\xE3o": 2
-  inimigo: {fileID: 2445400726944541815, guid: a04bce0c1db44a9418c5784a76a0d03c, type: 3}
-  quantidadeDeInimigos: 2
-  pontoSpawn: {fileID: 1207824893}
-  temp: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
