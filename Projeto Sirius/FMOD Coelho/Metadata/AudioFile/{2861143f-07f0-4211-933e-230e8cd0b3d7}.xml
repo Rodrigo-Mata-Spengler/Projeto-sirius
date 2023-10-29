@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2861143f-07f0-4211-933e-230e8cd0b3d7}">
+		<property name="assetPath">
+			<value>Piso de Pressão/P P 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0565079365079366</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1881c853-cc31-4f68-aa25-b2be91454f39}</destination>
+		</relationship>
+	</object>
+</objects>
