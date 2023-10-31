@@ -572,8 +572,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 646063863428317603}
   statusMov: 0
-  raio: 0
-  collider: {fileID: 4587914508930200059}
+  colliderSound: {fileID: 4587914508930200059}
+  soundLevel: 0
   caminhando: 4
   correndo: 8
   pulando: 4
