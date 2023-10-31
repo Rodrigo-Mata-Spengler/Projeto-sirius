@@ -507,6 +507,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area Inimigo
       objectReference: {fileID: 0}
+    - target: {fileID: 3237281632534659693, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237281632534659693, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685458530296081787, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
+      propertyPath: distanciaMaxima
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3685458530296081787, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: velocidadeInimigo
       value: 2
@@ -554,6 +566,14 @@ PrefabInstance:
     - target: {fileID: 5371843924951772319, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728233328049991228, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728233328049991228, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

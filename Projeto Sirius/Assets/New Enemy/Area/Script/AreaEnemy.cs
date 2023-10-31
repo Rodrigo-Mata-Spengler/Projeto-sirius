@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class AreaEnemy : MonoBehaviour
@@ -14,6 +15,7 @@ public class AreaEnemy : MonoBehaviour
     [Header("Configuração de inimigos na area:")]
     [SerializeField] private GameObject inimigo;
     [SerializeField] private float velocidadeInimigo = 0;
+    [SerializeField] private float distanciaMaxima = 0;
     [SerializeField] private int quantidadeDeInimigos = 0;
     [SerializeField] private Transform pontoSpawn;
     private Vector3 pontoSpawnpos;
@@ -56,18 +58,17 @@ public class AreaEnemy : MonoBehaviour
         {
             pontoSpawn.position = RandomPointInSpace();
             inimigosNoMundo[i] = Instantiate(inimigo, pontoSpawn.position + new Vector3(0,alturaVisualização,0), pontoSpawn.rotation);
-            inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBulder(this,velocidadeInimigo);
+            inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBuilder(this,velocidadeInimigo,distanciaMaxima);
         }
     }
-
 
     //gera um ponto aleatorio dentro da area de inimigos
     public Vector3 RandomPointInSpace()
     {
         Vector3 ponto = new Vector3(0,0,0);
 
-        ponto.x = Random.Range(pontoA.position.x,pontoB.position.x);
-        ponto.z = Random.Range(pontoA.position.z,pontoB.position.z);
+        ponto.x = UnityEngine.Random.Range(pontoA.position.x,pontoB.position.x);
+        ponto.z = UnityEngine.Random.Range(pontoA.position.z,pontoB.position.z);
 
         return ponto;
     }
