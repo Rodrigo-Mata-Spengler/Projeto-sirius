@@ -15,6 +15,7 @@ public class AreaEnemy : MonoBehaviour
     [Header("Configuração de inimigos na area:")]
     [SerializeField] private GameObject inimigo;
     [SerializeField] private float velocidadeInimigo = 0;
+    [SerializeField] private float velocidadeInteresseInimigo = 0;
     [SerializeField] private float distanciaMaxima = 0;
     [SerializeField] private int quantidadeDeInimigos = 0;
     [SerializeField] private Transform pontoSpawn;
@@ -58,7 +59,7 @@ public class AreaEnemy : MonoBehaviour
         {
             pontoSpawn.position = RandomPointInSpace();
             inimigosNoMundo[i] = Instantiate(inimigo, pontoSpawn.position + new Vector3(0,alturaVisualização,0), pontoSpawn.rotation);
-            inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBuilder(this,velocidadeInimigo,distanciaMaxima);
+            inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBuilder(this,velocidadeInimigo,velocidadeInteresseInimigo,distanciaMaxima);
         }
     }
 

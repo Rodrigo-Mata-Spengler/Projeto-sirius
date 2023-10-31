@@ -8,7 +8,6 @@ public class EnemyControler : MonoBehaviour
     [Header("Status Enemy")]
     [SerializeField]private EnemyStatus status = EnemyStatus.idle;
     private Rigidbody enemyRigi;
-    private CharacterController enemyChara;
 
     [Header("Enemy field of view")]
     [SerializeField] private Transform fieldOfView;
@@ -16,15 +15,19 @@ public class EnemyControler : MonoBehaviour
 
     [Header("Velocidade")]
     [SerializeField] private float velocidade = 0;
+    [SerializeField] private float velocidadeInteresse = 0;
 
     [Header("Ponto de interesse")]
     [SerializeField] private Vector3 pontoMov;
     private AreaEnemy areaMovimento;
 
+    [Header("Idle")]
+    [SerializeField] private float esperaIdle = 0;
+    private float proximaEsperaIdle = 0;
+
     private void Start()
     {
-        enemyRigi = GetComponent<Rigidbody>();
-        enemyChara = GetComponent<CharacterController>();
+        enemyRigi = GetComponent<Rigidbody>();;
     }
 
     private void OnDrawGizmos()
@@ -33,44 +36,35 @@ public class EnemyControler : MonoBehaviour
         Gizmos.DrawWireSphere(pontoMov,.5f);
     }
 
-    public void EnemyBuilder(AreaEnemy area,float vel,float distanciaMax)
+    public void EnemyBuilder(AreaEnemy area,float vel,float velInt,float distanciaMax)
     {
         areaMovimento = area;
         velocidade = vel;
         distanciaMaxima = distanciaMax;
+        velocidadeInteresse = velInt;
     }
 
     private void Update()
     {
-        if(status == EnemyStatus.idle)
+        switch (status)
         {
-            pontoMov = areaMovimento.RandomPointInSpace();
-            status = EnemyStatus.movendo;
+            case EnemyStatus.idle:
+                Idle();
+                break;
+            case EnemyStatus.movendo:
+                Movendo();
+                break;
+            case EnemyStatus.Atraido:
+                Atraido();
+                break;
+            case EnemyStatus.procurando:
+                Procurando();
+                break;
+            case EnemyStatus.Achou:
+                Achou();
+                break;
         }
-        if (status == EnemyStatus.movendo)
-        {
-            transform.position = Vector3.MoveTowards(transform.position,pontoMov,velocidade * Time.deltaTime);
 
-            if (transform.position == pontoMov)
-            {
-                status = EnemyStatus.idle;
-            }
-        }
-        if (status == EnemyStatus.Atraido)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, pontoMov, velocidade * Time.deltaTime);
-
-            if (Vector3.Distance(transform.position,pontoMov) <= distanciaMaxima)
-            {
-                pontoMov = transform.position;
-                status = EnemyStatus.procurando;
-            }
-        }
-        if (status == EnemyStatus.procurando)
-        {
-
-        }
-        
     }
 
     public void NewPointOfInterest(Vector3 pontoDeInteresse)
@@ -81,7 +75,45 @@ public class EnemyControler : MonoBehaviour
             status = EnemyStatus.Atraido;
         }
     }
-    //cria um ponto aleatorio no espaço
-    //se move ate ele
-    //se ver o player 
+
+    private void Idle()
+    {
+        if (proximaEsperaIdle <= Time.time)
+        {
+            pontoMov = areaMovimento.RandomPointInSpace();
+            status = EnemyStatus.movendo;
+        }
+    }
+
+    private void Movendo()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, pontoMov, velocidade * Time.deltaTime);
+
+        if (transform.position == pontoMov)
+        {
+            proximaEsperaIdle = esperaIdle + Time.time;
+            status = EnemyStatus.idle;
+        }
+    }
+
+    private void Atraido()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, pontoMov, velocidadeInteresse  * Time.deltaTime);
+
+        Debug.Log(Vector3.Distance(transform.position, pontoMov));
+        if (Vector3.Distance(transform.position, pontoMov) <= distanciaMaxima)
+        {
+            status = EnemyStatus.procurando;
+        }
+    }
+
+    private void Procurando()
+    {
+
+    }
+
+    private void Achou()
+    {
+
+    }
 }

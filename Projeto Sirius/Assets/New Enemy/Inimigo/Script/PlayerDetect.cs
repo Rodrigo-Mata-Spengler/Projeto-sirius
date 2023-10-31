@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class PlayerDetect : MonoBehaviour
 {
@@ -13,7 +14,13 @@ public class PlayerDetect : MonoBehaviour
     {
         if (other.CompareTag(tagPlayer) || other.CompareTag(tagPontoDeInteresse))
         {
-            controler.NewPointOfInterest(other.transform.position);
+            RaycastHit hit;
+            Physics.Raycast(transform.position, ( other.transform.position - transform.position), out hit, Mathf.Infinity);
+            Debug.Log(hit.transform.tag.ToString());
+            if (hit.transform.CompareTag(tagPlayer) || hit.transform.CompareTag(tagPontoDeInteresse))
+            {
+                controler.NewPointOfInterest(other.transform.position);
+            }
         }    
     }
 }
