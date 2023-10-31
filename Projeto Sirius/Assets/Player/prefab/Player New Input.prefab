@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 8788008714356100191}
   - component: {fileID: 2372457075094942411}
   - component: {fileID: 4587914508930200059}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: SoundDetection
   m_TagString: PointOfInterest
   m_Icon: {fileID: 0}
