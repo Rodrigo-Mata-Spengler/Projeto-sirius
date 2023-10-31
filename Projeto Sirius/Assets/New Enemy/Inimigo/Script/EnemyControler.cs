@@ -5,6 +5,9 @@ using UnityEngine;
 enum EnemyStatus { idle, movendo, Atraido, procurando, Achou}
 public class EnemyControler : MonoBehaviour
 {
+    private GameObject player = null;
+    private PauseMenu pauseMorte;
+
     [Header("Status Enemy")]
     [SerializeField]private EnemyStatus status = EnemyStatus.idle;
     private Rigidbody enemyRigi;
@@ -20,10 +23,16 @@ public class EnemyControler : MonoBehaviour
     [Header("Ponto de interesse")]
     [SerializeField] private Vector3 pontoMov;
     private AreaEnemy areaMovimento;
+    [SerializeField] private string playeTag;
+    [SerializeField] private string pointTag;
 
     [Header("Idle")]
     [SerializeField] private float esperaIdle = 0;
     private float proximaEsperaIdle = 0;
+
+    [Header("Tempo de procura")]
+    [SerializeField] private float esperaProcura = 0;
+    private float proximaEsperaProcura = 0;
 
     private void Start()
     {
@@ -32,16 +41,17 @@ public class EnemyControler : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(pontoMov,.5f);
     }
 
-    public void EnemyBuilder(AreaEnemy area,float vel,float velInt,float distanciaMax)
+    public void EnemyBuilder(AreaEnemy area,float vel,float velInt,float distanciaMax,PauseMenu pausem)
     {
         areaMovimento = area;
         velocidade = vel;
         distanciaMaxima = distanciaMax;
         velocidadeInteresse = velInt;
+        pauseMorte = pausem;
     }
 
     private void Update()
@@ -69,11 +79,16 @@ public class EnemyControler : MonoBehaviour
 
     public void NewPointOfInterest(Vector3 pontoDeInteresse)
     {
-        if (status != EnemyStatus.Atraido || status != EnemyStatus.procurando)
+        pontoMov = pontoDeInteresse;
+        if (status != EnemyStatus.procurando && status != EnemyStatus.procurando && status != EnemyStatus.Achou)
         {
-            pontoMov = pontoDeInteresse;
             status = EnemyStatus.Atraido;
         }
+    }
+
+    public void FoundPlayer(GameObject player)
+    {
+        this.player = player;
     }
 
     private void Idle()
@@ -100,20 +115,38 @@ public class EnemyControler : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, pontoMov, velocidadeInteresse  * Time.deltaTime);
 
-        Debug.Log(Vector3.Distance(transform.position, pontoMov));
         if (Vector3.Distance(transform.position, pontoMov) <= distanciaMaxima)
         {
+            proximaEsperaProcura = esperaProcura + Time.time;
             status = EnemyStatus.procurando;
         }
     }
 
     private void Procurando()
     {
+        RaycastHit hit;
+        Physics.Raycast(transform.position, (pontoMov - transform.position), out hit, Mathf.Infinity);
+        Debug.DrawRay(transform.position, (pontoMov - transform.position));
 
+
+        Debug.Log(hit.transform.tag);
+        if (proximaEsperaProcura <= Time.time)
+        {
+            pontoMov = areaMovimento.RandomPointInSpace();
+            status = EnemyStatus.movendo;
+        }
+        else if (hit.transform.CompareTag(pointTag))
+        {
+
+        } 
+        else if(hit.transform.CompareTag(playeTag))
+        {
+            status = EnemyStatus.Achou;
+        }
     }
 
     private void Achou()
     {
-
+        //pauseMorte.Death();
     }
 }

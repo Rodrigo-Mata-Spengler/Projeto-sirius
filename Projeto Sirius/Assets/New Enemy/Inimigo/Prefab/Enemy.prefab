@@ -102,7 +102,10 @@ MonoBehaviour:
   velocidade: 0
   velocidadeInteresse: 0
   pontoMov: {x: 0, y: 0, z: 0}
+  playeTag: Player
+  pointTag: PointOfInterest
   esperaIdle: 3
+  esperaProcura: 2
 --- !u!1 &5976050361052274462
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,5 +257,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagPlayer: Player
-  tagPontoDeInteresse: Player
+  tagPontoDeInteresse: PointOfInterest
   controler: {fileID: 3468666010466374234}

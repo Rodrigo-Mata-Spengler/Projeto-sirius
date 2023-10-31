@@ -346,6 +346,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1058511699 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4587914508930200059, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+  m_PrefabInstance: {fileID: 1657025606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1164087793
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +451,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2372457075094942411, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: pulando
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372457075094942411, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: agachado
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372457075094942411, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: correndo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372457075094942411, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: escalando
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372457075094942411, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: colliderSound
+      value: 
+      objectReference: {fileID: 1058511699}
     - target: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: m_Name
       value: Player New Input
@@ -490,6 +515,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6975243462304595138, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975243462304595138, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
+      propertyPath: m_TagString
+      value: PointOfInterest
+      objectReference: {fileID: 0}
     - target: {fileID: 9187672707324191201, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
       propertyPath: quimicoatual
       value: 1200
@@ -521,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1768795028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -602,8 +635,8 @@ Transform:
   m_GameObject: {fileID: 1768795027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2149544, y: -4.09412, z: 12.1}
-  m_LocalScale: {x: 14.78, y: 23.93, z: 1}
+  m_LocalPosition: {x: -7.2149544, y: -2.47, z: 13.94}
+  m_LocalScale: {x: 83.32, y: 13.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -622,15 +655,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3237281632534659693, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.8
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 3237281632534659693, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.1
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 3685458530296081787, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: distanciaMaxima
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3685458530296081787, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: velocidadeInimigo
@@ -686,11 +719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728233328049991228, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: -18.4
       objectReference: {fileID: 0}
     - target: {fileID: 6728233328049991228, guid: 9bce88a5bdbd5224084a08dc3338cf8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.5
+      value: -16.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

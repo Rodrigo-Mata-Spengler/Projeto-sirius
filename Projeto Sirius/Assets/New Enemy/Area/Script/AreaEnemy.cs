@@ -22,6 +22,9 @@ public class AreaEnemy : MonoBehaviour
     private Vector3 pontoSpawnpos;
     [SerializeField] private GameObject[] inimigosNoMundo;
 
+    [Header("Menu de morte")]
+    [SerializeField] private PauseMenu pause;
+
     private void OnDrawGizmos()
     {
         TradutorPos();
@@ -59,7 +62,7 @@ public class AreaEnemy : MonoBehaviour
         {
             pontoSpawn.position = RandomPointInSpace();
             inimigosNoMundo[i] = Instantiate(inimigo, pontoSpawn.position + new Vector3(0,alturaVisualização,0), pontoSpawn.rotation);
-            inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBuilder(this,velocidadeInimigo,velocidadeInteresseInimigo,distanciaMaxima);
+            inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBuilder(this,velocidadeInimigo,velocidadeInteresseInimigo,distanciaMaxima,pause);
         }
     }
 

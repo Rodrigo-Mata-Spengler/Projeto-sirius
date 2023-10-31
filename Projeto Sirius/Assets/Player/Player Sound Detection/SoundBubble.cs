@@ -6,20 +6,16 @@ public class SoundBubble : MonoBehaviour
 {
     [SerializeField] private PlayerMoveStatus playerStatus;
     [SerializeField] private StatusMovimento statusMov = StatusMovimento.idle;
-    [SerializeField] private float raio = 0;
+    [SerializeField] private SphereCollider colliderSound;
+    [SerializeField] public float soundLevel = 0;
 
-    [SerializeField] private float caminhando = 0;
-    [SerializeField] private float correndo = 0;
-    [SerializeField] private float pulando = 0;
-    [SerializeField] private float agachado = 0;
-    [SerializeField] private float parado = 0;
-    [SerializeField] private float empurrando = 0;
-    [SerializeField] private float escalando = 0;
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, raio);
-    }
+    [SerializeField] public float caminhando = 0;
+    [SerializeField] public float correndo = 0;
+    [SerializeField] public float pulando = 0;
+    [SerializeField] public float agachado = 0;
+    [SerializeField] public float parado = 0;
+    [SerializeField] public float empurrando = 0;
+    [SerializeField] public float escalando = 0;
 
     private void Start()
     {
@@ -30,9 +26,9 @@ public class SoundBubble : MonoBehaviour
     {
         TranslateStatus(playerStatus.GetStatus());
 
-        raio = RaioEsfera();
+        soundLevel = RaioEsfera();
 
-        Physics.OverlapSphere(transform.position, raio);
+        colliderSound.radius = soundLevel;
     }
 
     private float RaioEsfera()
