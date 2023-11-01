@@ -492,6 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLedge: {fileID: 3985171473417943264}
   velocidade: {x: 0, y: 0, z: 0}
+  soundB: {fileID: 6975243462304595138}
   status: 0
   pulandoOffSet: 0.2
 --- !u!1 &6951047221563369458
@@ -580,7 +581,7 @@ MonoBehaviour:
   agachado: 2
   parado: 0
   empurrando: 0
-  escalando: 4
+  escalando: 6
 --- !u!135 &4587914508930200059
 SphereCollider:
   m_ObjectHideFlags: 0

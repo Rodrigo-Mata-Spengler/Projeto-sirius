@@ -10,6 +10,7 @@ public class PlayerMoveStatus : MonoBehaviour
     private MovimentoPlayer playerMovimento;
     [SerializeField] private LedgeDetect playerLedge;
     public Vector3 velocidade;
+    [SerializeField] private GameObject soundB;
 
     [SerializeField] private StatusMovimento status = StatusMovimento.idle;
 
@@ -28,9 +29,15 @@ public class PlayerMoveStatus : MonoBehaviour
         //testa para ver se o player esta no ar
         if (!playerControler.isGrounded)
         {
-            if (velocidade.y > pulandoOffSet)
+            if (playerMovimento.escalando)
+            {
+                status = StatusMovimento.escalando;
+                soundB.SetActive(false);
+            }
+            else if(velocidade.y > pulandoOffSet)
             {
                 status = StatusMovimento.pulando;
+                soundB.SetActive(true);
 
             }
             else if (velocidade.y < -1 * pulandoOffSet)
@@ -38,6 +45,7 @@ public class PlayerMoveStatus : MonoBehaviour
                 if (!playerMovimento.agachado)
                 {
                     status = StatusMovimento.caindo;
+                    soundB.SetActive(true);
                 }
             }
         }
@@ -46,35 +54,44 @@ public class PlayerMoveStatus : MonoBehaviour
             if (playerMovimento.correndo && velocidade.x != 0)
             {
                 status = StatusMovimento.correndo;
+                soundB.SetActive(true);
             } else if (playerMovimento.agachado)
             {
                 if(velocidade.x != 0)
                 {
                     status = StatusMovimento.agachando;
+                    soundB.SetActive(true);
                 }
                 else
                 {
                     status = StatusMovimento.agachado_idle;
+                    soundB.SetActive(true);
                 }   
             } else if (playerMovimento.arrastando)
             {
                 status = StatusMovimento.empurrando;
+                soundB.SetActive(true);
+
             } else if (playerMovimento.escalando)
             {
                 status = StatusMovimento.escalando;
+                soundB.SetActive(false);
             } else if (playerLedge.IsLedge())
             {
                 status = StatusMovimento.agarrando;
+                soundB.SetActive(true);
             }
             else
             {
                 if (velocidade.x != 0)
                 {
                     status = StatusMovimento.caminhando;
+                    soundB.SetActive(true);
                 }
                 else
                 {
                     status = StatusMovimento.idle;
+                    soundB.SetActive(true);
                 }
             }
         }
