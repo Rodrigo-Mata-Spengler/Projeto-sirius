@@ -15,6 +15,7 @@ TagManager:
   - PlayerSpawn
   - Colecionavel
   - PointOfInterest
+  - BreakWall
   layers:
   - Default
   - TransparentFX

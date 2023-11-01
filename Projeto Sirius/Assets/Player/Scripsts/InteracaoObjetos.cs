@@ -39,6 +39,11 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private LuzTrigger luz;
     private bool interacaoLightSwitch = false;
 
+    [Header("Wall")]
+    [SerializeField] private string tagBreakWall;
+    [SerializeField] private DestructibleWall wall;
+    private bool interacaoWall= false;
+
     [Header("Alavanca")]
     [SerializeField] private string tagAlavanca;
     [SerializeField] private DoorButton door;
@@ -90,6 +95,10 @@ public class InteracaoObjetos : MonoBehaviour
         }else if (interacaoColecionavel && button == ButtonStatus.press)
         {
             Coletar();
+        }
+        else if (interacaoWall && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
+        {
+            wall.BreakWall();
         }
 
         if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())
@@ -166,6 +175,11 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoLightSwitch = true;
             luz = other.gameObject.GetComponent<LuzTrigger>();
+        
+        }else if (other.gameObject.CompareTag(tagBreakWall))
+        {
+            interacaoWall = true;
+            wall = other.gameObject.GetComponent<DestructibleWall>();
         }
         else if (other.gameObject.CompareTag(tagAlavanca))
         {

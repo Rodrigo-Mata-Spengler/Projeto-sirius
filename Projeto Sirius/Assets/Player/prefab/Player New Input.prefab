@@ -289,6 +289,8 @@ MonoBehaviour:
   ancoraPendurar: {fileID: 0}
   tagLightSwitch: LightSwitch
   luz: {fileID: 0}
+  tagBreakWall: BreakWall
+  wall: {fileID: 0}
   tagAlavanca: BotaoPorta
   door: {fileID: 0}
   tagCheckPoint: CheckPoint
