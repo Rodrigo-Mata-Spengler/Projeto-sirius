@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Bits: 960
   outlinesOccluderLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   outlineSettings:
     outlineColor: {r: 0, g: 0, b: 0, a: 0.6509804}
     outlineScale: 1.3
