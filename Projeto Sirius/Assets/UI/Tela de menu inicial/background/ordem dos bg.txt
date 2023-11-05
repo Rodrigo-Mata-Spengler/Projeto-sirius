@@ -1,0 +1,7 @@
+1- bg 2
+
+2 - divisao bg bg 2
+
+3 - liquido (animaçao)
+
+4 - bg sem liquido
