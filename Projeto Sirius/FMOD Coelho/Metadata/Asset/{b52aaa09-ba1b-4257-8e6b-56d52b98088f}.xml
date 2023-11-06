@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{b52aaa09-ba1b-4257-8e6b-56d52b98088f}">
+		<property name="assetPath">
+			<value>Seringa/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1881c853-cc31-4f68-aa25-b2be91454f39}</destination>
+		</relationship>
+	</object>
+</objects>
