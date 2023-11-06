@@ -61,7 +61,7 @@ public class BossFinal : MonoBehaviour
         }
 
         //caso o player tenha falado com o npc que vai ajudalo
-        if (other.gameObject.CompareTag(lentoTag))
+        if (other.gameObject.CompareTag(lentoTag) && lentidao == false)
         {
             fimDaEspera = tempoLentidao + Time.time;
             velocidade = velocidadeLentidao;
