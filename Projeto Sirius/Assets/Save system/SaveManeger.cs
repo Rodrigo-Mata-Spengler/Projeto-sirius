@@ -15,6 +15,9 @@ public class SaveManeger : MonoBehaviour
     [Header("Camera da Scena")]
     [SerializeField] private GameObject cam;
 
+    [Header("Menu Pause")]
+    [SerializeField] private PauseMenu menupause;
+
     private PlayerData data;
 
     private void Start()
@@ -24,11 +27,11 @@ public class SaveManeger : MonoBehaviour
             //verifica se existe um save do player ja existente
             if (data == null)
             {   
-                spawn.SpawnPlayer(player,cam);
+                spawn.SpawnPlayer(player,cam,menupause);
             }else {
                 spawn.transform.position = new Vector3(data.loc_Atual[0], data.loc_Atual[1],spawn.transform.position.z);
 
-                spawn.SpawnPlayer(player,data,cam);
+                spawn.SpawnPlayer(player,data,cam,menupause);
             }
         }
     }
@@ -51,6 +54,11 @@ public class SaveManeger : MonoBehaviour
         if (!cam)
         {
             Debug.LogError("Prefab da camera não configurado! \n favor configurar antes de continuar");
+            configurado = false;
+        }
+        if (!menupause)
+        {
+            Debug.LogError("Prefab do Menu de pause não configurado! \n favor configurar antes de continuar");
             configurado = false;
         }
 

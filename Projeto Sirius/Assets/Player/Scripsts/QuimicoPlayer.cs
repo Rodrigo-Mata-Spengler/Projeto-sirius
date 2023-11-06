@@ -8,6 +8,7 @@ public class QuimicoPlayer : MonoBehaviour
 {
     [Header("Status")]
     [SerializeField] private Statusquimico status = Statusquimico.Normal;
+    [HideInInspector] public PauseMenu menuMorte;
 
     [Header("Niveis do quimico")]
     [SerializeField] private float quimicoatual = 0;
@@ -45,6 +46,16 @@ public class QuimicoPlayer : MonoBehaviour
             quimicoatual -= perda;
 
             tempCadencia = cadencia + Time.time;
+        }
+
+        if (quimicoatual <= 0)
+        {
+            menuMorte.Death();
+        }
+
+        if (quimicoatual >= 0)
+        {
+            menuMorte.Death();
         }
 
         if (quimicoatual <= abstinencia)
