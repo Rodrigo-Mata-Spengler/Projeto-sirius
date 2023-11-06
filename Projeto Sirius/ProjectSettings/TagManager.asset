@@ -16,6 +16,8 @@ TagManager:
   - Colecionavel
   - PointOfInterest
   - BreakWall
+  - Boss
+  - Lento
   layers:
   - Default
   - TransparentFX
