@@ -40,24 +40,12 @@ public class BossFinal : MonoBehaviour
 
     }
 
-
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("saiu");
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("ficou");
-    }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entrou");
-
         //caso player seja capturado pelo Boss
         if (other.gameObject.CompareTag(playerTag))
         {
-            //morte.Death();
+            morte.Death();
         }
 
         //caso o player tenha falado com o npc que vai ajudalo
