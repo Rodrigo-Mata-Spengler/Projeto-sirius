@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public string FirstScene;
 
-    public GameObject MainMenuPanel;
+    public GameObject ArmarioFechado;
     public GameObject OpcoesPanel;
 
     void Start()
@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Opcoes()
     {
-        MainMenuPanel.SetActive(false);
+        ArmarioFechado.SetActive(false);
         OpcoesPanel.SetActive(true);
 
     }

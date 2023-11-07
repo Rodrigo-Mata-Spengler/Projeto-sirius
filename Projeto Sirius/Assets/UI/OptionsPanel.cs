@@ -5,12 +5,14 @@ using UnityEngine;
 public class OptionsPanel : MonoBehaviour
 {
 
-    [SerializeField] private GameObject MainMenuPanel;
+    [SerializeField] private GameObject ArmarioFechado;
     [SerializeField] private GameObject MainOpcoesPanel;
     [SerializeField] private GameObject OpcoesPanel;
     [SerializeField] private GameObject ControlesPanel;
     [SerializeField] private GameObject GraficosPanel;
     [SerializeField] private GameObject SFXPanel;
+
+    [SerializeField] private List<GameObject> paineisOpcoes= new List<GameObject>();
 
     private int PanelOpen = 0;
     // Start is called before the first frame update
@@ -27,35 +29,23 @@ public class OptionsPanel : MonoBehaviour
 
     public void BackMainMenuPanel()
     {
-        OpcoesPanel.SetActive(false);
-        MainMenuPanel.SetActive(true);
+        ArmarioFechado.SetActive(true);
        
     }
 
-    public void ParaOpçoes()
+    public void DesligaPainel()
     {
-        switch(PanelOpen)
+        for(int i = 0; i<paineisOpcoes.Count; i++)
         {
-            case 1:
-                ControlesPanel.SetActive(false);
-                break;
-
-            case 2:
-                GraficosPanel.SetActive(false);
-                break;
-
-            case 3:
-                SFXPanel.SetActive(false);
-                break;
-
+            paineisOpcoes[i].SetActive(false);
         }
-        OpcoesPanel.SetActive(true);
-        PanelOpen = 0;
     }
 
     public void ParaControles()
     {
-        OpcoesPanel.SetActive(false);
+        DesligaPainel();
+
+
         ControlesPanel.SetActive(true);
 
         PanelOpen = 1;
@@ -63,20 +53,26 @@ public class OptionsPanel : MonoBehaviour
     }
     public void ParaGraficos()
     {
+        DesligaPainel();
+
         PanelOpen = 2;
-        OpcoesPanel.SetActive(false);
+
         GraficosPanel.SetActive(true);
     }
     public void ParaSFX()
     {
+        DesligaPainel();
+
         PanelOpen = 3;
-        OpcoesPanel.SetActive(false);
+
         SFXPanel.SetActive(true);
     }
 
     public void ParaMainMenu()
     {
-        MainMenuPanel.SetActive(true);
+       
+
+        ArmarioFechado.SetActive(true);
         MainOpcoesPanel.SetActive(false);
     }
 }

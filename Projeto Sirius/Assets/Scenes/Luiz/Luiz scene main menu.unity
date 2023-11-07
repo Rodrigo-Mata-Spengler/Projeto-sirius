@@ -433,6 +433,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 52534364352691675, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545914624515100151, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -515,18 +523,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4018380176909618709, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6757186529589293370, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 723
-      objectReference: {fileID: 0}
-    - target: {fileID: 7928723938036815248, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8733749910460954266, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
