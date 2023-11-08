@@ -117,7 +117,10 @@ VisualEffect:
         m_Name: "Local de emis\xE3o_center"
         m_Overridden: 1
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 0.13726279, z: 0.8275778, w: 0}
+        m_Name: Cor
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
