@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{a1cce6ec-c44b-4d92-bdd8-74a0dd10ecbc}">
+		<property name="assetPath">
+			<value>Coelho Caindo -Editado/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1881c853-cc31-4f68-aa25-b2be91454f39}</destination>
+		</relationship>
+	</object>
+</objects>
