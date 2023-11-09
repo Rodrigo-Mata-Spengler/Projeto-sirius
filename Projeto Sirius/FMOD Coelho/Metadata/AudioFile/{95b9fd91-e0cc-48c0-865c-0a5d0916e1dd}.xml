@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{95b9fd91-e0cc-48c0-865c-0a5d0916e1dd}">
 		<property name="assetPath">
-			<value>Seringa Coletada/Coletar Seringa 2.wav</value>
+			<value>Seringa Coletada Batida Única/Coletar Seringa 2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

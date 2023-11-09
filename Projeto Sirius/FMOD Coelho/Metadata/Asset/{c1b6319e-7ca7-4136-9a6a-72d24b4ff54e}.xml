@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="EncodableAsset" id="{8c76abd8-0329-46d4-a97b-d93b591bbc89}">
+	<object class="EncodableAsset" id="{c1b6319e-7ca7-4136-9a6a-72d24b4ff54e}">
 		<property name="assetPath">
-			<value>Seringa Coletada Batida Única/</value>
+			<value>Seringa Coletada/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{1881c853-cc31-4f68-aa25-b2be91454f39}</destination>
