@@ -324,8 +324,8 @@ MonoBehaviour:
   escalando: 0
   gravidade: 10
   puloAbstinencia: 0
-  puloNormal: 5
-  puloOverdose: 7
+  puloNormal: 6
+  puloOverdose: 9
   pulando: 0
   alturaAgachado: 2
   velocidadeAgachadoNormal: 2
