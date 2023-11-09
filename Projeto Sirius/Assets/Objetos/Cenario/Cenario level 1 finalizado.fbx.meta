@@ -23,7 +23,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Caminhao_material
-    second: {fileID: 2100000, guid: 60b25b932f2867e42b926527a01fe439, type: 2}
+    second: {fileID: 2100000, guid: eed26203db1133148a8b72099abed1de, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -33,7 +33,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Corda_material
-    second: {fileID: 2100000, guid: 60b25b932f2867e42b926527a01fe439, type: 2}
+    second: {fileID: 2100000, guid: a5230d9865a6b4e45909ecad82fde223, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -48,7 +48,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gaiola_material
-    second: {fileID: 2100000, guid: 60b25b932f2867e42b926527a01fe439, type: 2}
+    second: {fileID: 2100000, guid: 08a98773c5b920345ab1b45b4b65b309, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -93,7 +93,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Tranca_material
-    second: {fileID: 2100000, guid: 60b25b932f2867e42b926527a01fe439, type: 2}
+    second: {fileID: 2100000, guid: d11da479469f42b459651cb667d1bc17, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
