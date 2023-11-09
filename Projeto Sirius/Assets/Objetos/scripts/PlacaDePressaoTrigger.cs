@@ -6,22 +6,47 @@ public class PlacaDePressaoTrigger : MonoBehaviour
 {
     [SerializeField] private PlacaDePressao[] porta;
     [SerializeField] private PlacaDePressao placaDePressao;
+    private bool usando = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Arrastavel"))
+        if (usando == false)
         {
-            Debug.Log("aquii porra");
-            for (int i = 0; i < porta.Length; i++)
+            if (other.CompareTag("Player") || other.CompareTag("Arrastavel"))
             {
-                if (!porta[i].IsOpen)
+                Debug.Log("aquii porra");
+                for (int i = 0; i < porta.Length; i++)
                 {
-                    porta[i].Open(other.transform.position);
-                    placaDePressao.Open(other.transform.position);
-
+                    if (!porta[i].IsOpen)
+                    {
+                        porta[i].Open(other.transform.position);
+                        placaDePressao.Open(other.transform.position);
+                        usando = true;
+                    }
                 }
-            }
 
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (usando == false)
+        {
+            if (other.CompareTag("Player") || other.CompareTag("Arrastavel"))
+            {
+                Debug.Log("aquii porra");
+                for (int i = 0; i < porta.Length; i++)
+                {
+                    if (!porta[i].IsOpen)
+                    {
+                        porta[i].Open(other.transform.position);
+                        placaDePressao.Open(other.transform.position);
+                        usando = true;
+                    }
+                }
+
+            }
         }
     }
 
@@ -38,6 +63,7 @@ public class PlacaDePressaoTrigger : MonoBehaviour
                     porta[i].Close();
                 }
             }
+            usando = false;
 
         }
     }
