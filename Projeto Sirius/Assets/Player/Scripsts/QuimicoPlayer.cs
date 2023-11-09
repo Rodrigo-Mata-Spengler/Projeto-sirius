@@ -53,7 +53,7 @@ public class QuimicoPlayer : MonoBehaviour
             menuMorte.Death();
         }
 
-        if (quimicoatual >= 0)
+        if (quimicoatual >= 100)
         {
             menuMorte.Death();
         }
