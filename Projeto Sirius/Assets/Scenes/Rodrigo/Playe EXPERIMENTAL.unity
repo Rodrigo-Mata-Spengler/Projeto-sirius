@@ -643,6 +643,7 @@ MonoBehaviour:
   spawn: {fileID: 529810364}
   player: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   cam: {fileID: 850782216357180878}
+  menupause: {fileID: 0}
 --- !u!4 &611996674
 Transform:
   m_ObjectHideFlags: 0
@@ -1635,6 +1636,10 @@ PrefabInstance:
     - target: {fileID: 7036582328125799666, guid: 15b8c2d22fa8c144a84e6169ea9feb70, type: 3}
       propertyPath: m_Name
       value: Colecionavel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036582328125799666, guid: 15b8c2d22fa8c144a84e6169ea9feb70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7036582328125799666, guid: 15b8c2d22fa8c144a84e6169ea9feb70, type: 3}
       propertyPath: m_TagString
