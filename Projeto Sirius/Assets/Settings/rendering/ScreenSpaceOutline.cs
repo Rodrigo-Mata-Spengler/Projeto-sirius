@@ -14,7 +14,7 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature
         [Header("General Outline Settings")]
         public Color outlineColor = Color.black;
         [Range(0.0f, 20.0f)]
-        public float outlineScale = 1.3f;
+        public float outlineScale = 1.05f;
 
         [Header("Depth Settings")]
         [Range(0.0f, 100.0f)]
@@ -24,11 +24,11 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature
 
         [Header("Normal Settings")]
         [Range(0.0f, 1.0f)]
-        public float normalThreshold = 1f;
+        public float normalThreshold = 0.616f;
 
         [Header("Depth Normal Relation Settings")]
         [Range(0.0f, 2.0f)]
-        public float steepAngleThreshold = 0.42f;
+        public float steepAngleThreshold = 0.303f;
         [Range(0.0f, 500.0f)]
         public float steepAngleMultiplier = 10f;
 

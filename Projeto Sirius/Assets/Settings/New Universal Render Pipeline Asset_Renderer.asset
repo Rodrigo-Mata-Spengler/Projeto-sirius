@@ -21,13 +21,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   outlineSettings:
-    outlineColor: {r: 0, g: 0, b: 0, a: 1}
-    outlineScale: 1.08
+    outlineColor: {r: 0, g: 0, b: 0, a: 0.6745098}
+    outlineScale: 1.05
     depthThreshold: 100
     robertsCrossMultiplier: 0
-    normalThreshold: 0.39
-    steepAngleThreshold: 2
-    steepAngleMultiplier: 385
+    normalThreshold: 0.616
+    steepAngleThreshold: 0.303
+    steepAngleMultiplier: 10
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 16
