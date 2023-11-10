@@ -88,11 +88,11 @@ public class PlacaDePressao : MonoBehaviour
 
         if (ForwardAmount >= ForwardDirection)
         {
-            endRotation = Quaternion.Euler(new Vector3(0, 0, StartRotation.z + RotationAmount));
+            endRotation = Quaternion.Euler(new Vector3( StartRotation.x + RotationAmount, StartRotation.y , StartRotation.z));
         }
         else
         {
-            endRotation = Quaternion.Euler(new Vector3(0, 0, StartRotation.z - RotationAmount));
+            endRotation = Quaternion.Euler(new Vector3( StartRotation.x - RotationAmount, StartRotation.y, StartRotation.z));
         }
 
         IsOpen = true;

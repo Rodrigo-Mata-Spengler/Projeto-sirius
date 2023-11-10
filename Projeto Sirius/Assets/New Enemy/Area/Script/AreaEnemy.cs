@@ -60,7 +60,7 @@ public class AreaEnemy : MonoBehaviour
 
         for (int i = 0; i < quantidadeDeInimigos; i++)
         {
-            pontoSpawn.position = RandomPointInSpace();
+            pontoSpawn.position = RandomPointInSpace(pontoSpawn.position.y);
             inimigosNoMundo[i] = Instantiate(inimigo, pontoSpawn.position + new Vector3(0,alturaVisualização,0), pontoSpawn.rotation);
             inimigosNoMundo[i].GetComponent<EnemyControler>().EnemyBuilder(this,velocidadeInimigo,velocidadeInteresseInimigo,distanciaMaxima,pause);
         }
@@ -73,6 +73,16 @@ public class AreaEnemy : MonoBehaviour
 
         ponto.x = UnityEngine.Random.Range(pontoA.position.x,pontoB.position.x);
         ponto.z = UnityEngine.Random.Range(pontoA.position.z,pontoB.position.z);
+
+        return ponto;
+    }
+
+    public Vector3 RandomPointInSpace(float y)
+    {
+        Vector3 ponto = new Vector3(0, y, 0);
+
+        ponto.x = UnityEngine.Random.Range(pontoA.position.x, pontoB.position.x);
+        ponto.z = UnityEngine.Random.Range(pontoA.position.z, pontoB.position.z);
 
         return ponto;
     }
