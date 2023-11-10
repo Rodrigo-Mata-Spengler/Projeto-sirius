@@ -40,6 +40,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_grab", false);
 
                 anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
 
             case StatusMovimento.caminhando:
@@ -67,6 +69,10 @@ public class PlayerAnim : MonoBehaviour
                 break;
             case StatusMovimento.escalando:
                 anim.SetBool("Is_Clibing", true);
+                anim.SetBool("Is_Clibing_idle", false);
+                break;
+            case StatusMovimento.escalando_idle:
+                anim.SetBool("Is_Clibing_idle", true);
                 break;
             case StatusMovimento.agarrando:
                 anim.SetBool("Is_grab", true);
@@ -116,6 +122,9 @@ public class PlayerAnim : MonoBehaviour
                 break;
             case 9:
                 status = StatusMovimento.agachado_idle;
+                break;
+            case 10:
+                status = StatusMovimento.escalando_idle;
                 break;
         }
     }

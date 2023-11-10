@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando , agachado_idle, empurrando, escalando, agarrando}
+enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando , agachado_idle, empurrando, escalando, escalando_idle, agarrando}
 public class PlayerMoveStatus : MonoBehaviour
 {
     private CharacterController playerControler;
@@ -31,8 +31,16 @@ public class PlayerMoveStatus : MonoBehaviour
         {
             if (playerMovimento.escalando)
             {
-                status = StatusMovimento.escalando;
-                soundB.SetActive(false);
+                if (velocidade.y != 0)
+                {
+                    status = StatusMovimento.escalando;
+                    soundB.SetActive(false);
+                }
+                else
+                {
+                    status = StatusMovimento.escalando_idle;
+                    soundB.SetActive(false);
+                }
             }
             else if(velocidade.y > pulandoOffSet)
             {
@@ -74,8 +82,18 @@ public class PlayerMoveStatus : MonoBehaviour
 
             } else if (playerMovimento.escalando)
             {
-                status = StatusMovimento.escalando;
-                soundB.SetActive(false);
+                if (velocidade.y != 0)
+                {
+                    status = StatusMovimento.escalando;
+                    soundB.SetActive(false);
+                }
+                else
+                {
+                    status = StatusMovimento.escalando_idle;
+                    soundB.SetActive(false);
+                }
+
+                
             } else if (playerLedge.IsLedge())
             {
                 status = StatusMovimento.agarrando;
@@ -132,6 +150,9 @@ public class PlayerMoveStatus : MonoBehaviour
                 break;
             case StatusMovimento.agachado_idle:
                 temp = 9;
+                break;
+            case StatusMovimento.escalando_idle:
+                temp = 10;
                 break;
         }
 
