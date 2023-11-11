@@ -257,8 +257,8 @@ MonoBehaviour:
   menuMorte: {fileID: 0}
   quimicoatual: 50
   quimicoMaximo: 100
-  cadencia: 0.5
-  perda: 0.5
+  cadencia: 1
+  perda: 0.25
   abstinencia: 30
   overdose: 70
   quimicos: 5
@@ -325,7 +325,7 @@ MonoBehaviour:
   gravidade: 10
   puloAbstinencia: 0
   puloNormal: 6
-  puloOverdose: 9
+  puloOverdose: 11
   pulando: 0
   alturaAgachado: 2
   velocidadeAgachadoNormal: 2
