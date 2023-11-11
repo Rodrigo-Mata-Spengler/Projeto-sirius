@@ -18,6 +18,7 @@ public class DestructibleWall : MonoBehaviour
 
         }
         DoOnce = true;
-        Trigger.enabled = false;
+
+        Destroy(this,5f);
     }
 }
