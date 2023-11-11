@@ -9,9 +9,11 @@ using UnityEngine.Rendering;
 public class SettingsMenu : MonoBehaviour
 {
     public Toggle vsyncTog;
+    public Toggle FullScreen;
 
     public VolumeProfile volumeProfile ;
     UnityEngine.Rendering.Universal.ColorAdjustments Brightness;
+    [SerializeField] private Slider BrightnessSlider;
 
     public List<ResItem> resolutionsx = new List<ResItem>();
     private int selectedResolution;
@@ -151,9 +153,10 @@ public class SettingsMenu : MonoBehaviour
     public void ApllyChanges()
     {
         Vsync();
-        //SetFullscreen();
+        SetFullscreen(FullScreen);
         SetQuality();
         SetResolution();
+        SetBrightness(BrightnessSlider.value);
     }
 }
 
