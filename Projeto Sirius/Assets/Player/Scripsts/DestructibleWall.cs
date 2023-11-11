@@ -19,6 +19,6 @@ public class DestructibleWall : MonoBehaviour
         }
         DoOnce = true;
 
-        Destroy(this,5f);
+        Destroy(this,2f);
     }
 }
