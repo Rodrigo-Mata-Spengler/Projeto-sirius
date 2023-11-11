@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3197398351561964729}
   - component: {fileID: 7881798408647303846}
   - component: {fileID: 8550652250028717839}
-  - component: {fileID: 7172938709707668663}
+  - component: {fileID: 7309815165469694102}
   m_Layer: 0
   m_Name: pCube21
   m_TagString: Untagged
@@ -198,8 +198,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7172938709707668663
-MeshCollider:
+--- !u!65 &7309815165469694102
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -216,10 +216,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7825289430055562144, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 3.5418324, y: 2.3816164, z: 4.329072}
+  m_Center: {x: 0.1788521, y: -0.059194274, z: 0.000017895509}
 --- !u!1 &3365275470364331928
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +231,7 @@ GameObject:
   - component: {fileID: 3384001348566620103}
   - component: {fileID: 7625136583373651959}
   - component: {fileID: 7689676065129985179}
-  - component: {fileID: 1198086057977503360}
+  - component: {fileID: 2115621392274135060}
   m_Layer: 0
   m_Name: pCube15
   m_TagString: Untagged
@@ -332,8 +331,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1198086057977503360
-MeshCollider:
+--- !u!65 &2115621392274135060
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -350,10 +349,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 379010558040167564, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 2.5000002, y: 2.5278916, z: 4.25575}
+  m_Center: {x: 0.00007629395, y: 0.013942124, z: 0.40952304}
 --- !u!1 &4918898567850375133
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +364,7 @@ GameObject:
   - component: {fileID: 2768816310515122003}
   - component: {fileID: 284429619023028717}
   - component: {fileID: 695576369578644060}
-  - component: {fileID: 2768475751333833719}
+  - component: {fileID: 6698290735237581412}
   m_Layer: 0
   m_Name: pCube18
   m_TagString: Untagged
@@ -466,8 +464,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2768475751333833719
-MeshCollider:
+--- !u!65 &6698290735237581412
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -484,10 +482,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4465315455489950968, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 6.051713, y: 2.500003, z: 3.1817243}
+  m_Center: {x: 1.7756197, y: 0.0000018481576, z: -0.000011447399}
 --- !u!1 &5414575140645437659
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +497,7 @@ GameObject:
   - component: {fileID: 2280955249878816646}
   - component: {fileID: 1276231358112353979}
   - component: {fileID: 4783859424854460621}
-  - component: {fileID: 8147079804742395587}
+  - component: {fileID: 5244156288345090664}
   m_Layer: 0
   m_Name: pCube17
   m_TagString: Untagged
@@ -600,8 +597,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8147079804742395587
-MeshCollider:
+--- !u!65 &5244156288345090664
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -618,10 +615,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8659943070623925175, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 2.5000002, y: 2.5666246, z: 3.508217}
+  m_Center: {x: 0.00007629395, y: 0.03330886, z: 0.15391706}
 --- !u!1 &6384395957530245031
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +630,7 @@ GameObject:
   - component: {fileID: 4486107608518642418}
   - component: {fileID: 3564810355760990597}
   - component: {fileID: 6611840671547395136}
-  - component: {fileID: 6378248098202140564}
+  - component: {fileID: 4616937600382768914}
   m_Layer: 0
   m_Name: pCube16
   m_TagString: Untagged
@@ -734,8 +730,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6378248098202140564
-MeshCollider:
+--- !u!65 &4616937600382768914
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -752,10 +748,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2735251984287490357, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 5.7646184, y: 2.485235, z: 3.8007648}
+  m_Center: {x: 1.161457, y: 0.67210656, z: -0.0000030223473}
 --- !u!1 &6677620781651726762
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +763,7 @@ GameObject:
   - component: {fileID: 4907112234971350094}
   - component: {fileID: 5283196925714543128}
   - component: {fileID: 967702690792457621}
-  - component: {fileID: 7224352884135798032}
+  - component: {fileID: 7193064906827320600}
   m_Layer: 0
   m_Name: pCube22
   m_TagString: Untagged
@@ -868,8 +863,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7224352884135798032
-MeshCollider:
+--- !u!65 &7193064906827320600
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -886,10 +881,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3628990442929905983, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 3.4545522, y: 2.4999998, z: 3.831359}
+  m_Center: {x: 0.19430164, y: -0.0000030398373, z: -0.000014305116}
 --- !u!1 &7124547579106087460
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +896,7 @@ GameObject:
   - component: {fileID: 1192184103477314537}
   - component: {fileID: 8894961470602926323}
   - component: {fileID: 3415681271033393478}
-  - component: {fileID: 2569149516018561743}
+  - component: {fileID: 4322183095933772893}
   m_Layer: 0
   m_Name: pCube19
   m_TagString: Untagged
@@ -1002,8 +996,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2569149516018561743
-MeshCollider:
+--- !u!65 &4322183095933772893
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1020,10 +1014,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1984987933520197390, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 5.2454, y: 2.5720499, z: 3.0289273}
+  m_Center: {x: -0.000019073488, y: 0.0005165041, z: 0.13008596}
 --- !u!1 &8149400301728201118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1029,7 @@ GameObject:
   - component: {fileID: 4108890496507877119}
   - component: {fileID: 196530324526514516}
   - component: {fileID: 7915369637806549507}
-  - component: {fileID: 2269401606825140438}
+  - component: {fileID: 4830932189031955028}
   m_Layer: 0
   m_Name: pCube20
   m_TagString: Untagged
@@ -1136,8 +1129,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2269401606825140438
-MeshCollider:
+--- !u!65 &4830932189031955028
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1154,7 +1147,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4121606559162394652, guid: 14a614ff15e6f1f47a07a3f9df1e99ea, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 2.5000002, y: 2.5000002, z: 2.5000002}
+  m_Center: {x: 0, y: -0.000000029802322, z: -0.00000011920929}

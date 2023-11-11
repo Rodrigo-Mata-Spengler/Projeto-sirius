@@ -286,6 +286,7 @@ MonoBehaviour:
   tagQuimicoColetavel: QuimicoColetavel
   quimicoColetavel: {fileID: 0}
   tagSubirParede: Escalavel
+  tagSubirCorda: Corda
   tagPendurar: Agarravel
   ancoraPendurar: {fileID: 0}
   tagLightSwitch: LightSwitch

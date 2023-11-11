@@ -27,6 +27,7 @@ public class InteracaoObjetos : MonoBehaviour
 
     [Header("Escalada")]
     [SerializeField] public string tagSubirParede;
+    [SerializeField] public string tagSubirCorda;
 
     [Header("Se Pendurar")]
     [SerializeField] private string tagPendurar;

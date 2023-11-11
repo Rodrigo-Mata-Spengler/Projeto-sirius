@@ -18,6 +18,7 @@ TagManager:
   - BreakWall
   - Boss
   - Lento
+  - Corda
   layers:
   - Default
   - TransparentFX

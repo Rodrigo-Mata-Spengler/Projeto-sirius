@@ -91,6 +91,10 @@ public class MovimentoPlayer : MonoBehaviour
         }
         else
         {
+            if (playerInteracao.tag == playerInteracao.tagSubirCorda)
+            {
+                return escalando = true;
+            }
             return escalando = false;
         }
     }
