@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Luiz/Luiz scene main menu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: f1d358b0112c5a54aa7dbd15bd2cfa3f
   - enabled: 1
     path: Assets/Scenes/Mendes/Cena Mendes.unity

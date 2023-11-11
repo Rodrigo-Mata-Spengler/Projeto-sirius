@@ -9,6 +9,8 @@ public class DoorButton : MonoBehaviour
 
     [SerializeField] private bool timer = false;
     [SerializeField] private float tempoLigado = 0;
+
+    [SerializeField] private Animator AlavancaPivotAnimator;
     private float tempoFechar = 0;
 
     private void Update()
@@ -38,6 +40,7 @@ public class DoorButton : MonoBehaviour
                 if (!Door[i].IsOpen)
                 {
                     Door[i].Open(Player.transform.position);
+                    AlavancaPivotAnimator.SetBool("Apertou", true);
 
                 }
             }
