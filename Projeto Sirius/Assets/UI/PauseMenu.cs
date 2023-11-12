@@ -15,6 +15,11 @@ public class PauseMenu : MonoBehaviour
 
     private bool dead = false;
 
+    private void Start()
+    {
+        Resume();
+    }
+
     public void OnPause(InputAction.CallbackContext context)
     {
         if (context.performed)
