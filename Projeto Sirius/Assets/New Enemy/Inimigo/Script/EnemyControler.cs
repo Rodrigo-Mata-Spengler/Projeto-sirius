@@ -133,7 +133,7 @@ public class EnemyControler : MonoBehaviour
         Debug.Log(hit.transform.tag);
         if (proximaEsperaProcura <= Time.time)
         {
-            pontoMov = areaMovimento.RandomPointInSpace();
+            pontoMov = new Vector3(areaMovimento.RandomPointInSpace().x, transform.position.y, transform.position.z);
             status = EnemyStatus.movendo;
         }
         else if (hit.transform.CompareTag(pointTag))
