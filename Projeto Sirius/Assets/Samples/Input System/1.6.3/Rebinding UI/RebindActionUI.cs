@@ -313,22 +313,23 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             // If it's a part binding, show the name of the part in the UI.
             var partName = default(string);
             if (action.bindings[bindingIndex].isPartOfComposite)
-                partName = $"Binding '{action.bindings[bindingIndex].name}'. ";
+                partName = $" Pressione uma tecla. ";
+
 
             // Bring up rebind overlay, if we have one.
             m_RebindOverlay?.SetActive(true);
             if (m_RebindText != null)
             {
                 var text = !string.IsNullOrEmpty(m_RebindOperation.expectedControlType)
-                    ? $"{partName}Waiting for {m_RebindOperation.expectedControlType} input..."
-                    : $"{partName}Waiting for input...";
+                    ? $"{partName}"
+                    : $"{partName}Esperando por ação...";
                 m_RebindText.text = text;
             }
 
             // If we have no rebind overlay and no callback but we have a binding text label,
             // temporarily set the binding text label to "<Waiting>".
             if (m_RebindOverlay == null && m_RebindText == null && m_RebindStartEvent == null && m_BindingText != null)
-                m_BindingText.text = "<Waiting...>";
+                m_BindingText.text = "<Esperando...>";
 
             // Give listeners a chance to act on the rebind starting.
             m_RebindStartEvent?.Invoke(this, m_RebindOperation);
@@ -347,7 +348,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 }
                 if(binding.effectivePath == newBinding.effectivePath)
                 {
-                    Debug.Log("Duplicate binding found" + newBinding.effectivePath);
+                    Debug.Log("Tecla duplicada" + newBinding.effectivePath);
                     return true;
                 }
             }
