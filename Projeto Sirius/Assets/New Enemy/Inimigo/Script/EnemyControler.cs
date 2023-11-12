@@ -36,7 +36,8 @@ public class EnemyControler : MonoBehaviour
 
     private void Start()
     {
-        enemyRigi = GetComponent<Rigidbody>();;
+        enemyRigi = GetComponent<Rigidbody>();
+        proximaEsperaIdle = esperaIdle + Time.time;
     }
 
     private void OnDrawGizmos()
@@ -79,7 +80,7 @@ public class EnemyControler : MonoBehaviour
 
     public void NewPointOfInterest(Vector3 pontoDeInteresse)
     {
-        pontoMov = pontoDeInteresse;
+        pontoMov = new Vector3(pontoDeInteresse.x,transform.position.y, transform.position.z);
         if (status != EnemyStatus.procurando && status != EnemyStatus.procurando && status != EnemyStatus.Achou)
         {
             status = EnemyStatus.Atraido;
@@ -95,7 +96,7 @@ public class EnemyControler : MonoBehaviour
     {
         if (proximaEsperaIdle <= Time.time)
         {
-            pontoMov = areaMovimento.RandomPointInSpace();
+            pontoMov = new Vector3(areaMovimento.RandomPointInSpace().x, transform.position.y, transform.position.z);
             status = EnemyStatus.movendo;
         }
     }
@@ -104,7 +105,7 @@ public class EnemyControler : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, pontoMov, velocidade * Time.deltaTime);
 
-        if (transform.position == pontoMov)
+        if (transform.position.x == pontoMov.x)
         {
             proximaEsperaIdle = esperaIdle + Time.time;
             status = EnemyStatus.idle;
@@ -147,6 +148,6 @@ public class EnemyControler : MonoBehaviour
 
     private void Achou()
     {
-        //pauseMorte.Death();
+        pauseMorte.Death();
     }
 }

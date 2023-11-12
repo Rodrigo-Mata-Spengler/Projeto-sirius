@@ -261,7 +261,7 @@ MonoBehaviour:
   perda: 0.25
   abstinencia: 30
   overdose: 70
-  quimicos: 5
+  quimicos: 0
   quantidadeReabastecer: 20
   delayUso: 0.5
   desligarCadencia: 0

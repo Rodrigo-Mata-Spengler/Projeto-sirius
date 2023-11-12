@@ -11,11 +11,18 @@ public class ChangeScene : MonoBehaviour
     [Header("Player Tag")]
     [SerializeField] private string tagPlayer;
 
+    [Header("Salvar")]
+    [SerializeField] private bool salvar = true;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(tagPlayer))
         {
             SceneManager.LoadScene(proxFase);
+            if (salvar)
+            {
+                SaveSystem.SavePlayer(other.gameObject);
+            }
         }
     }
 }

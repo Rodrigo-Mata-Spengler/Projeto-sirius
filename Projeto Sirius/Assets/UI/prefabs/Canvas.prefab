@@ -5351,7 +5351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpcoesPanel: {fileID: 7103289734567121750}
-  PausePanel: {fileID: 0}
+  PausePanel: {fileID: 7103289734567121750}
   DeathPanel: {fileID: 3985645779385899092}
 --- !u!114 &7174890966060018279
 MonoBehaviour:
@@ -11490,7 +11490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7758057652967718603
 RectTransform:
   m_ObjectHideFlags: 0
