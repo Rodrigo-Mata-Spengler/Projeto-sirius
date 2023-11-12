@@ -8,6 +8,7 @@ public class DestructibleWall : MonoBehaviour
     [SerializeField] private float force=1;
     [HideInInspector]public bool DoOnce = false;
     [SerializeField] private DestructibleWallTrigger Trigger;
+    [SerializeField] private float destructionTime = .5f;
 
     public void BreakWall()
     {
@@ -15,10 +16,11 @@ public class DestructibleWall : MonoBehaviour
         {
             WallParts[i].isKinematic = false;
             WallParts[i].velocity = new Vector3(force, 0f, 0f);
+            Destroy(WallParts[i].gameObject, destructionTime);
 
         }
         DoOnce = true;
 
-        Destroy(this,2f);
+        
     }
 }

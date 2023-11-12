@@ -500,6 +500,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0c4462be6681d24e9969009bcb27b9a, type: 3}
+--- !u!114 &919799516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1092763367806290026, guid: c0c4462be6681d24e9969009bcb27b9a, type: 3}
+  m_PrefabInstance: {fileID: 919799515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90dd7e6ebca98b4e9276a19fb5b45b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1397770029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4180ebd46db3cd429451bf778afd28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 0}
+  spawn: {fileID: 919799516}
   player: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   cam: {fileID: 2133044416}
   menupause: {fileID: 707385878}
