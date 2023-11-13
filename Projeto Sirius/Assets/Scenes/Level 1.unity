@@ -5136,8 +5136,8 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 4937b8848a3bd7b4da0c185346d36bac, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
-  m_StartAngleFade: 148.6835
-  m_EndAngleFade: 180
+  m_StartAngleFade: 0
+  m_EndAngleFade: 31.31646
   m_UVScale: {x: 2.6649787, y: 1.7105632}
   m_UVBias: {x: -0.5353445, y: -0.3839873}
   m_DecalLayerMask: 1
