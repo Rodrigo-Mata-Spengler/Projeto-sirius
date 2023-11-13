@@ -18,6 +18,9 @@ public class SaveManeger : MonoBehaviour
     [Header("Menu Pause")]
     [SerializeField] private PauseMenu menupause;
 
+    [Header("Erase Data:")]
+    [SerializeField] private bool erase = false;
+
     private PlayerData data;
 
     private void Start()
@@ -35,7 +38,16 @@ public class SaveManeger : MonoBehaviour
             }
         }
     }
-    
+
+    private void Update()
+    {
+        if (erase)
+        {
+            SaveSystem.ErasePlayer();
+            erase = false;
+        }
+    }
+
     //verifica se todos os requerimentos para carregar o player foram configurados
     private bool VerifyConfig()
     {
