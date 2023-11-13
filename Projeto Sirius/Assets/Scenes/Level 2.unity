@@ -305,7 +305,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3433731066886269525, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Name
@@ -393,6 +393,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4018380176909618709, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658560567095462509, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: saveManeger
+      value: 
+      objectReference: {fileID: 1531304882}
+    - target: {fileID: 7103289734567121750, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7354970246613243708, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
@@ -581,6 +589,14 @@ MonoBehaviour:
   player: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   cam: {fileID: 2133044416}
   menupause: {fileID: 707385878}
+  erase: 0
+  data:
+    scena_Atual: 
+    loc_Atual: []
+    quantidade_Aplicada: 0
+    quantidade_Guardada: 0
+    colecionaveis: 
+  m_player: {fileID: 0}
 --- !u!4 &1531304883
 Transform:
   m_ObjectHideFlags: 0

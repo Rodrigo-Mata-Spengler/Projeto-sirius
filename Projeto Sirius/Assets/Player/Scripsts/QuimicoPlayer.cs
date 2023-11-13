@@ -32,7 +32,7 @@ public class QuimicoPlayer : MonoBehaviour
     [SerializeField] private float delayUso = 0;
 
     [Header("Modo teste")]
-    [SerializeField] private bool desligarCadencia = false;
+    [SerializeField] public bool desligarCadencia = false;
 
     private void Start()
     {

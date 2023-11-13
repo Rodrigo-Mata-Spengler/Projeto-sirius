@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private GameObject OpcoesPanel;
     [SerializeField] private GameObject PausePanel;
+    [SerializeField] private GameObject CheatPanel;
     [SerializeField] private GameObject DeathPanel;
 
     private bool dead = false;
@@ -74,12 +75,14 @@ public class PauseMenu : MonoBehaviour
     public void Opcoes()
     {
         PausePanel.SetActive(false);
+        CheatPanel.SetActive(false);
         OpcoesPanel.SetActive(true);
 
     }
     public void BackToPausePanel()
     {
         OpcoesPanel.SetActive(false);
+        CheatPanel.SetActive(false);
         PausePanel.SetActive(true);
        
     }
@@ -92,6 +95,13 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void CheatCode()
+    {
+        OpcoesPanel.SetActive(false);
+        CheatPanel.SetActive(true);
+        PausePanel.SetActive(false);
     }
 
 }

@@ -445,6 +445,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3433731066886269525, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -549,9 +553,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7745884125159810779, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 42c4dd0b0fa53d9479916a81b233a322, type: 3}
     - target: {fileID: 7990201363203704854, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133882327166666414, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133882327166666414, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 970ad86e47deb5644aa0cc8b57be771f, type: 3}
+    - target: {fileID: 8133882327166666414, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133882327166666414, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinuarJogo
       objectReference: {fileID: 0}
     - target: {fileID: 8706256346121173326, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Enabled
