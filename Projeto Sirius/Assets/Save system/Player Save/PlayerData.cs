@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class PlayerData
@@ -21,7 +20,28 @@ public class PlayerData
     public PlayerData(GameObject player)
     {
         //scena atual
-        scena_Atual = SceneManager.GetActiveScene().name;
+        scena_Atual = player.GetComponent<CenaAtual>().cena;
+
+        //localização do player
+        loc_Atual[0] = player.transform.position.x;
+        loc_Atual[1] = player.transform.position.y;
+
+        //Quimico do player
+        quantidade_Aplicada = player.GetComponent<QuimicoPlayer>().GetQuimicoAtual();
+        quantidade_Guardada = player.GetComponent<QuimicoPlayer>().getQuimico();
+
+        //Coletaveis
+        bool[] temp = player.GetComponent<PlayerInventario>().colecionaveis;
+        for (int i = 0; i < colecionaveis.Length; i++)
+        {
+            colecionaveis[i] = temp[i];
+        }
+    }
+
+    public PlayerData(GameObject player,string cena)
+    {
+        //scena atual
+        scena_Atual = cena;
 
         //localização do player
         loc_Atual[0] = player.transform.position.x;

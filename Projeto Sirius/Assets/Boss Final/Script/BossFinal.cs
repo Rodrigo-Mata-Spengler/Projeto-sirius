@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossFinal : MonoBehaviour
 {
     [Header("Menu Morte")]
-   //[SerializeField] private PauseMenu morte;
+   [SerializeField] private PauseMenu morte;
 
     [Header("Destino Boss")] 
     [SerializeField] private Transform pontoFinal;
@@ -16,6 +16,9 @@ public class BossFinal : MonoBehaviour
     private float fimDaEspera = 0;
     private bool lentidao = false;
 
+    [SerializeField] private float tempoInicio = 0;
+    private float tempoInicio_temp = 0;
+
     [Header("Tags")]
     [SerializeField] private string playerTag;
     [SerializeField] private string lentoTag;
@@ -23,33 +26,27 @@ public class BossFinal : MonoBehaviour
     private void Start()
     {
         velocidade = velocidadeNormal;
+
+        tempoInicio_temp = Time.time + tempoInicio;
     }
 
     private void Update()
     {
-        if (lentidao)
+        if (tempoInicio_temp <= Time.time)
         {
-            if (fimDaEspera <= Time.time)
+            if (lentidao)
             {
-                velocidade = velocidadeNormal;
-                lentidao = false;
+                if (fimDaEspera <= Time.time)
+                {
+                    velocidade = velocidadeNormal;
+                    lentidao = false;
+                }
             }
+
+            transform.position = Vector3.MoveTowards(transform.position, pontoFinal.position, velocidade * Time.deltaTime);
         }
-
-        transform.position = Vector3.MoveTowards(transform.position ,pontoFinal.position ,velocidade * Time.deltaTime);
-
     }
 
-
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("saiu");
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("ficou");
-    }
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("entrou");
@@ -57,7 +54,7 @@ public class BossFinal : MonoBehaviour
         //caso player seja capturado pelo Boss
         if (other.gameObject.CompareTag(playerTag))
         {
-            //morte.Death();
+            morte.Death();
         }
 
         //caso o player tenha falado com o npc que vai ajudalo

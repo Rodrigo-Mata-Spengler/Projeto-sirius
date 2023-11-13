@@ -17,6 +17,19 @@ public class SaveSystem
         stream.Close();
     }
 
+    public static void SavePlayer(GameObject player,string cena)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/PlayerData.cpd";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        PlayerData data = new PlayerData(player,cena);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/PlayerData.cpd";

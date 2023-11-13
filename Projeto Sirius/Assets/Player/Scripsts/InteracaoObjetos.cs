@@ -13,6 +13,7 @@ public class InteracaoObjetos : MonoBehaviour
     [Header("Player")]
     [SerializeField] private QuimicoPlayer qPlayer;
     [SerializeField] private MovimentoPlayer mPlayer;
+    [SerializeField] private LedgeDetect ledgePlayer;
 
     [Header("Arrastar Objetos")]
     [SerializeField] private GameObject ancoraPlayer;
@@ -64,6 +65,7 @@ public class InteracaoObjetos : MonoBehaviour
     {
         qPlayer = GetComponent<QuimicoPlayer>();
         mPlayer = GetComponent<MovimentoPlayer>();
+        ledgePlayer = GetComponent<LedgeDetect>();
         original_parent = gameObject.transform.parent;
     }
 
@@ -141,13 +143,19 @@ public class InteracaoObjetos : MonoBehaviour
     //para pendurar
     private void Pendurar()
     {
-        gameObject.transform.SetParent(ancoraPendurar.transform);
-        mPlayer.enabled = false;
+        if (!ledgePlayer.IsClimbing() || !ledgePlayer.IsLedge())
+        {
+            gameObject.transform.SetParent(ancoraPendurar.transform);
+            mPlayer.enabled = false;
+        }
     }
     private void SoltarPendurar()
     {
-        gameObject.transform.SetParent(original_parent);
-        mPlayer.enabled = true;
+        if (!ledgePlayer.IsClimbing() || !ledgePlayer.IsLedge())
+        {
+            gameObject.transform.SetParent(original_parent);
+            mPlayer.enabled = true;
+        }
     }
 
     //coletar colecionavel
@@ -201,7 +209,8 @@ public class InteracaoObjetos : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         tag = null ;
-        if (other.gameObject.CompareTag(tagArrastarObjeto))
+        Solta();
+        if (other.gameObject.CompareTag(tagArrastarObjeto) || interacaoArrasta)
         {
             interacaoArrasta = false;
             objeto = null;

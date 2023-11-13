@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -11,24 +12,30 @@ public class MainMenu : MonoBehaviour
     public GameObject ArmarioFechado;
     public GameObject OpcoesPanel;
 
-    void Start()
+    public Button continuar;
+    private PlayerData data;
+
+    private void Start()
     {
-        
+        data = SaveSystem.LoadPlayer();
+
+        if (data != null)
+        {
+            continuar.interactable = true;
+        }
+        else
+        {
+            continuar.interactable = false;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ContinuarJogo()
     {
-        
-    }
-
-    public void continuar()
-    {
-
+        SceneManager.LoadScene(data.scena_Atual);
     }
 
     public void NovoJogo()
     {
+        SaveSystem.ErasePlayer();
         SceneManager.LoadScene(FirstScene);
     }
     public void Opcoes()

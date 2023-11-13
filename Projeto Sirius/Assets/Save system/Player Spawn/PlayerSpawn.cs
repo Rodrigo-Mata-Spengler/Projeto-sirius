@@ -22,7 +22,7 @@ public class PlayerSpawn : MonoBehaviour
         Gizmos.DrawLine(new Vector3(transform.position.x + 0.75f, transform.position.y, transform.position.z), new Vector3(transform.position.x, transform.position.y-1, transform.position.z));
     }
     //spawn simples
-    public bool SpawnPlayer(GameObject player, GameObject cam, PauseMenu menu)
+    public GameObject SpawnPlayer(GameObject player, GameObject cam, PauseMenu menu)
     {
         GameObject local_player = Instantiate(player, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
 
@@ -31,10 +31,12 @@ public class PlayerSpawn : MonoBehaviour
         cam.GetComponent<CinemachineVirtualCamera>().Follow = local_player.transform;
         cam.GetComponent<CinemachineVirtualCamera>().LookAt = local_player.transform;
 
+        SaveSystem.SavePlayer(local_player);
+
         return local_player;
     }
     //spawn com Save
-    public bool SpawnPlayer(GameObject player, PlayerData data, GameObject cam, PauseMenu menu)
+    public GameObject SpawnPlayer(GameObject player, PlayerData data, GameObject cam, PauseMenu menu)
     {
         GameObject local_PLayer = Instantiate(player, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
 
@@ -44,6 +46,8 @@ public class PlayerSpawn : MonoBehaviour
 
         cam.GetComponent<CinemachineVirtualCamera>().Follow = local_PLayer.transform;
         cam.GetComponent<CinemachineVirtualCamera>().LookAt = local_PLayer.transform;
+
+        SaveSystem.SavePlayer(local_PLayer);
 
         return local_PLayer;
     }

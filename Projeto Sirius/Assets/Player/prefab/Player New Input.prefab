@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 8336167175591605944}
   - component: {fileID: 601053923632725665}
   - component: {fileID: 646063863428317603}
+  - component: {fileID: 8805170173406185142}
   m_Layer: 3
   m_Name: Player New Input
   m_TagString: Player
@@ -211,7 +212,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.65
   m_Height: 1.76
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -281,6 +282,7 @@ MonoBehaviour:
   tag: 
   qPlayer: {fileID: 0}
   mPlayer: {fileID: 0}
+  ledgePlayer: {fileID: 0}
   ancoraPlayer: {fileID: 6951047221563369458}
   tagArrastarObjeto: Arrastavel
   tagQuimicoColetavel: QuimicoColetavel
@@ -464,6 +466,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9e7a56aa-51e8-4c76-bdfd-e19cfda402fd
     m_ActionName: UI/Selecionar[/Mouse/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2396ba80-170c-4310-8e7b-eeee246d67c8
+    m_ActionName: UI/TelaInicial[/Keyboard/anyKey,/Mouse/leftButton,/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player
@@ -499,6 +505,19 @@ MonoBehaviour:
   soundB: {fileID: 6975243462304595138}
   status: 0
   pulandoOffSet: 0.2
+--- !u!114 &8805170173406185142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761348081167850978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b62f76550cd6454cad0814766c9b922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cena: 
 --- !u!1 &6951047221563369458
 GameObject:
   m_ObjectHideFlags: 0

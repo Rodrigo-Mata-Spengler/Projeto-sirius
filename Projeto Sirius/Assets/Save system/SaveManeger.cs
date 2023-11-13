@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEditor;
 
 public class SaveManeger : MonoBehaviour
@@ -21,26 +22,37 @@ public class SaveManeger : MonoBehaviour
     [Header("Erase Data:")]
     [SerializeField] private bool erase = false;
 
-    private PlayerData data;
+    public PlayerData data;
+    public GameObject m_player;
 
     private void Start()
     {
         if (VerifyConfig())
         {
+            data = SaveSystem.LoadPlayer();
+
             //verifica se existe um save do player ja existente
             if (data == null)
             {   
-                spawn.SpawnPlayer(player,cam,menupause);
-            }else {
-                spawn.transform.position = new Vector3(data.loc_Atual[0], data.loc_Atual[1],spawn.transform.position.z);
+                m_player = spawn.SpawnPlayer(player,cam,menupause);
+            }
+            else {
 
-                spawn.SpawnPlayer(player,data,cam,menupause);
+                if (data.scena_Atual == SceneManager.GetActiveScene().name)
+                {
+                    spawn.transform.position = new Vector3(data.loc_Atual[0], data.loc_Atual[1], spawn.transform.position.z);
+                }
+                m_player = spawn.SpawnPlayer(player,data,cam,menupause);
             }
         }
+
+        SaveSystem.SavePlayer(m_player,SceneManager.GetActiveScene().name);
     }
 
     private void Update()
     {
+        data = SaveSystem.LoadPlayer();
+
         if (erase)
         {
             SaveSystem.ErasePlayer();

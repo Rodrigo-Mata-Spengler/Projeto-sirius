@@ -49,9 +49,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void Reborn()
     {
+        PlayerData data = SaveSystem.LoadPlayer();
+        SceneManager.LoadScene(data.scena_Atual);
+
         Time.timeScale = 1f;
         DeathPanel.SetActive(false);
-        SceneManager.LoadScene(1);
         dead = false;
     }
 
