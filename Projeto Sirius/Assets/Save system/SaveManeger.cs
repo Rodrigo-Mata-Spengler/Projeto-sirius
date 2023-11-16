@@ -25,6 +25,8 @@ public class SaveManeger : MonoBehaviour
     public PlayerData data;
     public GameObject m_player;
 
+    private bool doOnce = true;
+
     private void Start()
     {
         if (VerifyConfig())
@@ -51,7 +53,12 @@ public class SaveManeger : MonoBehaviour
 
     private void Update()
     {
-        data = SaveSystem.LoadPlayer();
+        if (doOnce)
+        {
+            data = SaveSystem.LoadPlayer();
+
+            doOnce = false;
+        }
 
         if (erase)
         {
