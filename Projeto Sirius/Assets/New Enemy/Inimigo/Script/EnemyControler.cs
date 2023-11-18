@@ -126,7 +126,7 @@ public class EnemyControler : MonoBehaviour
     private void Procurando()
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, (pontoMov - transform.position), out hit, Mathf.Infinity);
+        Physics.Raycast(transform.position + new Vector3(0, 2, 0), (pontoMov - transform.position ), out hit, Mathf.Infinity);
         Debug.DrawRay(transform.position, (pontoMov - transform.position));
 
 

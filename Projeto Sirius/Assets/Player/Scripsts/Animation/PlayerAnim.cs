@@ -43,39 +43,215 @@ public class PlayerAnim : MonoBehaviour
 
                 anim.SetBool("Is_Clibing_idle", false);
                 break;
-
             case StatusMovimento.caminhando:
                 anim.SetBool("Is_Walking", true);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.correndo:
+                anim.SetBool("Is_Walking", false);
+
                 anim.SetBool("Is_Runing", true);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.pulando:
-                //anim.SetBool("Is_Walking", true);
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
                 anim.SetBool("Is_Jumping", true);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.caindo:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
                 anim.SetBool("Is_falling", true);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.agachando:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
                 anim.SetBool("Is_crouch", true);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
                 anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.agachado_idle:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
                 anim.SetBool("Is_Stealth_idle", true);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.empurrando:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
                 anim.SetBool("Is_Pushing", true);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.escalando:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
                 anim.SetBool("Is_Clibing", true);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
                 anim.SetBool("Is_Clibing_idle", false);
                 break;
             case StatusMovimento.escalando_idle:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", false);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
                 anim.SetBool("Is_Clibing_idle", true);
                 break;
             case StatusMovimento.agarrando:
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Pushing", false);
+
+                anim.SetBool("Is_Clibing", false);
+
                 anim.SetBool("Is_grab", true);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
                 break;
         }
 
