@@ -65,6 +65,10 @@
 		<relationship name="modules">
 			<destination>{13b1ece4-fd3f-4401-9e19-2a5c7575ef74}</destination>
 			<destination>{1e38e0af-b597-4e41-88a5-2243b26e4203}</destination>
+			<destination>{157f8e1f-9487-4a59-b4a4-803a84253300}</destination>
+			<destination>{d8185998-ac03-48f7-8377-222ae22a99eb}</destination>
+			<destination>{483a421c-ffdc-4234-af09-aaa65d4a086a}</destination>
+			<destination>{b56578ce-e4b0-45f4-b7a6-e436daeccc37}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{fb53aaab-08f0-4438-bde3-b8cd85f9d47b}</destination>
@@ -79,6 +83,10 @@
 		<relationship name="modules">
 			<destination>{13b1ece4-fd3f-4401-9e19-2a5c7575ef74}</destination>
 			<destination>{1e38e0af-b597-4e41-88a5-2243b26e4203}</destination>
+			<destination>{157f8e1f-9487-4a59-b4a4-803a84253300}</destination>
+			<destination>{d8185998-ac03-48f7-8377-222ae22a99eb}</destination>
+			<destination>{483a421c-ffdc-4234-af09-aaa65d4a086a}</destination>
+			<destination>{b56578ce-e4b0-45f4-b7a6-e436daeccc37}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{7649ba2e-4410-4708-b30e-35438d778585}</destination>
@@ -120,6 +128,53 @@
 			<destination>{5b4f14a7-4b85-440c-92a0-20866c897f35}</destination>
 		</relationship>
 	</object>
+	<object class="EventSound" id="{157f8e1f-9487-4a59-b4a4-803a84253300}">
+		<property name="start">
+			<value>2</value>
+		</property>
+		<property name="volume">
+			<value>-11</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{3c99d905-40c0-494a-a887-ec915829a687}</destination>
+		</relationship>
+		<relationship name="event">
+			<destination>{05c76c61-b657-4c5d-a605-133fef3a2f12}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{d8185998-ac03-48f7-8377-222ae22a99eb}">
+		<property name="start">
+			<value>3</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{f8205cd7-5710-4f23-bc8a-c67d49164d4e}</destination>
+		</relationship>
+		<relationship name="event">
+			<destination>{f09c484d-2559-4c32-8603-45e3d01df06d}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{483a421c-ffdc-4234-af09-aaa65d4a086a}">
+		<property name="start">
+			<value>4</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{9facf894-f558-49f8-83b4-80b34dd1f7ae}</destination>
+		</relationship>
+		<relationship name="event">
+			<destination>{2dd8d975-9f26-4a2a-a5c6-92649ae508bd}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{b56578ce-e4b0-45f4-b7a6-e436daeccc37}">
+		<property name="start">
+			<value>5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{9277de00-8a2c-4dd3-adb7-87e710ffad93}</destination>
+		</relationship>
+		<relationship name="event">
+			<destination>{28b286e9-acb2-40e8-a835-c2592831d3b5}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{fb53aaab-08f0-4438-bde3-b8cd85f9d47b}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -154,6 +209,50 @@
 		</property>
 	</object>
 	<object class="ADSRModulator" id="{49e0b819-cf8e-4686-9db8-87c30968ab0a}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{3c99d905-40c0-494a-a887-ec915829a687}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{f8205cd7-5710-4f23-bc8a-c67d49164d4e}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{9facf894-f558-49f8-83b4-80b34dd1f7ae}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{9277de00-8a2c-4dd3-adb7-87e710ffad93}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
 		</property>
