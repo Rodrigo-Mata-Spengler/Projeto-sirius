@@ -379,6 +379,7 @@ MonoBehaviour:
   - Animais Presos
   - "Ar dos Maquin\xE1rios"
   - Atmosfera
+  - Checkpoint
   - Cientista
   - Coelhinho
   - Luz
@@ -387,6 +388,7 @@ MonoBehaviour:
   - Objeto Arrastando
   - Objeto de Vidro
   - "Piso de Press\xE3o"
+  - Tag
   - Tampa do Bueiro
   BanksToLoad: []
   LiveUpdatePort: 9264
