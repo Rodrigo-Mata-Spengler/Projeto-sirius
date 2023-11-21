@@ -5,7 +5,7 @@
 			<value>Menu Principal</value>
 		</property>
 		<relationship name="folder">
-			<destination>{69c99058-a69b-41b2-aace-adcf1632c04a}</destination>
+			<destination>{7093fea7-0a52-43e3-813a-e6a5c9b0dced}</destination>
 		</relationship>
 	</object>
 </objects>

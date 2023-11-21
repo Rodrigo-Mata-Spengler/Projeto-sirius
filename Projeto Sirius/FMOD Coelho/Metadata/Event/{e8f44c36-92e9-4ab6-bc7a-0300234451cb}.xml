@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{e8f44c36-92e9-4ab6-bc7a-0300234451cb}">
 		<property name="name">
-			<value>Alçapão do Esgoto Abrindo</value>
+			<value>Alçapão</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{8dd3c9d5-e8b6-4ba4-a265-37c1c7d600f9}</destination>
+			<destination>{678a5177-d984-43e1-849c-ab8a4f66018d}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{3d273e35-0d75-4cdb-a035-0e212d949a98}</destination>
@@ -56,7 +56,7 @@
 			<destination>{d989eca9-d8c6-4dd9-ab44-a57f4456fe1a}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{45c38ec4-969b-41ec-bad5-616d4d022062}</destination>
+			<destination>{c82cf43e-af6f-4686-9600-2da378ce8040}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{9f97a2aa-9a36-4087-8b67-7b61d48285fa}" />

@@ -5,7 +5,7 @@
 			<value>Checkpoint</value>
 		</property>
 		<relationship name="folder">
-			<destination>{69c99058-a69b-41b2-aace-adcf1632c04a}</destination>
+			<destination>{05e58411-6a7f-4209-b3a1-4e4d6ab2cc07}</destination>
 		</relationship>
 	</object>
 </objects>

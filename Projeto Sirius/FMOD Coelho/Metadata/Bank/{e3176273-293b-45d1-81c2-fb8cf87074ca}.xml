@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{e3176273-293b-45d1-81c2-fb8cf87074ca}">
+		<property name="name">
+			<value>Corda Descendo</value>
+		</property>
+		<relationship name="folder">
+			<destination>{05e58411-6a7f-4209-b3a1-4e4d6ab2cc07}</destination>
+		</relationship>
+	</object>
+</objects>

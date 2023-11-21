@@ -5,7 +5,7 @@
 			<value>Cientista</value>
 		</property>
 		<relationship name="folder">
-			<destination>{69c99058-a69b-41b2-aace-adcf1632c04a}</destination>
+			<destination>{50ac9f4d-0d97-4ed3-bc63-a56106bd691c}</destination>
 		</relationship>
 	</object>
 </objects>
