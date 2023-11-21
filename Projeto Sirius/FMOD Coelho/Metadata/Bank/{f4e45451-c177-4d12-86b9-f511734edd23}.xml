@@ -5,7 +5,7 @@
 			<value>Interruptor</value>
 		</property>
 		<relationship name="folder">
-			<destination>{69c99058-a69b-41b2-aace-adcf1632c04a}</destination>
+			<destination>{fb1b4827-9287-44e0-b3a3-8b593c60f8c9}</destination>
 		</relationship>
 	</object>
 </objects>

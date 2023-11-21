@@ -5,7 +5,7 @@
 			<value>Coelhinho</value>
 		</property>
 		<relationship name="folder">
-			<destination>{69c99058-a69b-41b2-aace-adcf1632c04a}</destination>
+			<destination>{1e48d350-6df9-43bd-ab5e-ab1c3b88c7b5}</destination>
 		</relationship>
 	</object>
 </objects>
