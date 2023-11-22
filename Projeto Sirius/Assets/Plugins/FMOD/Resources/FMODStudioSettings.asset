@@ -389,6 +389,7 @@ MonoBehaviour:
   - Objeto Arrastando
   - Objeto de Vidro
   - "Piso de Press\xE3o"
+  - Porta de Metal
   - Tag
   - Tampa do Bueiro
   BanksToLoad: []
