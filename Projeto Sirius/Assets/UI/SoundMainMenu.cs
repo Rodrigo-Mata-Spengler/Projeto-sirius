@@ -15,8 +15,4 @@ public class SoundMainMenu : MonoBehaviour
         //AudioManager.instance.PlayOneShot(FMODEvents.instance.Alavanca,transform.position);
     }
 
-    private void Update()
-    {
-        AudioManager.instance.InitializeMusic(FMODEvents.instance.BolhasMenu);
-    }
 }
