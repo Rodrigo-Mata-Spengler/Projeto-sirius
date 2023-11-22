@@ -14,8 +14,12 @@ public class FMODEvents : MonoBehaviour
 
 
     [field: Header("Interface SFX")]
+    [field: SerializeField] public EventReference BolhasMenu { get; private set; }
+    [field: SerializeField] public EventReference EngrenagensMenu { get; private set; }
+    [field: SerializeField] public EventReference InterruptorMenu { get; private set; }
+    [field: SerializeField] public EventReference PortaFechando { get; private set; }
+    [field: SerializeField] public EventReference PortaRanger { get; private set; }
     [field: SerializeField] public EventReference Confirmacao { get; private set; }
-    [field: SerializeField] public EventReference Negacao { get; private set; }
 
 
     [field: Header("Player SFX")]

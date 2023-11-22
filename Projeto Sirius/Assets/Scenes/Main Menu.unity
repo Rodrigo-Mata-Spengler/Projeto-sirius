@@ -170,9 +170,10 @@ GameObject:
   m_Component:
   - component: {fileID: 154025061}
   - component: {fileID: 154025060}
+  - component: {fileID: 154025062}
   m_Layer: 0
   m_Name: Audio System
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +210,20 @@ Transform:
   - {fileID: 995111456}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154025062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154025059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc436b25438ce0949af8e8db646f8e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeAlive: 0
+  tag: Audio
 --- !u!1 &180232132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,27 +3081,55 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  <BolhasMenu>k__BackingField:
+    Guid:
+      Data1: 1195186907
+      Data2: 1280691752
+      Data3: -902867832
+      Data4: -1423591673
+    Path: event:/Menu Principal/Bolhas a Esquerda
+  <EngrenagensMenu>k__BackingField:
+    Guid:
+      Data1: 2045512965
+      Data2: 1106769499
+      Data3: 762054842
+      Data4: -678471016
+    Path: event:/Menu Principal/Engrenagens a Direita
+  <InterruptorMenu>k__BackingField:
+    Guid:
+      Data1: 905163368
+      Data2: 1317723572
+      Data3: 1152122798
+      Data4: -1624853668
+    Path: event:/Menu Principal/interruptor Vsync&Fullscreen
+  <PortaFechando>k__BackingField:
+    Guid:
+      Data1: 256381682
+      Data2: 1250388530
+      Data3: 2127007384
+      Data4: 1602966054
+    Path: event:/Menu Principal/Porta Fechando
+  <PortaRanger>k__BackingField:
+    Guid:
+      Data1: -451516797
+      Data2: 1119052458
+      Data3: -851336799
+      Data4: 838919047
+    Path: event:/Menu Principal/Porta Ranger
   <Confirmacao>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <Negacao>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2111006129
+      Data2: 1339594148
+      Data3: 543699632
+      Data4: 1696761550
+    Path: event:/Menu Principal/Som de Feedback
   <Caminhando>k__BackingField:
     Guid:
       Data1: 1879181940
       Data2: 1134616189
       Data3: -632526928
       Data4: 948889898
-    Path: event:/Passos do Personagem
+    Path: event:/Protagonista/Passos do Personagem
   <Correndo>k__BackingField:
     Guid:
       Data1: 0
@@ -3096,11 +3139,11 @@ MonoBehaviour:
     Path: 
   <Pulo>k__BackingField:
     Guid:
-      Data1: -1689627891
-      Data2: 1254084467
-      Data3: -795577942
-      Data4: -1132648798
-    Path: event:/Pulo
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Agachado>k__BackingField:
     Guid:
       Data1: 0
@@ -3135,21 +3178,21 @@ MonoBehaviour:
       Data2: 1296153952
       Data3: -690529400
       Data4: -1512736966
-    Path: event:/Morrendo
+    Path: event:/Protagonista/Morrendo
   <BatendoGaiola>k__BackingField:
     Guid:
       Data1: 1489205800
       Data2: 1322242575
       Data3: 2007264434
       Data4: -1162553174
-    Path: event:/Batendo na Gaiola
+    Path: event:/Ambiente/Batendo na Gaiola
   <Abstinencia>k__BackingField:
     Guid:
       Data1: 1801349775
       Data2: 1099356501
       Data3: 958898877
       Data4: 599887226
-    Path: event:/Abstinencia
+    Path: event:/Protagonista/Abstinencia
   <Overdose>k__BackingField:
     Guid:
       Data1: 0
@@ -3163,28 +3206,28 @@ MonoBehaviour:
       Data2: 1310897600
       Data3: -502800755
       Data4: 1925168018
-    Path: event:/Uso de Quimico
+    Path: event:/Protagonista/Uso de Quimico
   <CientistaCaminhando>k__BackingField:
     Guid:
       Data1: 1120208041
       Data2: 1078566940
       Data3: 361914795
       Data4: -1839011506
-    Path: event:/Passos do Cientista
+    Path: event:/Cientista/Passos do Cientista
   <Alavanca>k__BackingField:
     Guid:
       Data1: 1139800625
       Data2: 1171152364
       Data3: 1091331988
       Data4: -1057157285
-    Path: event:/Alavanca
+    Path: event:/Ambiente/Alavanca
   <Alcapao>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -386642890
+      Data2: 1253479145
+      Data3: 228028
+      Data4: -883866589
+    Path: "event:/Ambiente/Al\xE7ap\xE3o"
   <ApagandoLuz>k__BackingField:
     Guid:
       Data1: 0
@@ -3194,18 +3237,18 @@ MonoBehaviour:
     Path: 
   <PlacaPresao>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1607449042
+      Data2: 1327563218
+      Data3: 1364203443
+      Data4: -1072737467
+    Path: "event:/Ambiente/Ch\xE3o de press\xE3o"
   <ArrastandoObjeto>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1698626246
+      Data2: 1184387991
+      Data3: 875697065
+      Data4: 1779887369
+    Path: event:/Ambiente/Objeto Arrastando
   <ObjetoMetalicoCaindo>k__BackingField:
     Guid:
       Data1: 0
@@ -3215,18 +3258,18 @@ MonoBehaviour:
     Path: 
   <QuebrandoParede>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -314270658
+      Data2: 1173681198
+      Data3: 1414979973
+      Data4: -1971092451
+    Path: event:/Ambiente/Quebrando Parede
   <VidroQuebrando>k__BackingField:
     Guid:
       Data1: -1540961643
       Data2: 1168794243
       Data3: 1600284821
       Data4: 957291616
-    Path: event:/Vidro Quebrando
+    Path: event:/Ambiente/Vidro Quebrando
 --- !u!43 &1073336640
 Mesh:
   m_ObjectHideFlags: 0
@@ -3472,8 +3515,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1214350174}
   - component: {fileID: 1214350173}
-  - component: {fileID: 1214350172}
   - component: {fileID: 1214350175}
+  - component: {fileID: 1214350176}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3481,14 +3524,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1214350172
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214350171}
-  m_Enabled: 1
 --- !u!20 &1214350173
 Camera:
   m_ObjectHideFlags: 0
@@ -3599,6 +3634,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1214350176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214350171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1270465161
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,6 +5346,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122642557}
   m_CullTransparentMesh: 1
+--- !u!1 &2124806394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124806396}
+  - component: {fileID: 2124806395}
+  - component: {fileID: 2124806397}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2124806395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124806394}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4424a36a491cc54594e122edabeee4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2124806396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124806394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 564.66833, y: 226.52686, z: 25.75145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124806397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124806394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1195186907
+      Data2: 1280691752
+      Data3: -902867832
+      Data4: -1423591673
+    Path: event:/Menu Principal/Bolhas a Esquerda
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &6557902295539105443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5370,3 +5494,4 @@ SceneRoots:
   - {fileID: 360869415}
   - {fileID: 1852223112}
   - {fileID: 219168885}
+  - {fileID: 2124806396}

@@ -19,6 +19,7 @@ TagManager:
   - Boss
   - Lento
   - Corda
+  - Audio
   layers:
   - Default
   - TransparentFX
