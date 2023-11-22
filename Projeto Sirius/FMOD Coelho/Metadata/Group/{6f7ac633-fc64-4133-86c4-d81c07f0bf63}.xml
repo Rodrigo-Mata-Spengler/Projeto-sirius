@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Menu Principal</value>
 		</property>
+		<property name="maxInstances">
+			<value>1</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{b71344c1-f137-4cf5-8e0a-68e5e5977866}</destination>
 		</relationship>

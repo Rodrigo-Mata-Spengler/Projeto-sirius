@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Protagonista</value>
 		</property>
+		<property name="maxInstances">
+			<value>1</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{55bb4c15-ae72-425b-a287-6aaf70ebc25b}</destination>
 		</relationship>

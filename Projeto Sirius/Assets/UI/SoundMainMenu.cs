@@ -11,7 +11,12 @@ public class SoundMainMenu : MonoBehaviour
 
     public void SoundBolha()
     {
-        //AudioManager.instance.InitializeMusic(FMODEvents.instance.BolhasMenu);
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.BolhasMenu,transform.position);
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.BolhasMenu);
+        //AudioManager.instance.PlayOneShot(FMODEvents.instance.Alavanca,transform.position);
+    }
+
+    private void Update()
+    {
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.BolhasMenu);
     }
 }

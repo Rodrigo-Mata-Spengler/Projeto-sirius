@@ -3076,11 +3076,11 @@ MonoBehaviour:
     Path: 
   <Music>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 65757603
+      Data2: 1092002967
+      Data3: 1300136079
+      Data4: -2076671949
+    Path: "event:/M\xFAsica e M\xFAsica Ambiente/Atmosferica"
   <BolhasMenu>k__BackingField:
     Guid:
       Data1: 1195186907
@@ -5357,6 +5357,7 @@ GameObject:
   - component: {fileID: 2124806396}
   - component: {fileID: 2124806395}
   - component: {fileID: 2124806397}
+  - component: {fileID: 2124806398}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -5371,7 +5372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124806394}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4424a36a491cc54594e122edabeee4e, type: 3}
   m_Name: 
@@ -5398,7 +5399,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124806394}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -5422,6 +5423,25 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &2124806398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124806394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Menu Principal
+  - Atmosfera
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1001 &6557902295539105443
 PrefabInstance:
   m_ObjectHideFlags: 0
