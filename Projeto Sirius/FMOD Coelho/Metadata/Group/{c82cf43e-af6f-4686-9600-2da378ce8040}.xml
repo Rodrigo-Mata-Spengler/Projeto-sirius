@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Ambiente</value>
 		</property>
+		<property name="maxInstances">
+			<value>1</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{4471dd93-6494-4f19-b261-4e01874b1c68}</destination>
 		</relationship>

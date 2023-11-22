@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Música Ambiente</value>
 		</property>
+		<property name="maxInstances">
+			<value>1</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{b3117c26-2dd9-411f-8270-030ce571c38b}</destination>
 		</relationship>

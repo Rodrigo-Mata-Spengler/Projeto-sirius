@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Cientista</value>
 		</property>
+		<property name="maxInstances">
+			<value>1</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{76f8cd17-da12-4118-9469-479fc3e5a9fc}</destination>
 		</relationship>

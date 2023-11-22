@@ -48,8 +48,8 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        InitializeAmbience(FMODEvents.instance.ambience);
-        InitializeMusic(FMODEvents.instance.Music);
+        //InitializeAmbience(FMODEvents.instance.ambience);
+        //InitializeMusic(FMODEvents.instance.Music);
     }
     private void Update()
     {
@@ -59,9 +59,9 @@ public class AudioManager : MonoBehaviour
             instance = this;
         }
         masterBus.setVolume(masterVolume);
-        musicBus.setVolume(musicVolume);
-        ambienceBus.setVolume(ambienceVolume);
-        sfxBus.setVolume(SFXVolume);
+        //musicBus.setVolume(musicVolume);
+        //ambienceBus.setVolume(ambienceVolume);
+        //sfxBus.setVolume(SFXVolume);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
