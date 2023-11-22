@@ -6,13 +6,15 @@ public class MuiscChangeTrigger : MonoBehaviour
 {
     [Header("Area")]
     [SerializeField] private MusicArea area;
+    [SerializeField] private string playerTag;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.tag.Equals("Player"))
+        if (other.CompareTag(playerTag))
         {
             AudioManager.instance.SetMusicArea(area);
-
         }
     }
+
+
 }
