@@ -7556,6 +7556,7 @@ GameObject:
   - component: {fileID: 1328225793031052072}
   - component: {fileID: 503025949361272220}
   - component: {fileID: 8395595496238942716}
+  - component: {fileID: 2357054925303882276}
   m_Layer: 5
   m_Name: Death Panel
   m_TagString: Untagged
@@ -7622,6 +7623,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2357054925303882276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985645779385899092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1693659117
+      Data2: 1296153952
+      Data3: -690529400
+      Data4: -1512736966
+    Path: event:/Protagonista/Morrendo
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 300000
 --- !u!1 &4017144898572858367
 GameObject:
   m_ObjectHideFlags: 0

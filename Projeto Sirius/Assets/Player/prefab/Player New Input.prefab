@@ -286,7 +286,6 @@ Transform:
   - {fileID: 2110634431556300484}
   - {fileID: 3424795003117608382}
   - {fileID: 1565893353158838008}
-  - {fileID: 9013850319275331826}
   - {fileID: 7541018169625425941}
   - {fileID: 3442675400277347389}
   m_Father: {fileID: 6851516022441376659}
@@ -538,69 +537,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 646063863428317603}
   playermov: {fileID: 2883722794124855018}
---- !u!1 &6591380154917451613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9013850319275331826}
-  - component: {fileID: 3697558723154515001}
-  m_Layer: 0
-  m_Name: Morrendo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9013850319275331826
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6591380154917451613}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5861608499804342467}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3697558723154515001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6591380154917451613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1693659117
-      Data2: 1296153952
-      Data3: -690529400
-      Data4: -1512736966
-    Path: event:/Protagonista/Morrendo
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &6761348081167850978
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +685,7 @@ MonoBehaviour:
   delayUso: 0.5
   aplicarQuimico_Audio: {fileID: 5672937115513035960}
   abstinencia_Audio: {fileID: 4690739832807061452}
+  overdose_Audio: {fileID: 148714064802129788}
   desligarCadencia: 0
 --- !u!114 &386463765481018588
 MonoBehaviour:
@@ -786,6 +723,7 @@ MonoBehaviour:
   checkPoint: {fileID: 0}
   tagColecionavel: Colecionavel
   colecionavel: {fileID: 0}
+  colecionaveis_Sound: {fileID: 5228683158668702275}
 --- !u!114 &2883722794124855018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +929,7 @@ MonoBehaviour:
   status: 0
   pulandoOffSet: 0.2
   caindo_Sound: {fileID: 2732869057067521558}
+  movendo_Sound: {fileID: 8172862702551760905}
 --- !u!114 &8805170173406185142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1017,7 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params:
   - Name: Passos do Protagonista
-    Value: 0
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20

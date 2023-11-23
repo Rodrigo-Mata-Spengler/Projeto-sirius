@@ -35,6 +35,7 @@ public class QuimicoPlayer : MonoBehaviour
     [Header("Sons Do Player")]
     [SerializeField] private StudioEventEmitter aplicarQuimico_Audio;
     [SerializeField] private StudioEventEmitter abstinencia_Audio;
+    [SerializeField] private StudioEventEmitter overdose_Audio;
 
     [Header("Modo teste")]
     [SerializeField] public bool desligarCadencia = false;
@@ -73,10 +74,25 @@ public class QuimicoPlayer : MonoBehaviour
         }else if (quimicoatual >= overdose)
         {
             status = Statusquimico.Overdose;
+
+            if (!overdose_Audio.IsPlaying())
+            {
+                overdose_Audio.Play();
+            }
         }
         else
         {
             status = Statusquimico.Normal;
+
+            if (abstinencia_Audio.IsPlaying())
+            {
+                abstinencia_Audio.Stop();
+            }
+
+            if (overdose_Audio.IsPlaying())
+            {
+                overdose_Audio.Stop();
+            }
         }
 
         if (aplicar && tempUso <= Time.time)

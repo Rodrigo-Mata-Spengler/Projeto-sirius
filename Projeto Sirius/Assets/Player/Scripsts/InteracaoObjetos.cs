@@ -58,10 +58,11 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private CheckPoint checkPoint;
     private bool interacaoCheckPoint = false;
 
-    [Header("Colesionaveis")]
+    [Header("Colecionaveis")]
     [SerializeField] private string tagColecionavel;
     [SerializeField] Colecionavel colecionavel;
     private bool interacaoColecionavel = false;
+    [SerializeField] private StudioEventEmitter colecionaveis_Sound;
 
     private void Start()
     {
@@ -168,7 +169,13 @@ public class InteracaoObjetos : MonoBehaviour
     private void Coletar()
     {
         this.GetComponent<PlayerInventario>().PegarColetavel(colecionavel.colecionavelID);
-        
+
+        if (!colecionaveis_Sound.IsPlaying())
+        {
+            colecionaveis_Sound.Play();
+        }
+
+
     }
 
     private void OnTriggerEnter(Collider other)

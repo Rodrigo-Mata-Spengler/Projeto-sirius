@@ -23,6 +23,7 @@ public class PlayerMoveStatus : MonoBehaviour
 
     [Header("Sons")]
     [SerializeField] private StudioEventEmitter caindo_Sound;
+    [SerializeField] private StudioEventEmitter movendo_Sound;
 
     private void Awake()
     {
@@ -72,17 +73,33 @@ public class PlayerMoveStatus : MonoBehaviour
             {
                 status = StatusMovimento.correndo;
                 soundB.SetActive(true);
+
+                if (!movendo_Sound.IsPlaying())
+                {
+                    movendo_Sound.Params[0].Value = 1;
+                    movendo_Sound.Play();
+                }
+                
+
             } else if (playerMovimento.agachado)
             {
                 if(velocidade.x != 0)
                 {
                     status = StatusMovimento.agachando;
                     soundB.SetActive(true);
+
+                    if (!movendo_Sound.IsPlaying())
+                    {
+                        movendo_Sound.Params[0].Value = 2;
+                        movendo_Sound.Play();
+                    }
                 }
                 else
                 {
                     status = StatusMovimento.agachado_idle;
                     soundB.SetActive(true);
+
+                    movendo_Sound.Stop();
                 }   
             } else if (playerMovimento.arrastando)
             {
@@ -114,11 +131,18 @@ public class PlayerMoveStatus : MonoBehaviour
                 {
                     status = StatusMovimento.caminhando;
                     soundB.SetActive(true);
+
+                    if (!movendo_Sound.IsPlaying())
+                    {
+                        movendo_Sound.Params[0].Value = 1;
+                        movendo_Sound.Play();
+                    }
                 }
                 else
                 {
                     status = StatusMovimento.idle;
                     soundB.SetActive(true);
+                    movendo_Sound.Stop();
                 }
             }
         }
