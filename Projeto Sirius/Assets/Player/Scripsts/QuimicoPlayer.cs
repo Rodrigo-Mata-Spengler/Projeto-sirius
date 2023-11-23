@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 enum Statusquimico {Abstinencia, Normal, Overdose};
 public class QuimicoPlayer : MonoBehaviour
@@ -30,6 +31,10 @@ public class QuimicoPlayer : MonoBehaviour
     private bool aplicar = false;
     private float tempUso = 0;
     [SerializeField] private float delayUso = 0;
+
+    [Header("Sons Do Player")]
+    [SerializeField] private StudioEventEmitter aplicarQuimico_Audio;
+    [SerializeField] private StudioEventEmitter abstinencia_Audio;
 
     [Header("Modo teste")]
     [SerializeField] public bool desligarCadencia = false;
@@ -61,6 +66,10 @@ public class QuimicoPlayer : MonoBehaviour
         if (quimicoatual <= abstinencia)
         {
             status = Statusquimico.Abstinencia;
+            if (!abstinencia_Audio.IsPlaying())
+            {
+                abstinencia_Audio.Play();
+            }
         }else if (quimicoatual >= overdose)
         {
             status = Statusquimico.Overdose;
@@ -77,6 +86,7 @@ public class QuimicoPlayer : MonoBehaviour
                 quimicoatual += quantidadeReabastecer;
                 quimicos -= 1;
                 tempUso = Time.time + delayUso;
+                aplicarQuimico_Audio.Play();
             }
         }
     }

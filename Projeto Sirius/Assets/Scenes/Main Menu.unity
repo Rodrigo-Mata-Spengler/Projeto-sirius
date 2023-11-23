@@ -4226,7 +4226,7 @@ GameObject:
   - component: {fileID: 1070400253}
   - component: {fileID: 1070400254}
   m_Layer: 0
-  m_Name: porta Fechando
+  m_Name: Musica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4262,19 +4262,21 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 256381682
-      Data2: 1250388530
-      Data3: 2127007384
-      Data4: 1602966054
-    Path: event:/Menu Principal/Porta Fechando
+      Data1: 1142440577
+      Data2: 1110830559
+      Data3: -1585589858
+      Data4: 1337334844
+    Path: "event:/M\xFAsica e M\xFAsica Ambiente/M\xFAsicas"
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
-  Params: []
+  Params:
+  - Name: "M\xFAsicas"
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
