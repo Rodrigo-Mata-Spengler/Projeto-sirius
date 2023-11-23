@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 
 enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando , agachado_idle, empurrando, escalando, escalando_idle, agarrando}
@@ -13,9 +14,16 @@ public class PlayerMoveStatus : MonoBehaviour
     [SerializeField] private GameObject soundB;
 
     [SerializeField] private StatusMovimento status = StatusMovimento.idle;
+    private StatusMovimento lastStatus = StatusMovimento.idle;
+
+    private bool wasFalling = false;
 
     [Header("Pulando")]
     [SerializeField] private float pulandoOffSet = 0;
+
+    [Header("Sons")]
+    [SerializeField] private StudioEventEmitter caindo_Sound;
+
     private void Awake()
     {
         playerControler = GetComponent<CharacterController>();
@@ -26,6 +34,7 @@ public class PlayerMoveStatus : MonoBehaviour
     {
         velocidade = playerControler.velocity;
 
+        lastStatus = status;
         //testa para ver se o player esta no ar
         if (!playerControler.isGrounded)
         {
@@ -112,6 +121,21 @@ public class PlayerMoveStatus : MonoBehaviour
                     soundB.SetActive(true);
                 }
             }
+        }
+
+        //som caindo
+        if (lastStatus == StatusMovimento.caindo && lastStatus != status)
+        {
+            if (wasFalling == true && !caindo_Sound.IsPlaying())
+            {
+                wasFalling = false;
+                caindo_Sound.Play();
+            }
+        }
+        
+        if(lastStatus != StatusMovimento.caindo)
+        {
+            wasFalling = true;
         }
     }
 

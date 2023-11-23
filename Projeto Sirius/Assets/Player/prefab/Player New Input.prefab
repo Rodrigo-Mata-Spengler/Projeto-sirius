@@ -771,6 +771,7 @@ MonoBehaviour:
   tagArrastarObjeto: Arrastavel
   tagQuimicoColetavel: QuimicoColetavel
   quimicoColetavel: {fileID: 0}
+  quimicoColetavel_Sound: {fileID: 7365508946130113275}
   tagSubirParede: Escalavel
   tagSubirCorda: Corda
   tagPendurar: Agarravel
@@ -989,6 +990,7 @@ MonoBehaviour:
   soundB: {fileID: 6975243462304595138}
   status: 0
   pulandoOffSet: 0.2
+  caindo_Sound: {fileID: 2732869057067521558}
 --- !u!114 &8805170173406185142
 MonoBehaviour:
   m_ObjectHideFlags: 0

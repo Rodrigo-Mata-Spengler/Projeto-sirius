@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 enum ButtonStatus {idle , press , released };
 public class InteracaoObjetos : MonoBehaviour
@@ -25,6 +26,7 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] public string tagQuimicoColetavel;
     [SerializeField] public QuimicoColetavel quimicoColetavel;
     private bool interacaoQuimico = false;
+    [SerializeField] private StudioEventEmitter quimicoColetavel_Sound;
 
     [Header("Escalada")]
     [SerializeField] public string tagSubirParede;
@@ -83,6 +85,10 @@ public class InteracaoObjetos : MonoBehaviour
         {
             interacaoQuimico = false;
             quimicoColetavel.Reabastecer();
+            if (!quimicoColetavel_Sound.IsPlaying())
+            {
+                quimicoColetavel_Sound.Play();
+            }
         }
         else if (interacaoLightSwitch && button == ButtonStatus.press)
         {
@@ -162,6 +168,7 @@ public class InteracaoObjetos : MonoBehaviour
     private void Coletar()
     {
         this.GetComponent<PlayerInventario>().PegarColetavel(colecionavel.colecionavelID);
+        
     }
 
     private void OnTriggerEnter(Collider other)

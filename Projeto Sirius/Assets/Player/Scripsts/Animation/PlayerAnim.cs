@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class PlayerAnim : MonoBehaviour
 {
@@ -126,6 +127,7 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
                 break;
             case StatusMovimento.agachando:
                 anim.SetBool("Is_Walking", false);
