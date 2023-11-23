@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{c7082995-126a-4780-b315-3d66f515be68}">
+	<object class="ParameterPreset" id="{314be439-c83f-4405-92a3-fc0b4a1f2bfe}">
 		<property name="name">
-			<value>Passos do Protagonista</value>
+			<value>Coração Batimento</value>
 		</property>
 		<relationship name="folder">
 			<destination>{dcb7b5f7-a99b-4fa6-91ac-bebda6c9cf4d}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{cbbffa83-2d85-4cf6-a954-5f8781741042}</destination>
+			<destination>{36c8163a-16e8-4448-8d1a-fadc0a9b6267}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{cbbffa83-2d85-4cf6-a954-5f8781741042}">
+	<object class="GameParameter" id="{36c8163a-16e8-4448-8d1a-fadc0a9b6267}">
 		<property name="parameterType">
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
+			<value>3</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Metal</value>
 			<value>Normal</value>
-			<value>Devagar</value>
-			<value>Correndo</value>
+			<value>Acelerado</value>
+			<value>Muito Acelerado</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
