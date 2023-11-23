@@ -130,7 +130,6 @@
 		</property>
 		<relationship name="sounds">
 			<destination>{784ea8c0-5f87-49c2-87e8-34b515bc26ec}</destination>
-			<destination>{d770aa3a-fe8b-45c4-91cd-6332bd8e0330}</destination>
 			<destination>{7a605981-c2b2-483e-bb85-7242c74d1f7a}</destination>
 			<destination>{0ef8499e-7833-4c21-a888-e566415df4fe}</destination>
 		</relationship>
@@ -174,7 +173,6 @@
 		</property>
 		<relationship name="sounds">
 			<destination>{4bda9912-08f6-4ee2-8d08-589a6772ae22}</destination>
-			<destination>{f703ddb7-e607-4e7f-a07a-2eff775d96c6}</destination>
 			<destination>{d070544d-5493-4c33-b3fe-e6520abe14fb}</destination>
 			<destination>{e55eb69f-0cf8-4dce-9b81-e3b5b8f32482}</destination>
 		</relationship>
@@ -303,7 +301,7 @@
 			<value>1.3532687912603465</value>
 		</property>
 		<property name="length">
-			<value>0.28673120873965369</value>
+			<value>0.3067312087396537</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{6e99c24c-60f2-4f72-bdb1-5b545dde884c}</destination>
@@ -370,11 +368,6 @@
 			<destination>{d350862a-490d-435a-a660-76a1daf2a1f9}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{d770aa3a-fe8b-45c4-91cd-6332bd8e0330}">
-		<relationship name="audioFile">
-			<destination>{15afd4a8-aa8d-405e-80cd-e69fb1171e39}</destination>
-		</relationship>
-	</object>
 	<object class="SingleSound" id="{7a605981-c2b2-483e-bb85-7242c74d1f7a}">
 		<relationship name="audioFile">
 			<destination>{2948feea-31ae-4c79-9e10-b4857e0e8b98}</destination>
@@ -421,11 +414,6 @@
 	<object class="SingleSound" id="{4bda9912-08f6-4ee2-8d08-589a6772ae22}">
 		<relationship name="audioFile">
 			<destination>{d350862a-490d-435a-a660-76a1daf2a1f9}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{f703ddb7-e607-4e7f-a07a-2eff775d96c6}">
-		<relationship name="audioFile">
-			<destination>{15afd4a8-aa8d-405e-80cd-e69fb1171e39}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{d070544d-5493-4c33-b3fe-e6520abe14fb}">
