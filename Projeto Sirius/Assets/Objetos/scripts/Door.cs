@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 public class Door : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class Door : MonoBehaviour
     private Vector3 Forward;
 
     private Coroutine AnimationCoroutine;
+
+    [Header("Sons:")]
+    [SerializeField] private StudioEventEmitter slide_Sound;
 
     private void Awake()
     {
@@ -97,6 +101,12 @@ public class Door : MonoBehaviour
 
         float time = 0;
         IsOpen = true;
+
+        if (!slide_Sound.IsPlaying())
+        {
+            slide_Sound.Play();
+        }
+
         while (time < 1)
         {
             transform.position = Vector3.Lerp(startPosition, endPosition, time);

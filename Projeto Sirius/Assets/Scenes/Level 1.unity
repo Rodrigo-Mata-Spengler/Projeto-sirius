@@ -6429,6 +6429,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865548811}
   m_Mesh: {fileID: -1470940850793612818, guid: eb5b033a0229bef44be46268f796fe89, type: 3}
+--- !u!1 &868940306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868940308}
+  - component: {fileID: 868940307}
+  m_Layer: 7
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &868940307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868940306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1329039486
+      Data2: 1267282072
+      Data3: 2035493257
+      Data4: -1600853003
+    Path: event:/Ambiente/Porta de Metal
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &868940308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868940306}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -174.6, y: 61.5, z: 1.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1756360996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875556366
 GameObject:
   m_ObjectHideFlags: 0
@@ -9965,6 +10028,7 @@ MonoBehaviour:
   SlidingDoor: 1
   SlideDirection: {x: 0, y: -1, z: 0}
   SlideAmount: 15
+  slide_Sound: {fileID: 7642616967932672624}
 --- !u!65 &1338832259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9984,8 +10048,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.123928, y: 22.521513, z: 8.885996}
-  m_Center: {x: 0, y: -7.031209, z: 3.3989582}
+  m_Size: {x: 2.123928, y: 32.802635, z: 8.885996}
+  m_Center: {x: 0, y: -1.8906479, z: 3.3989582}
 --- !u!1 &1344050745
 GameObject:
   m_ObjectHideFlags: 0
@@ -13659,6 +13723,7 @@ MonoBehaviour:
   SlidingDoor: 1
   SlideDirection: {x: 0, y: 0, z: -1}
   SlideAmount: -9
+  slide_Sound: {fileID: 868940307}
 --- !u!4 &1756360996
 Transform:
   m_ObjectHideFlags: 0
@@ -13674,6 +13739,7 @@ Transform:
   m_Children:
   - {fileID: 6538830933360836869}
   - {fileID: 6585838420160036078}
+  - {fileID: 868940308}
   m_Father: {fileID: 5139478066182254892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1763399082
@@ -14728,6 +14794,7 @@ MonoBehaviour:
   SlidingDoor: 1
   SlideDirection: {x: 0, y: -1, z: 0}
   SlideAmount: 15
+  slide_Sound: {fileID: 4202668085533418748}
 --- !u!65 &1928995333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14747,8 +14814,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.123928, y: 22.521513, z: 11.431199}
-  m_Center: {x: 0, y: -7.031209, z: 4.67156}
+  m_Size: {x: 2.123928, y: 32.587193, z: 11.431199}
+  m_Center: {x: 0, y: -1.9983692, z: 4.67156}
 --- !u!1001 &1930880884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14852,6 +14919,7 @@ MonoBehaviour:
   SlidingDoor: 0
   SlideDirection: {x: 0, y: 0, z: -1}
   SlideAmount: 1.9
+  slide_Sound: {fileID: 1937719820}
 --- !u!64 &1937719819
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14874,6 +14942,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4795086867996671240, guid: 0c10cd9f37b48834f84460e2493dcafd, type: 3}
+--- !u!114 &1937719820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937719811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1329039486
+      Data2: 1267282072
+      Data3: 2035493257
+      Data4: -1600853003
+    Path: event:/Ambiente/Porta de Metal
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 62.410767
 --- !u!1 &1937895108
 GameObject:
   m_ObjectHideFlags: 0
@@ -15827,6 +15926,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1959506429679547816, guid: 0c10cd9f37b48834f84460e2493dcafd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1937719819}
+    - targetCorrespondingSourceObject: {fileID: 1959506429679547816, guid: 0c10cd9f37b48834f84460e2493dcafd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1937719820}
   m_SourcePrefab: {fileID: 100100000, guid: 0c10cd9f37b48834f84460e2493dcafd, type: 3}
 --- !u!1001 &2063532707
 PrefabInstance:
@@ -18140,6 +18242,7 @@ GameObject:
   - component: {fileID: 3096638439597431654}
   - component: {fileID: 1338832259}
   - component: {fileID: 1338832258}
+  - component: {fileID: 7642616967932672624}
   m_Layer: 7
   m_Name: Corda_mesh3
   m_TagString: Corda
@@ -19173,6 +19276,7 @@ GameObject:
   - component: {fileID: 3404238021349496160}
   - component: {fileID: 1928995333}
   - component: {fileID: 1928995332}
+  - component: {fileID: 4202668085533418748}
   m_Layer: 7
   m_Name: Corda_mesh2
   m_TagString: Corda
@@ -19460,6 +19564,37 @@ Transform:
   - {fileID: 133941885}
   m_Father: {fileID: 7780714191525413146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4202668085533418748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673544578348048087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1371132196
+      Data2: 1152703440
+      Data3: 381730463
+      Data4: -1093391498
+    Path: event:/Ambiente/Corda Descendo
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 54.963806
 --- !u!4 &4255446186696634618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3849c710ae800a5498cd766e3ef42270, type: 3}
@@ -21068,6 +21203,37 @@ Transform:
   - {fileID: 1139143572}
   m_Father: {fileID: 7780714191525413146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7642616967932672624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350400071801585420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1371132196
+      Data2: 1152703440
+      Data3: 381730463
+      Data4: -1093391498
+    Path: event:/Ambiente/Corda Descendo
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 54.954346
 --- !u!33 &7652173965952040058
 MeshFilter:
   m_ObjectHideFlags: 0
