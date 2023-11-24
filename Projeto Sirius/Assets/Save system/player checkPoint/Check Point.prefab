@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8270163768968575719}
   - component: {fileID: 2503744359533706476}
   - component: {fileID: 3474133911309087628}
+  - component: {fileID: 6130943758204036982}
   m_Layer: 0
   m_Name: Check Point
   m_TagString: CheckPoint
@@ -49,6 +50,7 @@ MonoBehaviour:
   notSaved: {r: 1, g: 0, b: 0, a: 1}
   saved: {r: 0, g: 0, b: 1, a: 1}
   sprite: {fileID: 1865566548954868137}
+  save_Sound: {fileID: 6130943758204036982}
 --- !u!65 &3474133911309087628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70,6 +72,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &6130943758204036982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4053619839606614021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1200659301
+      Data2: 1107494450
+      Data3: -518108267
+      Data4: -934122567
+    Path: "event:/Ambiente/Checkpoint L\xE2mpada"
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4290691114168632098
 GameObject:
   m_ObjectHideFlags: 0

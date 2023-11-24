@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class PlacaDePressao : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class PlacaDePressao : MonoBehaviour
     private Vector3 Forward;
 
     private Coroutine AnimationCoroutine;
+
+    [Header("Sons")]
+    [SerializeField] private StudioEventEmitter alcapao_Sound;
 
     private void Awake()
     {
@@ -96,6 +100,11 @@ public class PlacaDePressao : MonoBehaviour
         }
 
         IsOpen = true;
+
+        if (!alcapao_Sound.IsPlaying())
+        {
+            alcapao_Sound.Play();
+        }
 
         float time = 0;
         while (time < 1)

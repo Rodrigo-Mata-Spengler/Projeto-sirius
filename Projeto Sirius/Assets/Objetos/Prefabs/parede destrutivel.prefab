@@ -39,6 +39,7 @@ Transform:
   - {fileID: 537897927709082902}
   - {fileID: 958318864568568740}
   - {fileID: 8658238857983773012}
+  - {fileID: 5664142069960371678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8708348035397955330
@@ -65,6 +66,8 @@ MonoBehaviour:
   force: 5
   DoOnce: 0
   Trigger: {fileID: 0}
+  destructionTime: 0.5
+  wallDestrution_Sound: {fileID: 6246765493031241279}
 --- !u!65 &6614968673735511883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -618,6 +621,69 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5000002, y: 2.5666246, z: 3.508217}
   m_Center: {x: 0.00007629395, y: 0.03330886, z: 0.15391706}
+--- !u!1 &6302428365472078417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5664142069960371678}
+  - component: {fileID: 6246765493031241279}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5664142069960371678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302428365472078417}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.8, z: -1.89}
+  m_LocalScale: {x: 0.6044604, y: 0.6044604, z: 0.6044604}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2343619614645028039}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6246765493031241279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302428365472078417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -314270658
+      Data2: 1173681198
+      Data3: 1414979973
+      Data4: -1971092451
+    Path: event:/Ambiente/Quebrando Parede
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6384395957530245031
 GameObject:
   m_ObjectHideFlags: 0

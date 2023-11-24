@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class DoorButton : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class DoorButton : MonoBehaviour
 
     [SerializeField] private Animator AlavancaPivotAnimator;
     private float tempoFechar = 0;
+
+    [Header("Sons")]
+    [SerializeField] private StudioEventEmitter alavanca_Sound;
 
     private void Update()
     {
@@ -41,8 +45,13 @@ public class DoorButton : MonoBehaviour
                 {
                     Door[i].Open(Player.transform.position);
                     AlavancaPivotAnimator.SetBool("Apertou", true);
-
+                    
                 }
+            }
+
+            if (!alavanca_Sound.IsPlaying())
+            {
+                alavanca_Sound.Play();
             }
         }else
         {

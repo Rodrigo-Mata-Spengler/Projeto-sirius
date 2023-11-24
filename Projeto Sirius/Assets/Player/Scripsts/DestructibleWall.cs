@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD;
+using FMODUnity;
 
 public class DestructibleWall : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class DestructibleWall : MonoBehaviour
     [HideInInspector]public bool DoOnce = false;
     [SerializeField] private DestructibleWallTrigger Trigger;
     [SerializeField] private float destructionTime = .5f;
+
+    [Header("Sons")]
+    [SerializeField] private StudioEventEmitter wallDestrution_Sound;
 
     public void BreakWall()
     {
@@ -19,6 +24,12 @@ public class DestructibleWall : MonoBehaviour
             Destroy(WallParts[i].gameObject, destructionTime);
 
         }
+
+        if (!wallDestrution_Sound.IsPlaying())
+        {
+            wallDestrution_Sound.Play();
+        }
+
         DoOnce = true;
 
         
