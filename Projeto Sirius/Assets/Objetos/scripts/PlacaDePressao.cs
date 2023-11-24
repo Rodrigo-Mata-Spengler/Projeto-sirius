@@ -32,6 +32,7 @@ public class PlacaDePressao : MonoBehaviour
 
     [Header("Sons")]
     [SerializeField] private StudioEventEmitter alcapao_Sound;
+    [SerializeField] private StudioEventEmitter placa_Sound;
 
     private void Awake()
     {
@@ -123,6 +124,12 @@ public class PlacaDePressao : MonoBehaviour
 
         float time = 0;
         IsOpen = true;
+
+        if (!placa_Sound.IsPlaying())
+        {
+            placa_Sound.Play();
+        }
+
         while (time < 1)
         {
             transform.position = Vector3.Lerp(startPosition, endPosition, time);

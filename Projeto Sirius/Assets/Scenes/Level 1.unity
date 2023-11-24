@@ -2452,6 +2452,7 @@ MonoBehaviour:
   SlideDirection: {x: -1, y: 0, z: 0}
   SlideAmount: 1.9
   alcapao_Sound: {fileID: 8518737795411465350}
+  placa_Sound: {fileID: 0}
 --- !u!1001 &245117745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6132,6 +6133,7 @@ MonoBehaviour:
   SlideDirection: {x: 0, y: -1, z: 0}
   SlideAmount: 0.1
   alcapao_Sound: {fileID: 0}
+  placa_Sound: {fileID: 826403732}
 --- !u!65 &826403731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6153,6 +6155,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9652414, y: 0.4226909, z: 2.7925506}
   m_Center: {x: 0.018270148, y: 0.55003536, z: 0.008058147}
+--- !u!114 &826403732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826403726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1607449042
+      Data2: 1327563218
+      Data3: 1364203443
+      Data4: -1072737467
+    Path: "event:/Ambiente/Ch\xE3o de press\xE3o"
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &850059958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11379,6 +11412,7 @@ MonoBehaviour:
   SlideDirection: {x: -1, y: 0, z: 0}
   SlideAmount: 1.9
   alcapao_Sound: {fileID: 8518737796382906727}
+  placa_Sound: {fileID: 0}
 --- !u!64 &1524485248
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11818,6 +11852,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5797143228491875803, guid: 82f0f7c898e00924ba753d924c6910f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 826403730}
+    - targetCorrespondingSourceObject: {fileID: -5797143228491875803, guid: 82f0f7c898e00924ba753d924c6910f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 826403732}
   m_SourcePrefab: {fileID: 100100000, guid: 82f0f7c898e00924ba753d924c6910f5, type: 3}
 --- !u!1 &1541995618
 GameObject:
