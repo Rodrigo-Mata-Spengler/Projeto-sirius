@@ -136,10 +136,6 @@ public class EnemyControler : MonoBehaviour
             pontoMov = new Vector3(areaMovimento.RandomPointInSpace().x, transform.position.y, transform.position.z);
             status = EnemyStatus.movendo;
         }
-        else if (hit.transform.CompareTag(pointTag))
-        {
-
-        } 
         else if(hit.transform.CompareTag(playeTag))
         {
             status = EnemyStatus.Achou;
