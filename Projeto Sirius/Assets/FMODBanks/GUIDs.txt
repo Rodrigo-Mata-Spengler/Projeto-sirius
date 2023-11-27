@@ -38,12 +38,11 @@
 {ed449c3e-f42e-45f4-85e1-56541d84838a} event:/Ambiente/Quebrando Parede
 {a426ca95-6283-45aa-9568-625f601c0f39} event:/Ambiente/Vidro Quebrando
 {42c504a9-a01c-4049-ab61-92154ee96292} event:/Cientista/Passos do Cientista
-{473d1adb-ce28-4c55-8854-2fca07b725ab} event:/Menu Principal/Bolhas a Esquerda
-{79ec0d05-f65b-41f7-ba08-6c2d985a8fd7} event:/Menu Principal/Engrenagens a Direita
-{0f4812f2-6a32-4a87-988e-c77e26528b5f} event:/Menu Principal/Porta Fechando
-{e5166683-62aa-42b3-a1a1-41cd87e30032} event:/Menu Principal/Porta Ranger
-{822c9a4f-95a4-4fd8-b032-6820ce862265} event:/Menu Principal/Som de Feedback
-{35f3b268-ddb4-4e8a-aeff-ab445cb3269f} event:/Menu Principal/interruptor Vsync&Fullscreen
+{b34d3181-edaf-4951-9989-67b31c1bde4a} event:/Menu Principal/Bolha a Esquerda
+{9fed0218-cf7c-411d-b7f6-0207f216e749} event:/Menu Principal/Engrenagem a Direita
+{e3247d2d-9be9-4834-9499-cd74bee3fc61} event:/Menu Principal/Interruptor Vsync&Fullscreen
+{e210b633-4e6d-480b-8187-66527f62bd46} event:/Menu Principal/Porta Ranger
+{82654fab-63eb-422e-9b99-bf35ff3c8faf} event:/Menu Principal/Som de Feedback
 {03eb61a3-a497-4116-8f80-7e4d33803884} event:/Música e Música Ambiente/Atmosferica
 {44184281-eddf-4235-9ed1-7da13c1cb64f} event:/Música e Música Ambiente/Músicas
 {6b5e6a8f-d955-4186-bda2-27397a8dc123} event:/Protagonista/Abstinencia
@@ -53,10 +52,9 @@
 {4a664c47-2629-4d32-a1ce-3480c6774d49} event:/Protagonista/Coletando Tag
 {64f32fed-bd60-4d41-885b-d7d63a77d5a5} event:/Protagonista/Morrendo
 {70020a74-de7d-43a0-b067-4cda2ae98e38} event:/Protagonista/Passos do Personagem
-{404967ee-b5c0-4e22-8dde-07e292bbbf72} event:/Protagonista/Uso de Quimico
-{f3b7669c-c800-41d0-a3bf-01751ef16b3e} parameter:/Coração
+{5b1c0784-c038-4b7e-81cb-fcec255578dd} event:/Protagonista/Químico
+{36c8163a-16e8-4448-8d1a-fadc0a9b6267} parameter:/Coração Batimento
 {26c4cde5-8bc8-4a7d-b2c7-00284cf2d9cc} parameter:/Morrendo Fade Out
 {7649ba2e-4410-4708-b30e-35438d778585} parameter:/Músicas
 {cbbffa83-2d85-4cf6-a954-5f8781741042} parameter:/Passos do Protagonista
 {c2e4187e-4011-45ba-abc3-d515aeae149b} parameter:/Posição
-{ba8655a0-cae4-49f8-9c25-fbaf0cc5ed6b} parameter:/Volume Coração
