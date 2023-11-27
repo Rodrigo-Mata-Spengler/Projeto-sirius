@@ -17533,6 +17533,8 @@ GameObject:
   - component: {fileID: 7912600522032952183}
   - component: {fileID: 1172699358}
   - component: {fileID: 1172699357}
+  - component: {fileID: 7912600522032952185}
+  - component: {fileID: 7912600522032952184}
   m_Layer: 7
   m_Name: caixa_low12
   m_TagString: Arrastavel
@@ -20221,6 +20223,8 @@ GameObject:
   - component: {fileID: 912069570265201712}
   - component: {fileID: 119709847}
   - component: {fileID: 119709846}
+  - component: {fileID: 5812973618507181941}
+  - component: {fileID: 5812973618507181940}
   m_Layer: 7
   m_Name: caixa_low13
   m_TagString: Arrastavel
@@ -20228,6 +20232,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5812973618507181940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812973618507181939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1698626246
+      Data2: 1184387991
+      Data3: 875697065
+      Data4: 1779887369
+    Path: event:/Ambiente/Objeto Arrastando
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &5812973618507181941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812973618507181939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c87ff94c08b18f4bb2e1108228e36cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrastar_Sound: {fileID: 5812973618507181940}
 --- !u!4 &5845434220942551780
 Transform:
   m_ObjectHideFlags: 0
@@ -21427,6 +21475,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7912600522032952184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362552295398824785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1698626246
+      Data2: 1184387991
+      Data3: 875697065
+      Data4: 1779887369
+    Path: event:/Ambiente/Objeto Arrastando
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &7912600522032952185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362552295398824785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c87ff94c08b18f4bb2e1108228e36cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrastar_Sound: {fileID: 7912600522032952184}
 --- !u!1 &7915714320484787423
 GameObject:
   m_ObjectHideFlags: 0
