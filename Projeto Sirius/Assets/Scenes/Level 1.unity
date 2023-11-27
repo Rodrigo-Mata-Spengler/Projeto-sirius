@@ -8842,7 +8842,7 @@ MonoBehaviour:
   player: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   cam: {fileID: 1567739635}
   menupause: {fileID: 990359275}
-  erase: 1
+  erase: 0
   data:
     scena_Atual: 
     loc_Atual: []
