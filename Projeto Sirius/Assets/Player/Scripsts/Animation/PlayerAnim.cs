@@ -17,6 +17,8 @@ public class PlayerAnim : MonoBehaviour
     private float temp_anim_bater_time = 0;
     private bool morte = false;
 
+    private bool empurrando = false;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -27,6 +29,8 @@ public class PlayerAnim : MonoBehaviour
     {
         if (!morte)
         {
+            empurrando = false;
+
             //Animação do movimento
             TranslateStatusMov(playerStatus.GetStatus());
 
@@ -43,8 +47,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -54,6 +56,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.caminhando:
                     anim.SetBool("Is_Walking", true);
@@ -66,8 +72,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -77,6 +81,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.correndo:
                     anim.SetBool("Is_Walking", false);
@@ -89,8 +97,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -100,6 +106,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.pulando:
                     anim.SetBool("Is_Walking", false);
@@ -112,8 +122,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -123,6 +131,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.caindo:
                     anim.SetBool("Is_Walking", false);
@@ -135,8 +147,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -146,6 +156,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
 
                     break;
                 case StatusMovimento.agachando:
@@ -159,8 +173,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", true);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -170,6 +182,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.agachado_idle:
                     anim.SetBool("Is_Walking", false);
@@ -182,8 +198,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -193,6 +207,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.empurrando:
                     anim.SetBool("Is_Walking", false);
@@ -205,8 +223,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", true);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -216,6 +232,19 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    if (playermov.LastInput() > 0)
+                    {
+                        anim.SetBool("Is_empurrar",true);
+                        anim.SetBool("Is_puxar", false);
+                    }
+                    else if (playermov.LastInput() < 0)
+                    {
+                        anim.SetBool("Is_empurrar", false);
+                        anim.SetBool("Is_puxar", true);
+                    }
+
+                    empurrando = true;
                     break;
                 case StatusMovimento.escalando:
                     anim.SetBool("Is_Walking", false);
@@ -228,8 +257,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", true);
 
                     anim.SetBool("Is_grab", false);
@@ -239,6 +266,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.escalando_idle:
                     anim.SetBool("Is_Walking", false);
@@ -251,8 +282,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", false);
@@ -262,6 +291,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", true);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
                 case StatusMovimento.agarrando:
                     anim.SetBool("Is_Walking", false);
@@ -274,8 +307,6 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_crouch", false);
 
-                    anim.SetBool("Is_Pushing", false);
-
                     anim.SetBool("Is_Clibing", false);
 
                     anim.SetBool("Is_grab", true);
@@ -285,6 +316,10 @@ public class PlayerAnim : MonoBehaviour
                     anim.SetBool("Is_Clibing_idle", false);
 
                     anim.SetBool("Is_Abstinencia", false);
+
+                    anim.SetBool("Is_empurrar", false);
+
+                    anim.SetBool("Is_puxar", false);
                     break;
             }
 
@@ -307,8 +342,6 @@ public class PlayerAnim : MonoBehaviour
 
                         anim.SetBool("Is_crouch", false);
 
-                        anim.SetBool("Is_Pushing", false);
-
                         anim.SetBool("Is_Clibing", false);
 
                         anim.SetBool("Is_grab", false);
@@ -327,11 +360,11 @@ public class PlayerAnim : MonoBehaviour
                     break;
             }
 
-            if (playermov.LastInput() > 0)
+            if (playermov.LastInput() > 0 && !empurrando)
             {
                 rend.flipX = false;
             }
-            else if (playermov.LastInput() < 0)
+            else if (playermov.LastInput() < 0 && !empurrando)
             {
                 rend.flipX = true;
             }
@@ -342,7 +375,6 @@ public class PlayerAnim : MonoBehaviour
             }
         }
 
-        
     }
 
 
