@@ -18,6 +18,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] public PlayerAnim anim;
 
     private bool dead = false;
+    private float tempo_Morte = .5f;
+    private float tempo = 0;
 
     private void Start()
     {
@@ -44,17 +46,49 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (dead)
+        {
+            if (tempo <= Time.time)
+            {
+                DeathPanel.SetActive(true);
+            }
+        }
+    }
+
     public void Death(TipoMorte morte)
     {
         switch (morte)
         {
             case TipoMorte.Abstinecia:
+                anim.Morte();
+                tempo = tempo_Morte + Time.time;
+
+                
+                dead = true;
                 break;
             case TipoMorte.Overdose:
+                anim.Morte();
+                tempo = tempo_Morte + Time.time;
+
+
+                dead = true;
                 break;
             case TipoMorte.capturado:
+                //arrumar
+                anim.Morte();
+                tempo = tempo_Morte + Time.time;
+
+
+                dead = true;
                 break;
             case TipoMorte.eletrocutado:
+                anim.Morte();
+                tempo = tempo_Morte + Time.time;
+
+
+                dead = true;
                 break;
             case TipoMorte.generico:
                 Time.timeScale = 0f;

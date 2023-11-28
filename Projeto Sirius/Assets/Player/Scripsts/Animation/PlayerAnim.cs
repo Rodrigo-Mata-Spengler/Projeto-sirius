@@ -15,7 +15,7 @@ public class PlayerAnim : MonoBehaviour
 
     private float temp_anim_bater = .1f;
     private float temp_anim_bater_time = 0;
-
+    private bool morte = false;
 
     private void Awake()
     {
@@ -25,276 +25,14 @@ public class PlayerAnim : MonoBehaviour
 
     private void Update()
     {
-        //Animação do movimento
-        TranslateStatusMov(playerStatus.GetStatus());
-
-        switch (status_Movimento)
+        if (!morte)
         {
-            case StatusMovimento.idle:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.caminhando:
-                anim.SetBool("Is_Walking", true);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.correndo:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", true);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.pulando:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", true);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.caindo:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", true);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-
-                break;
-            case StatusMovimento.agachando:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", true);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.agachado_idle:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", true);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.empurrando:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", true);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.escalando:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", true);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.escalando_idle:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", false);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", true);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-            case StatusMovimento.agarrando:
-                anim.SetBool("Is_Walking", false);
-
-                anim.SetBool("Is_Runing", false);
-
-                anim.SetBool("Is_Jumping", false);
-
-                anim.SetBool("Is_falling", false);
-
-                anim.SetBool("Is_crouch", false);
-
-                anim.SetBool("Is_Pushing", false);
-
-                anim.SetBool("Is_Clibing", false);
-
-                anim.SetBool("Is_grab", true);
-
-                anim.SetBool("Is_Stealth_idle", false);
-
-                anim.SetBool("Is_Clibing_idle", false);
-
-                anim.SetBool("Is_Abstinencia", false);
-                break;
-        }
-
-        //Animação do Quimico
-        TranlateStatusQuimico(playerQuimico.StatusTranslator());
-
-        switch (status_Quimico)
-        {
-            case Statusquimico.Abstinencia:
-
-                if (status_Movimento != StatusMovimento.idle && status_Movimento != StatusMovimento.caindo)
-                {
+            //Animação do movimento
+            TranslateStatusMov(playerStatus.GetStatus());
+
+            switch (status_Movimento)
+            {
+                case StatusMovimento.idle:
                     anim.SetBool("Is_Walking", false);
 
                     anim.SetBool("Is_Runing", false);
@@ -315,28 +53,296 @@ public class PlayerAnim : MonoBehaviour
 
                     anim.SetBool("Is_Clibing_idle", false);
 
-                    anim.SetBool("Is_Abstinencia", true);
-                }
-                break;
-            case Statusquimico.Normal:
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.caminhando:
+                    anim.SetBool("Is_Walking", true);
 
-                break;
-            case Statusquimico.Overdose:
-                break;
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.correndo:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", true);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.pulando:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", true);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.caindo:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", true);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+
+                    break;
+                case StatusMovimento.agachando:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", true);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.agachado_idle:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", true);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.empurrando:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", true);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.escalando:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", true);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.escalando_idle:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", true);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+                case StatusMovimento.agarrando:
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", true);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", false);
+                    break;
+            }
+
+            //Animação do Quimico
+            TranlateStatusQuimico(playerQuimico.StatusTranslator());
+
+            switch (status_Quimico)
+            {
+                case Statusquimico.Abstinencia:
+
+                    if (status_Movimento != StatusMovimento.idle && status_Movimento != StatusMovimento.caindo)
+                    {
+                        anim.SetBool("Is_Walking", false);
+
+                        anim.SetBool("Is_Runing", false);
+
+                        anim.SetBool("Is_Jumping", false);
+
+                        anim.SetBool("Is_falling", false);
+
+                        anim.SetBool("Is_crouch", false);
+
+                        anim.SetBool("Is_Pushing", false);
+
+                        anim.SetBool("Is_Clibing", false);
+
+                        anim.SetBool("Is_grab", false);
+
+                        anim.SetBool("Is_Stealth_idle", false);
+
+                        anim.SetBool("Is_Clibing_idle", false);
+
+                        anim.SetBool("Is_Abstinencia", true);
+                    }
+                    break;
+                case Statusquimico.Normal:
+
+                    break;
+                case Statusquimico.Overdose:
+                    break;
+            }
+
+            if (playermov.LastInput() > 0)
+            {
+                rend.flipX = false;
+            }
+            else if (playermov.LastInput() < 0)
+            {
+                rend.flipX = true;
+            }
+
+            if (temp_anim_bater_time <= Time.time)
+            {
+                anim.ResetTrigger("Trig_baterParede");
+            }
         }
 
-        if (playermov.LastInput() > 0)
-        {
-            rend.flipX = false;
-        }else if(playermov.LastInput() < 0)
-        {
-            rend.flipX = true;
-        }
-
-        if (temp_anim_bater_time <= Time.time)
-        {
-            anim.ResetTrigger("Trig_baterParede");
-        }
+        
     }
 
 
@@ -405,7 +411,38 @@ public class PlayerAnim : MonoBehaviour
 
     public void Morte()
     {
+        morte = true;
+
+        playermov.enabled = false;
+
+        anim.SetBool("Is_Walking", false);
+
+        anim.SetBool("Is_Runing", false);
+
+        anim.SetBool("Is_Jumping", false);
+
+        anim.SetBool("Is_falling", false);
+
+        anim.SetBool("Is_crouch", false);
+
+        anim.SetBool("Is_Pushing", false);
+
+        anim.SetBool("Is_Clibing", false);
+
+        anim.SetBool("Is_grab", false);
+
+        anim.SetBool("Is_Stealth_idle", false);
+
+        anim.SetBool("Is_Clibing_idle", false);
+
+        anim.SetBool("Is_Abstinencia", false);
+
         anim.SetTrigger("Trig_Morrendo");
         
+    }
+
+    public void TempoCongelado()
+    {
+        Time.timeScale = 0;
     }
 }
