@@ -14,7 +14,7 @@ public class PisoEletrico : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            menuMorte.Death();
+            menuMorte.Death( TipoMorte.eletrocutado);
         }
     }
 }

@@ -144,6 +144,6 @@ public class EnemyControler : MonoBehaviour
 
     private void Achou()
     {
-        pauseMorte.Death();
+        pauseMorte.Death(TipoMorte.capturado);
     }
 }

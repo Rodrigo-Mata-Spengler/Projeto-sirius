@@ -402,4 +402,10 @@ public class PlayerAnim : MonoBehaviour
 
         temp_anim_bater_time = temp_anim_bater + Time.time;
     }
+
+    public void Morte()
+    {
+        anim.SetTrigger("Trig_Morrendo");
+        
+    }
 }
