@@ -54,7 +54,7 @@ public class BossFinal : MonoBehaviour
         //caso player seja capturado pelo Boss
         if (other.gameObject.CompareTag(playerTag))
         {
-            morte.Death();
+            morte.Death(TipoMorte.capturado);
         }
 
         //caso o player tenha falado com o npc que vai ajudalo

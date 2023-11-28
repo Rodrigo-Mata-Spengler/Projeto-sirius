@@ -15,6 +15,7 @@ public class InteracaoObjetos : MonoBehaviour
     [SerializeField] private QuimicoPlayer qPlayer;
     [SerializeField] private MovimentoPlayer mPlayer;
     [SerializeField] private LedgeDetect ledgePlayer;
+    [SerializeField] private PlayerAnim animPlayer;
 
     [Header("Arrastar Objetos")]
     [SerializeField] private GameObject ancoraPlayer;
@@ -109,6 +110,7 @@ public class InteracaoObjetos : MonoBehaviour
         else if (interacaoWall && button == ButtonStatus.press && qPlayer.GetQuimicoAtual() >= qPlayer.GetAbstinencia())
         {
             wall.BreakWall();
+            animPlayer.BaterParede();
         }
 
         if (button == ButtonStatus.released || qPlayer.GetQuimicoAtual() < qPlayer.GetAbstinencia())

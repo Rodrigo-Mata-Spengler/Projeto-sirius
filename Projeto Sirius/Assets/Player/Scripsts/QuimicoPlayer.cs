@@ -56,12 +56,12 @@ public class QuimicoPlayer : MonoBehaviour
 
         if (quimicoatual <= 0)
         {
-            menuMorte.Death();
+            menuMorte.Death(TipoMorte.Abstinecia);
         }
 
         if (quimicoatual >= 100)
         {
-            menuMorte.Death();
+            menuMorte.Death(TipoMorte.Overdose);
         }
 
         if (quimicoatual <= abstinencia)

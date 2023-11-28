@@ -47,7 +47,7 @@ public class SaveManeger : MonoBehaviour
                 m_player = spawn.SpawnPlayer(player,data,cam,menupause);
             }
         }
-
+        menupause.anim = m_player.transform.GetChild(0).GetComponent<PlayerAnim>();
         SaveSystem.SavePlayer(m_player,SceneManager.GetActiveScene().name);
     }
 

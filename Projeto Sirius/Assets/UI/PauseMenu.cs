@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+public enum TipoMorte {Abstinecia ,Overdose ,capturado ,eletrocutado ,generico}
 public class PauseMenu : MonoBehaviour
 {
 
@@ -13,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private GameObject CheatPanel;
     [SerializeField] private GameObject DeathPanel;
+
+    [SerializeField] public PlayerAnim anim;
 
     private bool dead = false;
 
@@ -41,12 +44,24 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void Death()
+    public void Death(TipoMorte morte)
     {
-        Time.timeScale = 0f;
-        DeathPanel.SetActive(true);
-        dead = true;
-        
+        switch (morte)
+        {
+            case TipoMorte.Abstinecia:
+                break;
+            case TipoMorte.Overdose:
+                break;
+            case TipoMorte.capturado:
+                break;
+            case TipoMorte.eletrocutado:
+                break;
+            case TipoMorte.generico:
+                Time.timeScale = 0f;
+                DeathPanel.SetActive(true);
+                dead = true;
+                break;
+        }
     }
     public void Reborn()
     {

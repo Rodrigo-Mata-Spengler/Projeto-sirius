@@ -29,7 +29,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             //transform.LookAt(target);
-            pauseMenu.Death();
+            pauseMenu.Death(TipoMorte.capturado);
         }
         if(Vector3.Distance(transform.position,target) > 0.2f && !seePlayer)
         {
