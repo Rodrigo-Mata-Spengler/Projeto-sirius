@@ -11,10 +11,13 @@ public class OptionsPanel : MonoBehaviour
     [SerializeField] private GameObject ControlesPanel;
     [SerializeField] private GameObject GraficosPanel;
     [SerializeField] private GameObject SFXPanel;
+    [SerializeField] private PauseMenu pauseMenu;
 
     [SerializeField] private List<GameObject> paineisOpcoes= new List<GameObject>();
 
     private int PanelOpen = 0;
+    private bool inOpcoesPanel = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +36,27 @@ public class OptionsPanel : MonoBehaviour
        
     }
 
+    public void VoltarButton()
+    {
+        if(inOpcoesPanel)
+        {
+            pauseMenu.PauseOrResume();
+        }
+        else
+        {
+            inOpcoesPanel = true;
+            DesligaPainel();
+            OpcoesPanel.SetActive(true);
+            inOpcoesPanel = true;
+        }
+    }
+
     public void DesligaPainel()
     {
         for(int i = 0; i<paineisOpcoes.Count; i++)
         {
             paineisOpcoes[i].SetActive(false);
+            inOpcoesPanel = false;
         }
     }
 
@@ -70,9 +89,9 @@ public class OptionsPanel : MonoBehaviour
 
     public void ParaMainMenu()
     {
-       
 
         ArmarioFechado.SetActive(true);
         MainOpcoesPanel.SetActive(false);
+        inOpcoesPanel = true;
     }
 }
