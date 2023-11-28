@@ -7,9 +7,15 @@ public class PlayerAnim : MonoBehaviour
 {
     public PlayerMoveStatus playerStatus;
     public MovimentoPlayer playermov;
+    public QuimicoPlayer playerQuimico;
     private Animator anim;
-    private StatusMovimento status;
+    private StatusMovimento status_Movimento;
+    private Statusquimico status_Quimico;
     private SpriteRenderer rend;
+
+    private float temp_anim_bater = .1f;
+    private float temp_anim_bater_time = 0;
+
 
     private void Awake()
     {
@@ -19,9 +25,10 @@ public class PlayerAnim : MonoBehaviour
 
     private void Update()
     {
-        TranslateStatus(playerStatus.GetStatus());
+        //Animação do movimento
+        TranslateStatusMov(playerStatus.GetStatus());
 
-        switch (status)
+        switch (status_Movimento)
         {
             case StatusMovimento.idle:
                 anim.SetBool("Is_Walking", false);
@@ -43,6 +50,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.caminhando:
                 anim.SetBool("Is_Walking", true);
@@ -64,6 +73,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.correndo:
                 anim.SetBool("Is_Walking", false);
@@ -85,6 +96,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.pulando:
                 anim.SetBool("Is_Walking", false);
@@ -106,6 +119,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.caindo:
                 anim.SetBool("Is_Walking", false);
@@ -128,6 +143,8 @@ public class PlayerAnim : MonoBehaviour
 
                 anim.SetBool("Is_Clibing_idle", false);
 
+                anim.SetBool("Is_Abstinencia", false);
+
                 break;
             case StatusMovimento.agachando:
                 anim.SetBool("Is_Walking", false);
@@ -149,6 +166,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.agachado_idle:
                 anim.SetBool("Is_Walking", false);
@@ -170,6 +189,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", true);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.empurrando:
                 anim.SetBool("Is_Walking", false);
@@ -191,6 +212,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.escalando:
                 anim.SetBool("Is_Walking", false);
@@ -212,6 +235,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.escalando_idle:
                 anim.SetBool("Is_Walking", false);
@@ -233,6 +258,8 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", true);
+
+                anim.SetBool("Is_Abstinencia", false);
                 break;
             case StatusMovimento.agarrando:
                 anim.SetBool("Is_Walking", false);
@@ -254,6 +281,47 @@ public class PlayerAnim : MonoBehaviour
                 anim.SetBool("Is_Stealth_idle", false);
 
                 anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
+                break;
+        }
+
+        //Animação do Quimico
+        TranlateStatusQuimico(playerQuimico.StatusTranslator());
+
+        switch (status_Quimico)
+        {
+            case Statusquimico.Abstinencia:
+
+                if (status_Movimento != StatusMovimento.idle && status_Movimento != StatusMovimento.caindo)
+                {
+                    anim.SetBool("Is_Walking", false);
+
+                    anim.SetBool("Is_Runing", false);
+
+                    anim.SetBool("Is_Jumping", false);
+
+                    anim.SetBool("Is_falling", false);
+
+                    anim.SetBool("Is_crouch", false);
+
+                    anim.SetBool("Is_Pushing", false);
+
+                    anim.SetBool("Is_Clibing", false);
+
+                    anim.SetBool("Is_grab", false);
+
+                    anim.SetBool("Is_Stealth_idle", false);
+
+                    anim.SetBool("Is_Clibing_idle", false);
+
+                    anim.SetBool("Is_Abstinencia", true);
+                }
+                break;
+            case Statusquimico.Normal:
+
+                break;
+            case Statusquimico.Overdose:
                 break;
         }
 
@@ -264,46 +332,74 @@ public class PlayerAnim : MonoBehaviour
         {
             rend.flipX = true;
         }
+
+        if (temp_anim_bater_time <= Time.time)
+        {
+            anim.ResetTrigger("Trig_baterParede");
+        }
     }
 
 
-    private void TranslateStatus(float data)
+    private void TranslateStatusMov(float data)
     {
         switch (data)
         {
             case 0:
-                status = StatusMovimento.idle;
+                status_Movimento = StatusMovimento.idle;
                 break;
             case 1:
-                status = StatusMovimento.caminhando;
+                status_Movimento = StatusMovimento.caminhando;
                 break;
             case 2:
-                status = StatusMovimento.correndo;
+                status_Movimento = StatusMovimento.correndo;
                 break;
             case 3:
-                status = StatusMovimento.pulando;
+                status_Movimento = StatusMovimento.pulando;
                 break;
             case 4:
-                status = StatusMovimento.caindo;
+                status_Movimento = StatusMovimento.caindo;
                 break;
             case 5:
-                status = StatusMovimento.agachando;
+                status_Movimento = StatusMovimento.agachando;
                 break;
             case 6:
-                status = StatusMovimento.empurrando;
+                status_Movimento = StatusMovimento.empurrando;
                 break;
             case 7:
-                status = StatusMovimento.escalando;
+                status_Movimento = StatusMovimento.escalando;
                 break;
             case 8:
-                status = StatusMovimento.agarrando;
+                status_Movimento = StatusMovimento.agarrando;
                 break;
             case 9:
-                status = StatusMovimento.agachado_idle;
+                status_Movimento = StatusMovimento.agachado_idle;
                 break;
             case 10:
-                status = StatusMovimento.escalando_idle;
+                status_Movimento = StatusMovimento.escalando_idle;
                 break;
         }
+    }
+
+    private void TranlateStatusQuimico(float data)
+    {
+        switch (data)
+        {
+            case 0:
+                status_Quimico = Statusquimico.Abstinencia;
+                break;
+            case 1:
+                status_Quimico = Statusquimico.Normal;
+                break;
+            case 2:
+                status_Quimico = Statusquimico.Overdose;
+                break;
+        }
+    }
+
+    public void BaterParede()
+    {
+        anim.SetTrigger("Trig_baterParede");
+
+        temp_anim_bater_time = temp_anim_bater + Time.time;
     }
 }

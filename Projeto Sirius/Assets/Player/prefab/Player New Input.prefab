@@ -555,7 +555,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1145365486, guid: 73777f7a8904a7b459fcac88fbe28ac7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bab34525b2c36e499447cf3f1a79840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -601,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 646063863428317603}
   playermov: {fileID: 2883722794124855018}
+  playerQuimico: {fileID: 9187672707324191201}
 --- !u!1 &6761348081167850978
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +768,8 @@ MonoBehaviour:
   tag: 
   qPlayer: {fileID: 0}
   mPlayer: {fileID: 0}
-  ledgePlayer: {fileID: 0}
+  ledgePlayer: {fileID: 3985171473417943264}
+  animPlayer: {fileID: 2789000274180270116}
   ancoraPlayer: {fileID: 6951047221563369458}
   tagArrastarObjeto: Arrastavel
   tagQuimicoColetavel: QuimicoColetavel
