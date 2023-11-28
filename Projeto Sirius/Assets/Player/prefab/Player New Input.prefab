@@ -739,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: 1
   menuMorte: {fileID: 0}
+  anim: {fileID: 2789000274180270116}
   quimicoatual: 50
   quimicoMaximo: 100
   cadencia: 1

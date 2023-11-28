@@ -445,4 +445,31 @@ public class PlayerAnim : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+
+    public void UsarQuimico()
+    {
+        anim.SetBool("Is_Walking", false);
+
+        anim.SetBool("Is_Runing", false);
+
+        anim.SetBool("Is_Jumping", false);
+
+        anim.SetBool("Is_falling", false);
+
+        anim.SetBool("Is_crouch", false);
+
+        anim.SetBool("Is_Pushing", false);
+
+        anim.SetBool("Is_Clibing", false);
+
+        anim.SetBool("Is_grab", false);
+
+        anim.SetBool("Is_Stealth_idle", false);
+
+        anim.SetBool("Is_Clibing_idle", false);
+
+        anim.SetBool("Is_Abstinencia", false);
+
+        anim.SetTrigger("trig_Use_chem");
+    }
 }

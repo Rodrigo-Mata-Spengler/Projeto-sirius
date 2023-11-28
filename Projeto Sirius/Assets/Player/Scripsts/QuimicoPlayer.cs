@@ -10,6 +10,7 @@ public class QuimicoPlayer : MonoBehaviour
     [Header("Status")]
     [SerializeField] private Statusquimico status = Statusquimico.Normal;
     [HideInInspector] public PauseMenu menuMorte;
+    [SerializeField] private PlayerAnim anim;
 
     [Header("Niveis do quimico")]
     [SerializeField] private float quimicoatual = 0;
@@ -103,6 +104,7 @@ public class QuimicoPlayer : MonoBehaviour
                 quimicos -= 1;
                 tempUso = Time.time + delayUso;
                 aplicarQuimico_Audio.Play();
+                anim.UsarQuimico();
             }
         }
     }
