@@ -743,11 +743,11 @@ MonoBehaviour:
   quimicoatual: 50
   quimicoMaximo: 100
   cadencia: 1
-  perda: 0.25
+  perda: 2
   abstinencia: 30
-  overdose: 70
+  overdose: 80
   quimicos: 1
-  quantidadeReabastecer: 30
+  quantidadeReabastecer: 20
   delayUso: 0.5
   aplicarQuimico_Audio: {fileID: 5672937115513035960}
   abstinencia_Audio: {fileID: 4690739832807061452}

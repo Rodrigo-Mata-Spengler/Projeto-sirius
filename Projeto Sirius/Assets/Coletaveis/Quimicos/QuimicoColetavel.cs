@@ -13,8 +13,6 @@ public class QuimicoColetavel : MonoBehaviour
     public void Reabastecer()
     {
         player.GetComponent<QuimicoPlayer>().ReabastecerQuimico(quantidade);
-
-        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
