@@ -16,4 +16,13 @@ public class QuimicoColetavel : MonoBehaviour
 
         Destroy(this.gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        player = other.gameObject;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        player = null;
+    }
 }
