@@ -17,19 +17,6 @@ public class OptionsPanel : MonoBehaviour
 
     private int PanelOpen = 0;
     private bool inOpcoesPanel = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void BackMainMenuPanel()
     {
         ArmarioFechado.SetActive(true);
