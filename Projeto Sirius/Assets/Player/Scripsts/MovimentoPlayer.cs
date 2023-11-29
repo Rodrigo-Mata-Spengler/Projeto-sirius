@@ -307,16 +307,11 @@ public class MovimentoPlayer : MonoBehaviour
         return lastIpunt;
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider other)
     {
-
-        if (playerControler.isGrounded)
+        if (!playerControler.isGrounded)
         {
-            Rigidbody rb = hit.collider.attachedRigidbody;
-            if (rb != null && !rb.isKinematic)
-            {
-                rb.velocity = hit.moveDirection * forcaAtual;
-            }
+            playerRb.velocity = new Vector3(playerRb.velocity.x ,0,0);
         }
     }
 }
