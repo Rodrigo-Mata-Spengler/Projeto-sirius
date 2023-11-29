@@ -176,7 +176,7 @@ public class InteracaoObjetos : MonoBehaviour
         {
             colecionaveis_Sound.Play();
         }
-
+        Destroy(colecionavel);
 
     }
 

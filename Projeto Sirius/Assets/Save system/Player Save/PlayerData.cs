@@ -16,7 +16,7 @@ public class PlayerData
     public int quantidade_Guardada = 0;
 
     //colecionaveis
-    public bool[] colecionaveis = new bool[40];
+    public bool[] colecionaveis = new bool[5];
     public PlayerData(GameObject player)
     {
         //scena atual

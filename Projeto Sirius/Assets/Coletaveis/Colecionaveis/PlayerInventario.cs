@@ -8,7 +8,7 @@ public class PlayerInventario : MonoBehaviour
 
     private void Awake()
     {
-        colecionaveis = new bool[40];
+        colecionaveis = new bool[5];
 
         PlayerData data = SaveSystem.LoadPlayer();
         if (data != null)

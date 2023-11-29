@@ -14,6 +14,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Delay Input:")]
     [SerializeField] private float delayInput = 0;
     private float delayTime = 0;
+    [SerializeField] private PlayerInput input;
 
     private void Start()
     {
@@ -23,6 +24,8 @@ public class TutorialManager : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
+
+        input.enabled = false;
     }
 
     public void OpenTutorial(int Value)
@@ -35,6 +38,8 @@ public class TutorialManager : MonoBehaviour
         tutorialPanels[Value].SetActive(true);
 
         delayTime = delayInput + Time.realtimeSinceStartup;
+
+        input.enabled = true;
 
     }
 
@@ -49,7 +54,8 @@ public class TutorialManager : MonoBehaviour
                 item.gameObject.SetActive(false);
             }
 
-            //Time.timeScale = 1;
+            Time.timeScale = 1;
+            input.enabled = false;
         }
     }
 }

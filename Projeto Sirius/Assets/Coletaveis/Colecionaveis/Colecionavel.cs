@@ -14,11 +14,14 @@ public class Colecionavel : MonoBehaviour
     {
         PlayerData data = SaveSystem.LoadPlayer();
 
-        if (data.colecionaveis[colecionavelID])
+        if(data != null)
         {
-            Destroy(this.gameObject);
+            if (data.colecionaveis[colecionavelID])
+            {
+                Destroy(this.gameObject);
+            }
+            data = null;
         }
-        data = null;
 
         texto.text = numero;
     }
