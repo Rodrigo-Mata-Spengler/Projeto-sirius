@@ -13,8 +13,8 @@ public class SaveManeger : MonoBehaviour
     [Header("Prefab do Player")]
     [SerializeField] private GameObject player;
 
-    [Header("Camera da Scena")]
-    [SerializeField] private GameObject cam;
+    [Header("Cameras da Scena")]
+    [SerializeField] private GameObject[] cam;
 
     [Header("Menu Pause")]
     [SerializeField] private PauseMenu menupause;
@@ -82,7 +82,7 @@ public class SaveManeger : MonoBehaviour
             Debug.LogError("Prefab do player não configurado! \n favor configurar antes de continuar");
             configurado = false;
         }
-        if (!cam)
+        if (cam.Length == 0)
         {
             Debug.LogError("Prefab da camera não configurado! \n favor configurar antes de continuar");
             configurado = false;
