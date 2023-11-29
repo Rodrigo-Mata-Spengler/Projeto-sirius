@@ -602,6 +602,7 @@ MonoBehaviour:
   playerStatus: {fileID: 646063863428317603}
   playermov: {fileID: 2883722794124855018}
   playerQuimico: {fileID: 9187672707324191201}
+  ledge: {fileID: 3985171473417943264}
 --- !u!1 &6761348081167850978
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +961,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2396ba80-170c-4310-8e7b-eeee246d67c8
     m_ActionName: UI/TelaInicial[/Keyboard/anyKey,/Mouse/leftButton,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d55da42e-99d4-466f-85d3-338955a97653
+    m_ActionName: UI/Pausar[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player

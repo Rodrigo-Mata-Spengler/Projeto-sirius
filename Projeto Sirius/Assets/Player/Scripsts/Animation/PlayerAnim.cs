@@ -8,6 +8,7 @@ public class PlayerAnim : MonoBehaviour
     public PlayerMoveStatus playerStatus;
     public MovimentoPlayer playermov;
     public QuimicoPlayer playerQuimico;
+    public LedgeDetect ledge;
     private Animator anim;
     private StatusMovimento status_Movimento;
     private Statusquimico status_Quimico;
@@ -358,6 +359,33 @@ public class PlayerAnim : MonoBehaviour
                     break;
                 case Statusquimico.Overdose:
                     break;
+            }
+
+            if (ledge.IsLedge())
+            {
+                anim.SetBool("Is_Walking", false);
+
+                anim.SetBool("Is_Runing", false);
+
+                anim.SetBool("Is_Jumping", false);
+
+                anim.SetBool("Is_falling", false);
+
+                anim.SetBool("Is_crouch", false);
+
+                anim.SetBool("Is_Clibing", false);
+
+                anim.SetBool("Is_grab", true);
+
+                anim.SetBool("Is_Stealth_idle", false);
+
+                anim.SetBool("Is_Clibing_idle", false);
+
+                anim.SetBool("Is_Abstinencia", false);
+
+                anim.SetBool("Is_empurrar", false);
+
+                anim.SetBool("Is_puxar", false);
             }
 
             if (playermov.LastInput() > 0 && !empurrando)
