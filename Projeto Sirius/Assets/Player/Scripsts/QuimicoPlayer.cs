@@ -122,7 +122,15 @@ public class QuimicoPlayer : MonoBehaviour
     }
     public void ReabastecerQuimico(int a)
     {
-        quimicos += a;
+        if(quimicos + a >= 8)
+        {
+            quimicos = 8;
+        }
+        else
+        {
+            quimicos += a;
+        }
+        
     }
     public float GetQuimicoAtual()
     {

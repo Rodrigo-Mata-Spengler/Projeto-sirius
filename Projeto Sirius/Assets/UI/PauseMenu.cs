@@ -21,6 +21,9 @@ public class PauseMenu : MonoBehaviour
     private float tempo_Morte = .5f;
     private float tempo = 0;
 
+    private float tempo_pause = .5f;
+    private float tempo2 = 0;
+
     private void Start()
     {
         Resume();
@@ -28,8 +31,9 @@ public class PauseMenu : MonoBehaviour
 
     public void OnPause(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && tempo2<Time.time)
         {
+            tempo2 = tempo_pause + Time.time;
             PauseOrResume();
         }
     }
@@ -55,6 +59,8 @@ public class PauseMenu : MonoBehaviour
                 DeathPanel.SetActive(true);
             }
         }
+
+        
     }
 
     public void Death(TipoMorte morte)
@@ -112,6 +118,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         IsPaused = true;
         PausePanel.SetActive(true);
+
+        Debug.Log("time scale:" + Time.timeScale);
     }
 
     private void Resume()
