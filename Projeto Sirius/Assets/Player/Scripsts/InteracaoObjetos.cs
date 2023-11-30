@@ -176,6 +176,9 @@ public class InteracaoObjetos : MonoBehaviour
         {
             colecionaveis_Sound.Play();
         }
+
+        interacaoColecionavel = false;
+
         Destroy(colecionavel.gameObject);
 
     }
