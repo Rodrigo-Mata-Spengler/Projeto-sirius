@@ -160,11 +160,11 @@ public class InteracaoObjetos : MonoBehaviour
     }
     private void SoltarPendurar()
     {
-        if (!ledgePlayer.IsClimbing() || !ledgePlayer.IsLedge())
+        /*if (!ledgePlayer.IsClimbing() || !ledgePlayer.IsLedge())
         {
             gameObject.transform.SetParent(original_parent);
             mPlayer.enabled = true;
-        }
+        }*/
     }
 
     //coletar colecionavel

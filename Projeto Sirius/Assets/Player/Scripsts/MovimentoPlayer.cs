@@ -307,11 +307,4 @@ public class MovimentoPlayer : MonoBehaviour
         return lastIpunt;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!playerControler.isGrounded)
-        {
-            playerRb.velocity = new Vector3(playerRb.velocity.x ,0,0);
-        }
-    }
 }
