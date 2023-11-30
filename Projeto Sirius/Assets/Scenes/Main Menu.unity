@@ -545,6 +545,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 649607335}
+    - target: {fileID: 3923745356669035885, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: FirstScene
+      value: CutScene 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3958245951217935788, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
