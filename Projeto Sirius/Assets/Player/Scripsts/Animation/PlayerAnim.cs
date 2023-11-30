@@ -485,8 +485,6 @@ public class PlayerAnim : MonoBehaviour
 
         anim.SetBool("Is_crouch", false);
 
-        anim.SetBool("Is_Pushing", false);
-
         anim.SetBool("Is_Clibing", false);
 
         anim.SetBool("Is_grab", false);

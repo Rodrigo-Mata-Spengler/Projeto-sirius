@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (dead)
         {
-            if (tempo <= Time.time)
+            if (tempo < Time.time)
             {
                 DeathPanel.SetActive(true);
 
@@ -88,8 +88,10 @@ public class PauseMenu : MonoBehaviour
         switch (morte)
         {
             case TipoMorte.Abstinecia:
-                anim.Morte();
+                //anim.Morte();
                 tempo = tempo_Morte + Time.time;
+
+                customDeath[0].SetActive(true);
 
                 morteAtual = TipoMorte.Abstinecia;
                 
@@ -99,12 +101,16 @@ public class PauseMenu : MonoBehaviour
                 anim.Morte();
                 tempo = tempo_Morte + Time.time;
 
+                customDeath[1].SetActive(true);
+
                 morteAtual = TipoMorte.Overdose;
 
                 dead = true;
                 break;
             case TipoMorte.capturado:
                 tempo = tempo_Morte + Time.time;
+
+                customDeath[2].SetActive(true);
 
                 morteAtual = TipoMorte.capturado;
 
@@ -113,6 +119,8 @@ public class PauseMenu : MonoBehaviour
             case TipoMorte.eletrocutado:
                 anim.Morte();
                 tempo = tempo_Morte + Time.time;
+
+                customDeath[2].SetActive(true);
 
                 morteAtual = TipoMorte.capturado;
 
@@ -124,6 +132,8 @@ public class PauseMenu : MonoBehaviour
 
                 morteAtual = TipoMorte.capturado;
 
+                customDeath[2].SetActive(true);
+
                 dead = true;
                 break;
         }
@@ -131,7 +141,16 @@ public class PauseMenu : MonoBehaviour
     public void Reborn()
     {
         PlayerData data = SaveSystem.LoadPlayer();
-        SceneManager.LoadScene(data.scena_Atual);
+
+        if (data != null)
+        {
+            SceneManager.LoadScene(data.scena_Atual);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
 
         Time.timeScale = 1f;
         DeathPanel.SetActive(false);

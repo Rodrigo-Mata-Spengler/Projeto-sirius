@@ -2705,8 +2705,8 @@ Camera:
   m_GameObject: {fileID: 613641725}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4056,7 +4056,7 @@ PrefabInstance:
       objectReference: {fileID: 31187841}
     - target: {fileID: 7092237878401371371, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
       propertyPath: tempoInicio
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7092237878401371371, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
       propertyPath: velocidadeNormal
@@ -4076,7 +4076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8455648493916471928, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.8
+      value: -54.5
       objectReference: {fileID: 0}
     - target: {fileID: 8455648493916471928, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4121,10 +4121,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2662213986955606390, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
 --- !u!64 &1119489175
 MeshCollider:
@@ -4739,7 +4736,7 @@ MonoBehaviour:
   spawn: {fileID: 1004497494}
   player: {fileID: 6761348081167850978, guid: 4cf484ffff08aeb43bbc314c4cd3c519, type: 3}
   cam:
-  - {fileID: 0}
+  - {fileID: 1905748484}
   menupause: {fileID: 707385878}
   erase: 0
   data:
@@ -5289,6 +5286,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1305178505663949787, guid: c571d41903e6e0b4d971cecf974c0049, type: 3}
+--- !u!1 &1905748484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8195445792919928546, guid: f9da142b97758e741af7395042304cb0, type: 3}
+  m_PrefabInstance: {fileID: 2133044415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1910251300
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5668,6 +5670,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5046032999212862643, guid: cc77e1b99c384084fa62eb55d76463e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947574906554959627, guid: cc77e1b99c384084fa62eb55d76463e8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
