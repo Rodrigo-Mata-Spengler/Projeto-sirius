@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6963785790661774051}
   - component: {fileID: 3862852425021118926}
   - component: {fileID: 3468666010466374234}
+  - component: {fileID: 5313560267552785503}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -106,6 +107,22 @@ MonoBehaviour:
   pointTag: PointOfInterest
   esperaIdle: 3
   esperaProcura: 2
+--- !u!114 &5313560267552785503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445400726944541815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde4900d83fe3a745aff4df0426991dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7355445778326751599}
+  rend: {fileID: 7492842223094999747}
+  enemy: {fileID: 3468666010466374234}
+  status: 0
 --- !u!1 &5976050361052274462
 GameObject:
   m_ObjectHideFlags: 0

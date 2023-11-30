@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum EnemyStatus { idle, movendo, Atraido, procurando, Achou}
+public enum EnemyStatus { idle, movendo, Atraido, procurando, Achou}
 public class EnemyControler : MonoBehaviour
 {
     private GameObject player = null;
@@ -145,5 +145,10 @@ public class EnemyControler : MonoBehaviour
     private void Achou()
     {
         pauseMorte.Death(TipoMorte.capturado);
+    }
+
+    public EnemyStatus GetStatus()
+    {
+        return status;
     }
 }
