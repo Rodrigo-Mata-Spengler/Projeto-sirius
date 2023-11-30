@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 75772809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6, y: 0, z: 0}
+  m_LocalPosition: {x: -3.94, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,7 +872,7 @@ Transform:
   m_GameObject: {fileID: 325563109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.21, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2941,7 +2941,7 @@ Transform:
   m_GameObject: {fileID: 626784084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.61, y: 0, z: 0}
+  m_LocalPosition: {x: -3.99, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3515,7 +3515,7 @@ Transform:
   m_GameObject: {fileID: 881873729}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3938,7 +3938,7 @@ Transform:
   m_GameObject: {fileID: 1045170337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6100006, y: 0, z: 0}
+  m_LocalPosition: {x: -3.89, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4044,7 +4044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555856100206546331, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7092237878401371371, guid: d61a17d87b0d3ac42b829851e6bd0c94, type: 3}
       propertyPath: morte
@@ -5817,7 +5817,7 @@ Transform:
   m_GameObject: {fileID: 2064441748}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0, z: 0}
+  m_LocalPosition: {x: 0.34, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6119,11 +6119,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 522824271205986719, guid: f9da142b97758e741af7395042304cb0, type: 3}
+      propertyPath: CameraDistance
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 522824271205986719, guid: f9da142b97758e741af7395042304cb0, type: 3}
+      propertyPath: ShoulderOffset.y
+      value: 5.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8195445792919928546, guid: f9da142b97758e741af7395042304cb0, type: 3}
       propertyPath: m_Name
       value: Virtual Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 310922393053336539, guid: f9da142b97758e741af7395042304cb0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
