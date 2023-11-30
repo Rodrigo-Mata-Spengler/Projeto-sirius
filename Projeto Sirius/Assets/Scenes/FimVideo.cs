@@ -10,12 +10,24 @@ public class FimVideo : MonoBehaviour
 
     [SerializeField] private string proximaScena;
 
+    private float wait = .5f;
+    private float wait_time = 0f;
+
+    private void Start()
+    {
+        wait_time = wait + Time.time;
+    }
+
     private void Update()
     {
-        if (!video.isPlaying)
+        if (!video.isPlaying && wait_time < Time.time)
         {
             SceneManager.LoadScene(proximaScena);
         }
     }
 
+    public void OnAnyButton()
+    {
+        SceneManager.LoadScene(proximaScena);
+    }
 }

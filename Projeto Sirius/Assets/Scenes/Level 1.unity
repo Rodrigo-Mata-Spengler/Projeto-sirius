@@ -26901,11 +26901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5092096945507906312, guid: 5cd5e6da0c6f3a24e81b553b1debb823, type: 3}
       propertyPath: salvar
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5092096945507906312, guid: 5cd5e6da0c6f3a24e81b553b1debb823, type: 3}
       propertyPath: proxFase
-      value: level 3
+      value: CutScene 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

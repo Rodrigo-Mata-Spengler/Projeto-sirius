@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 511902672}
   m_Layer: 0
   m_Name: escalada
-  m_TagString: Untagged
+  m_TagString: Escalavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 519961485}
   m_Layer: 0
   m_Name: escalada
-  m_TagString: Untagged
+  m_TagString: Escalavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2357,6 +2357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mudar de fase
       objectReference: {fileID: 0}
+    - target: {fileID: 5092096945507906312, guid: 5cd5e6da0c6f3a24e81b553b1debb823, type: 3}
+      propertyPath: proxFase
+      value: Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6206980773877018457, guid: 5cd5e6da0c6f3a24e81b553b1debb823, type: 3}
       propertyPath: m_Size.y
       value: 20.290812
@@ -2602,11 +2606,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6257856204641138510, guid: c0c4462be6681d24e9969009bcb27b9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -161.67
+      value: -167.71
       objectReference: {fileID: 0}
     - target: {fileID: 6257856204641138510, guid: c0c4462be6681d24e9969009bcb27b9a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.26
+      value: -13.21
       objectReference: {fileID: 0}
     - target: {fileID: 6257856204641138510, guid: c0c4462be6681d24e9969009bcb27b9a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2859,7 +2863,7 @@ GameObject:
   - component: {fileID: 1055027473}
   m_Layer: 0
   m_Name: escalada
-  m_TagString: Untagged
+  m_TagString: Escalavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4843,7 +4847,7 @@ GameObject:
   - component: {fileID: 2055771713}
   m_Layer: 0
   m_Name: escalada
-  m_TagString: Untagged
+  m_TagString: Escalavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
