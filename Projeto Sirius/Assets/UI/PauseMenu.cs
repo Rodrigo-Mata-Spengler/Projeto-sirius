@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public enum TipoMorte {Abstinecia ,Overdose ,capturado ,eletrocutado ,generico}
+public enum TipoMorte {Abstinecia ,Overdose ,capturado ,eletrocutado ,generico, idle}
 public class PauseMenu : MonoBehaviour
 {
 
@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private GameObject CheatPanel;
     [SerializeField] private GameObject DeathPanel;
+    [SerializeField] private GameObject[] customDeath;
+    [SerializeField] private TipoMorte morteAtual = TipoMorte.idle;
 
     [SerializeField] public PlayerAnim anim;
 
@@ -27,6 +29,11 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         Resume();
+
+        foreach (var item in customDeath)
+        {
+            item.SetActive(false);
+        }
     }
 
     public void OnPause(InputAction.CallbackContext context)
@@ -57,6 +64,19 @@ public class PauseMenu : MonoBehaviour
             if (tempo <= Time.time)
             {
                 DeathPanel.SetActive(true);
+
+                switch (morteAtual)
+                {
+                    case TipoMorte.Abstinecia:
+                        customDeath[0].SetActive(true);
+                        break;
+                    case TipoMorte.Overdose:
+                        customDeath[1].SetActive(true);
+                        break;
+                    case TipoMorte.capturado:
+                        customDeath[2].SetActive(true);
+                        break;
+                }
             }
         }
 
@@ -71,6 +91,7 @@ public class PauseMenu : MonoBehaviour
                 anim.Morte();
                 tempo = tempo_Morte + Time.time;
 
+                morteAtual = TipoMorte.Abstinecia;
                 
                 dead = true;
                 break;
@@ -78,14 +99,14 @@ public class PauseMenu : MonoBehaviour
                 anim.Morte();
                 tempo = tempo_Morte + Time.time;
 
+                morteAtual = TipoMorte.Overdose;
 
                 dead = true;
                 break;
             case TipoMorte.capturado:
-                //arrumar
-                anim.Morte();
                 tempo = tempo_Morte + Time.time;
 
+                morteAtual = TipoMorte.capturado;
 
                 dead = true;
                 break;
@@ -93,12 +114,16 @@ public class PauseMenu : MonoBehaviour
                 anim.Morte();
                 tempo = tempo_Morte + Time.time;
 
+                morteAtual = TipoMorte.capturado;
 
                 dead = true;
                 break;
             case TipoMorte.generico:
                 Time.timeScale = 0f;
                 DeathPanel.SetActive(true);
+
+                morteAtual = TipoMorte.capturado;
+
                 dead = true;
                 break;
         }
