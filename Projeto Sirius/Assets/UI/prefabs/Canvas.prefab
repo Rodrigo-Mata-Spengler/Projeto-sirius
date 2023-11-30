@@ -6262,7 +6262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4637962161750942167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6309,6 +6309,7 @@ MonoBehaviour:
   PausePanel: {fileID: 7103289734567121750}
   CheatPanel: {fileID: 7344807938511178787}
   DeathPanel: {fileID: 3985645779385899092}
+  anim: {fileID: 0}
 --- !u!114 &7174890966060018279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7788,7 +7789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1328225793031052072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14174,7 +14175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &869683843350917682
 RectTransform:
   m_ObjectHideFlags: 0
