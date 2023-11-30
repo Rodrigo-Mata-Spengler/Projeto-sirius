@@ -9,6 +9,7 @@ public class DoorButton : MonoBehaviour
     [SerializeField] private Door[] Door;
 
     [SerializeField] private bool timer = false;
+    private bool ctrl = false;
     [SerializeField] private float tempoLigado = 0;
 
     [SerializeField] private Animator AlavancaPivotAnimator;
@@ -21,7 +22,7 @@ public class DoorButton : MonoBehaviour
     {
         if (timer)
         {
-            if (tempoFechar <= Time.time)
+            if (tempoFechar <= Time.time && ctrl)
             {
                 for (int i = 0; i < Door.Length; i++)
                 {
@@ -37,25 +38,26 @@ public class DoorButton : MonoBehaviour
 
     public void OpenDoor(Transform Player)
     {
-        if (!timer)
-        {
-            for (int i = 0; i < Door.Length; i++)
-            {
-                if (!Door[i].IsOpen)
-                {
-                    Door[i].Open(Player.transform.position);
-                    AlavancaPivotAnimator.SetBool("Apertou", true);
-                    
-                }
-            }
 
-            if (!alavanca_Sound.IsPlaying())
+        for (int i = 0; i < Door.Length; i++)
+        {
+            if (!Door[i].IsOpen)
             {
-                alavanca_Sound.Play();
+                Door[i].Open(Player.transform.position);
+                AlavancaPivotAnimator.SetBool("Apertou", true);
+
             }
-        }else
+        }
+
+        if (!alavanca_Sound.IsPlaying())
+        {
+            alavanca_Sound.Play();
+        }
+
+        if (timer)
         {
             tempoFechar = tempoLigado + Time.time;
+            ctrl = true;
         }
 
         
