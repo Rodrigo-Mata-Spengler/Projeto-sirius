@@ -744,7 +744,7 @@ MonoBehaviour:
   quimicoatual: 50
   quimicoMaximo: 100
   cadencia: 1
-  perda: 2
+  perda: 1.5
   abstinencia: 30
   overdose: 80
   quimicos: 1

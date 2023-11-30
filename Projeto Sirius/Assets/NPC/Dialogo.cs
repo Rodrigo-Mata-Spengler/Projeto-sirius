@@ -26,10 +26,10 @@ public class Dialogo : MonoBehaviour
     [SerializeField] private string playerTag;
     private QuimicoPlayer playerQui;
     private MovimentoPlayer playerMov;
+    private PlayerMoveStatus playerStatus;
     [SerializeField]private PlayerInput input;
 
     private bool startDialogue = false;
-    private ButtonStatus button = ButtonStatus.idle;
 
     [SerializeField]private SphereCollider barreira;
 
@@ -46,13 +46,18 @@ public class Dialogo : MonoBehaviour
 
     public void OnInteracao(InputAction.CallbackContext context)
     {
-        if (context.performed && delay_tempo <= Time.time && dialogueSize_Atual < dialogueSize)
+        if (context.performed && delay_tempo <= Time.time && dialogueSize_Atual < dialogueSize+1 && startDialogue)
         {
             delay_tempo = delay + Time.time;
 
             ShowText(dialogue[dialogueSize_Atual]);
             dialogueSize_Atual++;
-        }else if (dialogueSize_Atual == dialogueSize + 1)
+            if (dialogueSize_Atual == dialogueSize)
+            {
+                startDialogue = false;
+            }
+
+        }else if (dialogueSize_Atual == dialogueSize && startDialogue == false && delay_tempo <= Time.time)
         {
             playerMov.enabled = true;
             playerQui.desligarCadencia = true;
@@ -73,6 +78,9 @@ public class Dialogo : MonoBehaviour
 
             playerMov = other.gameObject.GetComponent<MovimentoPlayer>();
             playerQui = other.gameObject.GetComponent<QuimicoPlayer>();
+            playerStatus = other.gameObject.GetComponent<PlayerMoveStatus>();
+
+            playerStatus.SetStatus(StatusMovimento.idle);
 
             playerMov.enabled = false;
             playerQui.desligarCadencia = false;

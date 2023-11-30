@@ -4,7 +4,7 @@ using UnityEngine;
 using FMODUnity;
 
 
-enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando , agachado_idle, empurrando, escalando, escalando_idle, agarrando}
+public enum StatusMovimento { idle, caminhando, correndo, pulando, caindo, agachando , agachado_idle, empurrando, escalando, escalando_idle, agarrando}
 public class PlayerMoveStatus : MonoBehaviour
 {
     private CharacterController playerControler;
@@ -207,4 +207,8 @@ public class PlayerMoveStatus : MonoBehaviour
         return temp;
     }
 
+    public void SetStatus(StatusMovimento stat)
+    {
+        status = stat;
+    }
 }
