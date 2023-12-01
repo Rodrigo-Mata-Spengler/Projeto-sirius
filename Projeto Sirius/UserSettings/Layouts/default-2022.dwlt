@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 270
+  controlID: 154
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -179,7 +179,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: layout_Rodrigo
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 220
+  controlID: 103
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 221
+  controlID: 91
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -446,7 +446,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materiais/Lampada
+    - Assets/Coletaveis/Quimicos/siringa texturas
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materiais/Lampada
+  - Assets/Coletaveis/Quimicos/siringa texturas
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\rodri\OneDrive\Documents\GitHub\Projeto-sirius\Projeto
     Sirius
@@ -462,9 +462,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: d8210200
-    m_LastClickedID: 139736
-    m_ExpandedIDs: ffffffff00000000267b0000287b00002a7b00002c7b00002e7b0000307b0000327b0000347b0000367b0000387b00003a7b00003c7b00003e7b0000407b0000427b0000447b0000f47c0000487d0000
+    m_SelectedIDs: 62690100
+    m_LastClickedID: 92514
+    m_ExpandedIDs: 00000000bc880000be880000c0880000c2880000c4880000c6880000c8880000ca880000cc880000ce880000d0880000d2880000d4880000d6880000d8880000da880000dc8800005089000064890000f6890000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -492,7 +492,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000267b0000287b00002a7b00002c7b00002e7b0000307b0000327b0000347b0000367b0000387b00003a7b00003c7b00003e7b0000407b0000427b0000447b0000f47c0000
+    m_ExpandedIDs: 00000000bc880000be880000c0880000c2880000c4880000c6880000c8880000ca880000cc880000ce880000d0880000d2880000d4880000d6880000d8880000da880000dc880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -536,7 +536,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -631,21 +631,21 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 306}
-      m_SelectedIDs: f4780000
+      scrollPos: {x: 0, y: 126}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6ac0fdffb8cefdffc8f5fdff1cf6fdff964cffff9c4cffff3255ffff5a55ffff6a55ffff7255ffff7e55fffff455ffff5c56ffff6456ffff7056ffff9256ffff9856ffffda56ffffe056ffff1457ffffa457ffffee57fffff657ffff0258ffff3858ffff3e58ffff025bfffffe5bffff065cffff125cffff3c5cffff425cffff785cffff7e5cffffc85cffffce5cffff605dffff665dffff765dffff7c5dffff8c5dffff945dffffa05dffffb05dffffb85dffffc45dffffbe5effff2480ffff1094ffff3aa6ffff2cbaffff90e1ffff98e1ffffa4e1ffffd8e1ffffe0e1ffffece1ffff3eefffff46efffff52efffff98effffff8faffffb4800000800401009a04010020050100760501007c0501009a050100ba050100faf8010036fa010070fa0100
+      m_ExpandedIDs: 44aefdff14d3fdff1cd3fdff00bbfeff76cdfefff8faffffa0710000ba710000ba7200000e980100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Gaiola_low5
-        m_OriginalName: Gaiola_low5
+        m_Name: Quimicos Coletavel (2)
+        m_OriginalName: Quimicos Coletavel (2)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 104656
+        m_UserData: -156134
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1081,6 +1081,19 @@ MonoBehaviour:
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 17
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
@@ -1092,9 +1105,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 461.21487, y: 26.35364, z: 5.5966296}
+    m_Target: {x: 472.5197, y: 20.831095, z: -9.076576}
     speed: 2
-    m_Value: {x: 461.21487, y: 26.35364, z: 5.5966296}
+    m_Value: {x: 472.5197, y: 20.831095, z: -9.076576}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1140,13 +1153,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.058456447, y: -0.021565739, z: 0.0012046699, w: 0.9981098}
+    m_Target: {x: -0.028477669, y: -0.036576945, z: -0.0010948, w: 0.9989776}
     speed: 2
-    m_Value: {x: 0.058453325, y: -0.021564588, z: 0.0012046056, w: 0.99805653}
+    m_Value: {x: -0.028476154, y: -0.036575, z: -0.0010947417, w: 0.9989245}
   m_Size:
-    m_Target: 10.568689
+    m_Target: 3.7130911
     speed: 2
-    m_Value: 11.06669
+    m_Value: 3.8880537
   m_Ortho:
     m_Target: 0
     speed: 2

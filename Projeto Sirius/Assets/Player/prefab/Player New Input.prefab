@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5855975274575500253}
   - component: {fileID: 388951243482059774}
+  - component: {fileID: 4230333913147718034}
   m_Layer: 0
   m_Name: Musica ambiente
   m_TagString: Untagged
@@ -252,6 +253,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &4230333913147718034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117431625685832111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a06e19d7684d94f8f23bab2306751e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  som: {fileID: 388951243482059774}
 --- !u!1 &4691730285845152965
 GameObject:
   m_ObjectHideFlags: 0
