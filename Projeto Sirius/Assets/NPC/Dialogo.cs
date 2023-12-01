@@ -60,7 +60,7 @@ public class Dialogo : MonoBehaviour
         }else if (dialogueSize_Atual == dialogueSize && startDialogue == false && delay_tempo <= Time.time)
         {
             playerMov.enabled = true;
-            playerQui.desligarCadencia = true;
+            playerQui.desligarCadencia = false;
 
             dialogue_Panel.SetActive(false);
 
@@ -83,7 +83,7 @@ public class Dialogo : MonoBehaviour
             playerStatus.SetStatus(StatusMovimento.idle);
 
             playerMov.enabled = false;
-            playerQui.desligarCadencia = false;
+            playerQui.desligarCadencia = true;
 
             dialogue_Panel.SetActive(true);
 
