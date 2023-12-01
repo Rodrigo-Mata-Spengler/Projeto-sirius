@@ -27,6 +27,7 @@ public class Dialogo : MonoBehaviour
     private QuimicoPlayer playerQui;
     private MovimentoPlayer playerMov;
     private PlayerMoveStatus playerStatus;
+    private PlayerInput playerInput;
     [SerializeField]private PlayerInput input;
 
     private bool startDialogue = false;
@@ -61,6 +62,7 @@ public class Dialogo : MonoBehaviour
         {
             playerMov.enabled = true;
             playerQui.desligarCadencia = false;
+            playerInput.enabled = true;
 
             dialogue_Panel.SetActive(false);
 
@@ -79,11 +81,13 @@ public class Dialogo : MonoBehaviour
             playerMov = other.gameObject.GetComponent<MovimentoPlayer>();
             playerQui = other.gameObject.GetComponent<QuimicoPlayer>();
             playerStatus = other.gameObject.GetComponent<PlayerMoveStatus>();
+            playerInput = other.gameObject.GetComponent<PlayerInput>();
 
             playerStatus.SetStatus(StatusMovimento.idle);
 
-            playerMov.enabled = false;
+            //playerMov.enabled = false;
             playerQui.desligarCadencia = true;
+            playerInput.enabled = false;
 
             dialogue_Panel.SetActive(true);
 
