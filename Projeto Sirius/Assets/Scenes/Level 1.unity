@@ -11686,7 +11686,7 @@ MonoBehaviour:
   - {fileID: 1567739635}
   - {fileID: 818736947}
   menupause: {fileID: 990359275}
-  erase: 1
+  erase: 0
   data:
     scena_Atual: 
     loc_Atual: []
