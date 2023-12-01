@@ -276,8 +276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90184fa6a45f9054686d4a72182eb66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1307186302}
-  texto: {fileID: 832535524}
 --- !u!1 &285424906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1019203971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1717,6 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slide: {fileID: 1054485904}
   qPlayer: {fileID: 1307186302}
+  texto: {fileID: 0}
 --- !u!4 &1061590427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6189981585758922047, guid: 436e443d711496748921e7bb24e6563a, type: 3}
@@ -2372,12 +2371,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579330000888121670, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 606315530680511785, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8862738473055637891, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1f8d748e899561344a4d00735de8145b, type: 3}
 --- !u!1 &1705548095
 GameObject:
