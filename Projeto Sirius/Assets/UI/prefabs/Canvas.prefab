@@ -1135,6 +1135,7 @@ GameObject:
   - component: {fileID: 5915285501304005723}
   - component: {fileID: 6345353132180177965}
   - component: {fileID: 1331458550425184471}
+  - component: {fileID: 988596775055357681}
   m_Layer: 5
   m_Name: morte Abstinencia
   m_TagString: Untagged
@@ -1200,6 +1201,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &988596775055357681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585287197728133305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1693659117
+      Data2: 1296153952
+      Data3: -690529400
+      Data4: -1512736966
+    Path: event:/Protagonista/Morrendo
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 300000
 --- !u!1 &722861471144138392
 GameObject:
   m_ObjectHideFlags: 0
@@ -7866,7 +7898,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1328225793031052072}
   - component: {fileID: 503025949361272220}
-  - component: {fileID: 2357054925303882276}
   m_Layer: 5
   m_Name: Death Panel
   m_TagString: Untagged
@@ -7904,37 +7935,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3985645779385899092}
   m_CullTransparentMesh: 1
---- !u!114 &2357054925303882276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3985645779385899092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1693659117
-      Data2: 1296153952
-      Data3: -690529400
-      Data4: -1512736966
-    Path: event:/Protagonista/Morrendo
-  Event: 
-  PlayEvent: 11
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 300000
 --- !u!1 &4017144898572858367
 GameObject:
   m_ObjectHideFlags: 0
@@ -12305,6 +12305,7 @@ GameObject:
   - component: {fileID: 7337437443711900669}
   - component: {fileID: 1857128724222910063}
   - component: {fileID: 5679119097239200878}
+  - component: {fileID: 8100373775780963527}
   m_Layer: 5
   m_Name: morte overdose
   m_TagString: Untagged
@@ -12370,6 +12371,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8100373775780963527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368492119626069948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1693659117
+      Data2: 1296153952
+      Data3: -690529400
+      Data4: -1512736966
+    Path: event:/Protagonista/Morrendo
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 300000
 --- !u!1 &6382284275239422376
 GameObject:
   m_ObjectHideFlags: 0
@@ -14163,6 +14195,7 @@ GameObject:
   - component: {fileID: 3108250362859204810}
   - component: {fileID: 5447081576443283463}
   - component: {fileID: 4949373721557657746}
+  - component: {fileID: 2746699926089023200}
   m_Layer: 5
   m_Name: morte capturado
   m_TagString: Untagged
@@ -14228,6 +14261,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2746699926089023200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347113449566537366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1693659117
+      Data2: 1296153952
+      Data3: -690529400
+      Data4: -1512736966
+    Path: event:/Protagonista/Morrendo
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 300000
 --- !u!1 &7354970246613243708
 GameObject:
   m_ObjectHideFlags: 0

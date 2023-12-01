@@ -131,14 +131,14 @@ public class EnemyControler : MonoBehaviour
 
 
         Debug.Log(hit.transform.tag);
-        if (proximaEsperaProcura <= Time.time)
+
+        if (hit.transform.CompareTag(playeTag))
+        {
+            status = EnemyStatus.Achou;
+        }else if (proximaEsperaProcura <= Time.time)
         {
             pontoMov = new Vector3(areaMovimento.RandomPointInSpace().x, transform.position.y, transform.position.z);
             status = EnemyStatus.movendo;
-        }
-        else if(hit.transform.CompareTag(playeTag))
-        {
-            status = EnemyStatus.Achou;
         }
     }
 
