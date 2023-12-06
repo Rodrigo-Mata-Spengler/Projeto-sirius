@@ -788,7 +788,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4675,7 +4675,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -6146,7 +6146,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -6391,7 +6391,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6998,7 +6998,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -7298,7 +7298,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -10633,7 +10633,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -13027,7 +13027,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -14127,7 +14127,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -14709,7 +14709,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -17512,7 +17512,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18182,7 +18182,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18216,6 +18216,10 @@ PrefabInstance:
     - target: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3675258192038159865, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3715086074602549308, guid: ef8f438451adac44c88fb6660ae514d4, type: 3}
       propertyPath: m_Camera
@@ -18544,7 +18548,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7924528, g: 0.77618605, b: 0.60929155, a: 1}
-  m_Intensity: 13
+  m_Intensity: 4
   m_Range: 23.55581
   m_SpotAngle: 119.12993
   m_InnerSpotAngle: 56.9617
@@ -19820,7 +19824,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
